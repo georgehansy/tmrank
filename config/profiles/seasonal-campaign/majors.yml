@@ -1,0 +1,21 @@
+placement_points:
+  - placement_low: 1
+    placement_high: 1
+    points: 10.0
+  - placement_low: 2
+    placement_high: 2
+    points: 4.0
+  - placement_low: 3
+    placement_high: 3
+    points: 3.0
+  - placement_low: 4
+    placement_high: 4
+    points: 2.0
+  - placement_low: 5
+    placement_high: 8
+    points: 1.0
+
+rules:
+  - name: "Trackmania seasonal campaign majors"
+    match:
+      series: "Trackmania_Seasonal_Campaign"

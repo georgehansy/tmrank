@@ -1,0 +1,491 @@
+{
+  "profile": {
+    "name": "seasonal-campaign",
+    "label": "Seasonal Campaign"
+  },
+  "generated_at": "2026-04-13T21:00:31.509602+00:00",
+  "goat_top20": [
+    {
+      "rank": 1,
+      "player_slug": "hobbit",
+      "player_name": "Hobbit",
+      "goat_score": 1.0,
+      "prime_rating": 58.6643,
+      "elite_area": 1415.951,
+      "median_conservative": 54.5571,
+      "title_points": 63.0,
+      "active_months": 56,
+      "events_played": 18
+    },
+    {
+      "rank": 2,
+      "player_slug": "shcr",
+      "player_name": "Shcr",
+      "goat_score": 0.808351,
+      "prime_rating": 50.9866,
+      "elite_area": 1101.4597,
+      "median_conservative": 45.9863,
+      "title_points": 45.0,
+      "active_months": 60,
+      "events_played": 16
+    },
+    {
+      "rank": 3,
+      "player_slug": "maniaaaac",
+      "player_name": "Maniaaaac",
+      "goat_score": 0.649946,
+      "prime_rating": 53.5538,
+      "elite_area": 556.5943,
+      "median_conservative": 47.6539,
+      "title_points": 25.0,
+      "active_months": 29,
+      "events_played": 9
+    },
+    {
+      "rank": 4,
+      "player_slug": "solivagantz",
+      "player_name": "SolivaganTz",
+      "goat_score": 0.63408,
+      "prime_rating": 48.7448,
+      "elite_area": 706.1724,
+      "median_conservative": 38.6247,
+      "title_points": 28.0,
+      "active_months": 50,
+      "events_played": 16
+    },
+    {
+      "rank": 5,
+      "player_slug": "mudda",
+      "player_name": "Mudda",
+      "goat_score": 0.598396,
+      "prime_rating": 44.5026,
+      "elite_area": 728.623,
+      "median_conservative": 40.2888,
+      "title_points": 21.0,
+      "active_months": 54,
+      "events_played": 12
+    },
+    {
+      "rank": 6,
+      "player_slug": "darkestsentinel",
+      "player_name": "DarkestSentinel",
+      "goat_score": 0.597795,
+      "prime_rating": 52.032,
+      "elite_area": 696.6111,
+      "median_conservative": 42.6149,
+      "title_points": 12.0,
+      "active_months": 47,
+      "events_played": 15
+    },
+    {
+      "rank": 7,
+      "player_slug": "pusztitopako",
+      "player_name": "pusztitopako",
+      "goat_score": 0.593443,
+      "prime_rating": 49.2442,
+      "elite_area": 750.9919,
+      "median_conservative": 42.0591,
+      "title_points": 12.0,
+      "active_months": 47,
+      "events_played": 12
+    },
+    {
+      "rank": 8,
+      "player_slug": "zodiark",
+      "player_name": "Zodiark",
+      "goat_score": 0.571507,
+      "prime_rating": 45.6181,
+      "elite_area": 625.0841,
+      "median_conservative": 39.8982,
+      "title_points": 18.0,
+      "active_months": 53,
+      "events_played": 15
+    },
+    {
+      "rank": 9,
+      "player_slug": "rotaker",
+      "player_name": "RotakeR",
+      "goat_score": 0.532188,
+      "prime_rating": 46.7699,
+      "elite_area": 524.2018,
+      "median_conservative": 40.2634,
+      "title_points": 11.0,
+      "active_months": 33,
+      "events_played": 9
+    },
+    {
+      "rank": 10,
+      "player_slug": "keby",
+      "player_name": "Keby",
+      "goat_score": 0.525207,
+      "prime_rating": 42.9704,
+      "elite_area": 445.8024,
+      "median_conservative": 34.742,
+      "title_points": 22.0,
+      "active_months": 44,
+      "events_played": 12
+    },
+    {
+      "rank": 11,
+      "player_slug": "erizel",
+      "player_name": "Erizel",
+      "goat_score": 0.500731,
+      "prime_rating": 41.1767,
+      "elite_area": 525.2516,
+      "median_conservative": 37.1072,
+      "title_points": 12.0,
+      "active_months": 42,
+      "events_played": 9
+    },
+    {
+      "rank": 12,
+      "player_slug": "raceta",
+      "player_name": "Raceta",
+      "goat_score": 0.4964,
+      "prime_rating": 42.9832,
+      "elite_area": 259.6017,
+      "median_conservative": 40.0727,
+      "title_points": 18.0,
+      "active_months": 19,
+      "events_played": 4
+    },
+    {
+      "rank": 13,
+      "player_slug": "korniee",
+      "player_name": "Korniee",
+      "goat_score": 0.490724,
+      "prime_rating": 44.9561,
+      "elite_area": 550.2134,
+      "median_conservative": 36.3719,
+      "title_points": 5.0,
+      "active_months": 53,
+      "events_played": 15
+    },
+    {
+      "rank": 14,
+      "player_slug": "riolu",
+      "player_name": "Riolu",
+      "goat_score": 0.480999,
+      "prime_rating": 42.5212,
+      "elite_area": 221.0665,
+      "median_conservative": 42.5507,
+      "title_points": 14.0,
+      "active_months": 16,
+      "events_played": 4
+    },
+    {
+      "rank": 15,
+      "player_slug": "juliano",
+      "player_name": "Juliano",
+      "goat_score": 0.468497,
+      "prime_rating": 44.5386,
+      "elite_area": 540.4953,
+      "median_conservative": 35.6056,
+      "title_points": 1.0,
+      "active_months": 55,
+      "events_played": 14
+    },
+    {
+      "rank": 16,
+      "player_slug": "hefest",
+      "player_name": "Hefest",
+      "goat_score": 0.458987,
+      "prime_rating": 42.1016,
+      "elite_area": 341.3142,
+      "median_conservative": 34.6299,
+      "title_points": 11.0,
+      "active_months": 33,
+      "events_played": 6
+    },
+    {
+      "rank": 17,
+      "player_slug": "dexter",
+      "player_name": "DexteR",
+      "goat_score": 0.438375,
+      "prime_rating": 39.3139,
+      "elite_area": 293.9533,
+      "median_conservative": 29.2126,
+      "title_points": 16.0,
+      "active_months": 48,
+      "events_played": 12
+    },
+    {
+      "rank": 18,
+      "player_slug": "kelven",
+      "player_name": "Kelven",
+      "goat_score": 0.431367,
+      "prime_rating": 38.8802,
+      "elite_area": 300.5683,
+      "median_conservative": 38.1529,
+      "title_points": 6.0,
+      "active_months": 32,
+      "events_played": 9
+    },
+    {
+      "rank": 19,
+      "player_slug": "haskell",
+      "player_name": "HASKELL",
+      "goat_score": 0.427051,
+      "prime_rating": 37.5315,
+      "elite_area": 470.7371,
+      "median_conservative": 32.6107,
+      "title_points": 4.0,
+      "active_months": 62,
+      "events_played": 18
+    },
+    {
+      "rank": 20,
+      "player_slug": "lordquacked",
+      "player_name": "LordQuacked",
+      "goat_score": 0.423194,
+      "prime_rating": 41.2804,
+      "elite_area": 198.7518,
+      "median_conservative": 35.9118,
+      "title_points": 8.0,
+      "active_months": 17,
+      "events_played": 6
+    }
+  ],
+  "current_top10": [
+    {
+      "rank": 1,
+      "player_slug": "hobbit",
+      "player_name": "Hobbit",
+      "conservative_score": 59.7154,
+      "mu": 68.1566,
+      "sigma": 2.8137,
+      "events_played": 18,
+      "recent_events_24_months": 6,
+      "last_event_date": "2026-01-26"
+    },
+    {
+      "rank": 2,
+      "player_slug": "maniaaaac",
+      "player_name": "Maniaaaac",
+      "conservative_score": 52.7252,
+      "mu": 62.3617,
+      "sigma": 3.2122,
+      "events_played": 9,
+      "recent_events_24_months": 6,
+      "last_event_date": "2026-01-26"
+    },
+    {
+      "rank": 3,
+      "player_slug": "darkestsentinel",
+      "player_name": "DarkestSentinel",
+      "conservative_score": 52.0189,
+      "mu": 59.9669,
+      "sigma": 2.6493,
+      "events_played": 15,
+      "recent_events_24_months": 7,
+      "last_event_date": "2026-01-26"
+    },
+    {
+      "rank": 4,
+      "player_slug": "shcr",
+      "player_name": "Shcr",
+      "conservative_score": 49.9318,
+      "mu": 61.2971,
+      "sigma": 3.7884,
+      "events_played": 16,
+      "recent_events_24_months": 3,
+      "last_event_date": "2025-09-30"
+    },
+    {
+      "rank": 5,
+      "player_slug": "lordquacked",
+      "player_name": "LordQuacked",
+      "conservative_score": 48.6425,
+      "mu": 58.3741,
+      "sigma": 3.2439,
+      "events_played": 6,
+      "recent_events_24_months": 6,
+      "last_event_date": "2026-01-26"
+    },
+    {
+      "rank": 6,
+      "player_slug": "juliano",
+      "player_name": "Juliano",
+      "conservative_score": 42.1303,
+      "mu": 53.6594,
+      "sigma": 3.843,
+      "events_played": 14,
+      "recent_events_24_months": 4,
+      "last_event_date": "2025-09-30"
+    },
+    {
+      "rank": 7,
+      "player_slug": "kelven",
+      "player_name": "Kelven",
+      "conservative_score": 38.8449,
+      "mu": 49.6673,
+      "sigma": 3.6075,
+      "events_played": 9,
+      "recent_events_24_months": 5,
+      "last_event_date": "2025-09-30"
+    },
+    {
+      "rank": 8,
+      "player_slug": "r1nt3",
+      "player_name": "R1nt3",
+      "conservative_score": 38.7817,
+      "mu": 52.0349,
+      "sigma": 4.4177,
+      "events_played": 5,
+      "recent_events_24_months": 4,
+      "last_event_date": "2026-01-26"
+    },
+    {
+      "rank": 9,
+      "player_slug": "krude",
+      "player_name": "Krude",
+      "conservative_score": 36.7149,
+      "mu": 45.5297,
+      "sigma": 2.9383,
+      "events_played": 9,
+      "recent_events_24_months": 7,
+      "last_event_date": "2026-01-26"
+    },
+    {
+      "rank": 10,
+      "player_slug": "mudda",
+      "player_name": "Mudda",
+      "conservative_score": 36.53,
+      "mu": 49.1841,
+      "sigma": 4.218,
+      "events_played": 12,
+      "recent_events_24_months": 4,
+      "last_event_date": "2025-06-30"
+    }
+  ],
+  "rating_leader_timeline": [
+    {
+      "start_month": "2020-09",
+      "end_month": "2020-11",
+      "player_slug": "hefest",
+      "player_name": "Hefest",
+      "months": 3,
+      "peak_conservative": 24.4152
+    },
+    {
+      "start_month": "2020-12",
+      "end_month": "2021-02",
+      "player_slug": "raceta",
+      "player_name": "Raceta",
+      "months": 3,
+      "peak_conservative": 35.9508
+    },
+    {
+      "start_month": "2021-03",
+      "end_month": "2021-05",
+      "player_slug": "riolu",
+      "player_name": "Riolu",
+      "months": 3,
+      "peak_conservative": 42.5507
+    },
+    {
+      "start_month": "2021-06",
+      "end_month": "2022-02",
+      "player_slug": "rotaker",
+      "player_name": "RotakeR",
+      "months": 9,
+      "peak_conservative": 48.3974
+    },
+    {
+      "start_month": "2022-03",
+      "end_month": "2022-03",
+      "player_slug": "raceta",
+      "player_name": "Raceta",
+      "months": 1,
+      "peak_conservative": 46.2398
+    },
+    {
+      "start_month": "2022-04",
+      "end_month": "2022-05",
+      "player_slug": "rotaker",
+      "player_name": "RotakeR",
+      "months": 2,
+      "peak_conservative": 45.2478
+    },
+    {
+      "start_month": "2022-06",
+      "end_month": "2026-01",
+      "player_slug": "hobbit",
+      "player_name": "Hobbit",
+      "months": 44,
+      "peak_conservative": 60.1588
+    }
+  ],
+  "title_leaders_top10": [
+    {
+      "rank": 1,
+      "player_slug": "hobbit",
+      "player_name": "Hobbit",
+      "title_points": 63.0,
+      "events_played": 18
+    },
+    {
+      "rank": 2,
+      "player_slug": "shcr",
+      "player_name": "Shcr",
+      "title_points": 45.0,
+      "events_played": 16
+    },
+    {
+      "rank": 3,
+      "player_slug": "solivagantz",
+      "player_name": "SolivaganTz",
+      "title_points": 28.0,
+      "events_played": 16
+    },
+    {
+      "rank": 4,
+      "player_slug": "maniaaaac",
+      "player_name": "Maniaaaac",
+      "title_points": 25.0,
+      "events_played": 9
+    },
+    {
+      "rank": 5,
+      "player_slug": "keby",
+      "player_name": "Keby",
+      "title_points": 22.0,
+      "events_played": 12
+    },
+    {
+      "rank": 6,
+      "player_slug": "mudda",
+      "player_name": "Mudda",
+      "title_points": 21.0,
+      "events_played": 12
+    },
+    {
+      "rank": 7,
+      "player_slug": "zodiark",
+      "player_name": "Zodiark",
+      "title_points": 18.0,
+      "events_played": 15
+    },
+    {
+      "rank": 8,
+      "player_slug": "raceta",
+      "player_name": "Raceta",
+      "title_points": 18.0,
+      "events_played": 4
+    },
+    {
+      "rank": 9,
+      "player_slug": "dexter",
+      "player_name": "DexteR",
+      "title_points": 16.0,
+      "events_played": 12
+    },
+    {
+      "rank": 10,
+      "player_slug": "riolu",
+      "player_name": "Riolu",
+      "title_points": 14.0,
+      "events_played": 4
+    }
+  ]
+}

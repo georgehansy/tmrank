@@ -1,0 +1,103 @@
+defaults:
+  include: true
+  weight: 0.75
+  tags: []
+
+rules:
+  - name: "Exclude Trackmania seasonal campaign events"
+    match:
+      series: "Trackmania_Seasonal_Campaign"
+    include: false
+    tags:
+      - campaign
+
+  - name: "Exclude Icy campaign events"
+    match:
+      series: "Icy_Campaign"
+    include: false
+    tags:
+      - campaign
+
+  - name: "Exclude Kacky events"
+    match:
+      series: "Kackiest_Kacky"
+    include: false
+    tags:
+      - alt-discipline
+
+  - name: "Exclude United Masters events"
+    match:
+      series: "United_Masters"
+    include: false
+    tags:
+      - alt-discipline
+      
+  - name: "Exclude Formula League events"
+    match:
+      series: "Trackmania_Formula_League"
+    include: false
+    tags:
+      - alt-discipline
+
+  - name: "Exclude Formula E Championship events"
+    match:
+      series: "Trackmania_Formula_E_Championship"
+    include: false
+    tags:
+      - alt-discipline
+
+  - name: "Exclude Pittsburgh Knights All-Rounder Circuit weekly events"
+    match:
+      page_name_regex: "^Pittsburgh_Knights/All-Rounder_Circuit/Week_[1-6]$"
+    include: false
+    tags:
+      - alt-discipline
+
+  - name: "Downweight Tier 2 events"
+    match:
+      tier: 2
+    weight: 0.5
+    tags:
+      - tier-2
+
+  - name: "Downweight qualifiers"
+    match:
+      name_regex: "(?i)\\bqualif(?:ier|iers|ication|ications)\\b"
+    weight: 0.5
+    tags:
+      - qualifier
+
+  - name: "Boost world cup events"
+    match:
+      page_name_regex: "^(Electronic_Sports_World_Cup/(2006|2007|2008|2010|2011|2012|2013|2014|2015/Paris_Games_Week)|Maniaplanet_World_Cup/2016|Trackmania_World_Championship/2018|Trackmania_Grand_League/World_Cup/(2020-2021|2022)|Trackmania_World_Tour/(2023/World_Championship|2024/World_Cup|2025/World_Cup)|Esports_World_Cup/2026)$"
+    weight: 1
+    tags:
+      - world-cup
+
+  - name: "Boost Historic Majors"
+    match:
+      page_name_regex: "^(Verizon_Playlinc|Electronic_Sports_World_Cup/2008/Masters_of_Paris|World_Cyber_Games/(2009|2010))$"
+    weight: 1
+    tags:
+      - major
+
+  - name: "Boost ZrT Cups"
+    match:
+      page_name_regex: "^ZeratoR/Trackmania_Cup/(1|2|3|4|2017|2019|2020|2021|2022)$"
+    weight: 1
+    tags:
+      - major
+
+  - name: "Boost Trackmania Grand League Finals"
+    match:
+      page_name_regex: "^Trackmania_Grand_League/(Beta_Season|Winter_2020|Fall_2020/Playoffs|Winter_2021/Final|Fall_2021/Final|Spring_2022/Final)$"
+    weight: 1
+    tags:
+      - major
+
+  - name: "Boost Standalone Modern Majors"
+    match:
+      page_name_regex: "^(Arctic_Gaming_Experience/2022|Ascension_Tournament/2023)$"
+    weight: 1
+    tags:
+      - major

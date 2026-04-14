@@ -1,0 +1,15 @@
+.pytest_cache/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+.mypy_cache/
+.coverage
+htmlcov/
+artifacts/
+.env
+.env.*
+.codex_share*.html
+src/*.egg-info/

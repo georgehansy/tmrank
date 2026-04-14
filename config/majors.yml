@@ -1,0 +1,37 @@
+placement_points:
+  - placement_low: 1
+    placement_high: 1
+    points: 10.0
+  - placement_low: 2
+    placement_high: 2
+    points: 4.0
+  - placement_low: 3
+    placement_high: 3
+    points: 3.0
+  - placement_low: 4
+    placement_high: 4
+    points: 2.0
+  - placement_low: 5
+    placement_high: 8
+    points: 1.0
+
+rules:
+  - name: "World Cups"
+    match:
+      page_name_regex: "^(Electronic_Sports_World_Cup/|Maniaplanet_World_Cup/2016$|Trackmania_World_Championship/2018$|Trackmania_Grand_League/World_Cup/|Trackmania_World_Tour/.*/World_(Championship|Cup)$|Esports_World_Cup/2026$)"
+
+  - name: "Historic Majors"
+    match:
+      page_name_regex: "^(Verizon_Playlinc|Electronic_Sports_World_Cup/2008/Masters_of_Paris|World_Cyber_Games/(2009|2010))$"
+
+  - name: "ZrT Cups"
+    match:
+      page_name_regex: "^ZeratoR/Trackmania_Cup/(1|2|3|4|2017|2019|2020|2021|2022)$"
+
+  - name: "Trackmania Grand League Finals"
+    match:
+      page_name_regex: "^Trackmania_Grand_League/(Beta_Season|Winter_2020|Fall_2020/Playoffs|Winter_2021/Final|Fall_2021/Final|Spring_2022/Final)$"
+
+  - name: "Standalone Modern Majors"
+    match:
+      page_name_regex: "^(Arctic_Gaming_Experience/2022|Ascension_Tournament/2023)$"

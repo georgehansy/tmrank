@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tmrank</title>
+    <meta
+      name="description"
+      content="Trackmania rankings and GOAT views built from curated Liquipedia event history."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="./assets/styles.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="hero">
+        <div class="hero__eyebrow">Trackmania rankings project</div>
+        <div class="hero__grid">
+          <div class="hero__main">
+            <h1>tmrank</h1>
+            <p class="hero__lede">
+              Curated current-strength and GOAT rankings built from Liquipedia event history, published as an
+              independent community project.
+            </p>
+          </div>
+          <div class="hero__meta card">
+            <div class="stat">
+              <span class="stat__label">Last updated</span>
+              <span class="stat__value" id="hero-updated">Loading...</span>
+            </div>
+            <p class="hero__method">
+              GOAT combines prime rating, elite area, median conservative rating, and major title points.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--accent is-hidden" id="repo-link" href="#" target="_blank" rel="noreferrer">GitHub Repo</a>
+              <a class="button" href="./methodology.html">Methodology</a>
+              <a class="button" href="./legal.html">Attribution &amp; Legal</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="section">
+          <div class="section__header">
+            <div>
+              <p class="section__eyebrow">Hall of fame</p>
+              <h2>GOAT Top 20</h2>
+            </div>
+            <p class="section__copy">
+              The default esports profile combines sustained prime level, accumulated elite area, median monthly
+              strength, and major title points.
+            </p>
+          </div>
+          <div class="card table-card">
+            <div id="goat-table"></div>
+          </div>
+        </section>
+
+        <section class="section section--split">
+          <div>
+            <div class="section__header">
+              <div>
+                <p class="section__eyebrow">Right now</p>
+                <h2>Current Top 10</h2>
+              </div>
+            </div>
+            <div class="card table-card">
+              <div id="current-table"></div>
+            </div>
+          </div>
+          <div>
+            <div class="section__header">
+              <div>
+                <p class="section__eyebrow">Major résumé</p>
+                <h2>Major Titles Leaders</h2>
+              </div>
+            </div>
+            <div class="card table-card">
+              <div id="titles-table"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__header">
+            <div>
+              <p class="section__eyebrow">Era leadership</p>
+              <h2>Rating Leader Timeline</h2>
+            </div>
+            <p class="section__copy">
+              Monthly #1 rating reigns, grouped into continuous eras and shown as a compact ribbon with
+              width-proportional segments.
+            </p>
+          </div>
+          <div class="card timeline-card">
+            <div id="timeline"></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__header">
+            <div>
+              <p class="section__eyebrow">Other lenses</p>
+              <h2>Alternate Profiles</h2>
+            </div>
+            <p class="section__copy">
+              Compact snapshots from non-default ranking profiles. New profiles appear here automatically when they
+              are exported.
+            </p>
+          </div>
+          <div class="profile-grid" id="profile-cards"></div>
+        </section>
+      </main>
+
+      <footer class="site-footer card">
+        <div>
+          <strong>Data sourced from Liquipedia.</strong>
+          <p class="site-footer__copy">
+            This site shows independent derived rankings based on curated Liquipedia event history.
+          </p>
+        </div>
+        <div class="site-footer__links">
+          <a href="https://liquipedia.net/api-terms-of-use" target="_blank" rel="noreferrer">Liquipedia API terms</a>
+          <a href="./legal.html">License &amp; notices</a>
+          <span id="footer-updated">Updated: loading...</span>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./assets/app.js"></script>
+  </body>
+</html>

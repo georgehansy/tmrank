@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tmrank methodology</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="./assets/styles.css">
+  </head>
+  <body class="subpage-body">
+    <main class="subpage">
+      <a class="subpage__back" href="./index.html">Back to rankings</a>
+      <p class="section__eyebrow">Methodology</p>
+      <h1>How tmrank works</h1>
+      <div class="card prose">
+        <p>
+          tmrank builds rankings from curated Trackmania event placements stored locally after syncing Liquipedia
+          tournament data. The project is intentionally opinionated: event inclusion, profile definitions, weighting,
+          title logic, and GOAT components are all configured locally.
+        </p>
+        <h2>Current ranking</h2>
+        <p>
+          Current ranking is based on conservative rating from the local skill model. Inactive players become more
+          uncertain over time, which lowers their current conservative score until they compete again.
+        </p>
+        <h2>GOAT ranking</h2>
+        <p>GOAT ranking currently combines four components with plain min-max normalization:</p>
+        <ul>
+          <li><strong>Prime rating:</strong> best rolling prime window average, subject to a minimum active-month threshold.</li>
+          <li><strong>Elite area:</strong> accumulated monthly strength above the configured elite threshold.</li>
+          <li><strong>Median conservative:</strong> median monthly conservative rating across active months.</li>
+          <li><strong>Title points:</strong> major-event placement points using the configured majors list.</li>
+        </ul>
+        <h2>Profiles</h2>
+        <p>
+          Profiles are isolated config bundles under <code>config/profiles/&lt;name&gt;/</code>. A profile can override
+          event curation, rating settings, majors, or aliases without changing the default esports profile.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

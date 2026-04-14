@@ -1,0 +1,19 @@
+initial_mu: 25.0
+initial_sigma: 8.333
+monthly_inactivity_drift: 0.3
+conservative_multiplier: 3.0
+max_effective_field_size: 128
+field_size_dampening_start: 4
+field_size_dampening_strength: 0.4
+goat_activity_window_months: 6
+goat_prime_window_months: 12
+goat_prime_min_active_months: 6
+goat_elite_threshold: 25.0
+current_eligibility:
+  min_events_played: 5
+  max_months_since_last_event: 12
+goat_weights:
+  prime_rating: 0.25
+  elite_area: 0.25
+  median_conservative: 0.25
+  title_points: 0.25

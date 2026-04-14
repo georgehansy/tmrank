@@ -1,0 +1,25 @@
+players:
+  - canonical_slug: "carljr"
+    display_name: "Carl Jr."
+    source_ids: []
+    exact_names:
+      - "Carl Jr"
+      - "Carl Jr."
+      - "CarlJr"
+      - "Carl_Jr."
+
+  - canonical_slug: "bobo247"
+    display_name: "Bobo247"
+    source_ids: []
+    exact_names:
+      - "Bobo247"
+      - "Bobo.247"
+
+  - canonical_slug: "mikmos"
+    display_name: "Mikmos"
+    source_ids: []
+    exact_names:
+      - "Mikmos"
+      - "Mik Mos"
+
+teams: []

@@ -6,6 +6,41 @@ async function loadJson(path) {
   return response.json();
 }
 
+function isCompactViewport() {
+  return window.matchMedia("(max-width: 640px)").matches;
+}
+
+let activeTitleTooltipTrigger = null;
+let titleTooltipGlobalListenersBound = false;
+let titleTooltipCloseTimer = null;
+let activeGoatPlayerTooltipTrigger = null;
+let goatPlayerTooltipGlobalListenersBound = false;
+let goatPlayerTooltipCloseTimer = null;
+
+function formatNumber(value, fractionDigits = 2) {
+  const numericValue = Number(value);
+  if (!Number.isFinite(numericValue)) {
+    return "—";
+  }
+
+  return new Intl.NumberFormat("en", {
+    minimumFractionDigits: fractionDigits,
+    maximumFractionDigits: fractionDigits,
+  }).format(numericValue);
+}
+
+function formatInteger(value) {
+  const numericValue = Number(value);
+  if (!Number.isFinite(numericValue)) {
+    return "—";
+  }
+
+  return new Intl.NumberFormat("en", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(numericValue);
+}
+
 function formatDate(value) {
   if (!value) return "—";
   const date = new Date(value);
@@ -14,6 +49,17 @@ function formatDate(value) {
     year: "numeric",
     month: "short",
     day: "numeric",
+  }).format(date);
+}
+
+function formatMonthYear(value) {
+  if (!value) return "—";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return new Intl.DateTimeFormat("en", {
+    year: "numeric",
+    month: "short",
+    timeZone: "UTC",
   }).format(date);
 }
 
@@ -91,6 +137,65 @@ function hueForName(name) {
   return (hash + 360) % 360;
 }
 
+function formatPlacement(value) {
+  const placement = Number(value);
+  if (!Number.isFinite(placement)) return "—";
+  if (placement % 100 >= 11 && placement % 100 <= 13) return `${placement}th`;
+  if (placement % 10 === 1) return `${placement}st`;
+  if (placement % 10 === 2) return `${placement}nd`;
+  if (placement % 10 === 3) return `${placement}rd`;
+  return `${placement}th`;
+}
+
+function formatPlacementRange(placementLow, placementHigh) {
+  const low = Number(placementLow);
+  const high = Number(placementHigh);
+  if (!Number.isFinite(low)) return "—";
+  if (!Number.isFinite(high) || low === high) {
+    return formatPlacement(low);
+  }
+  return `${formatPlacement(low)}-${formatPlacement(high)}`;
+}
+
+function formatBestWorldCupResult(result) {
+  if (!result) return "—";
+  const label = formatPlacementRange(result.placement_low, result.placement_high);
+  const count = Number(result.count);
+  if (Number.isFinite(count) && count > 1) {
+    return `${label} (${count}x)`;
+  }
+  return label;
+}
+
+function formatCareerSpan(firstEventDate, lastEventDate) {
+  if (!firstEventDate || !lastEventDate) return "—";
+  const firstDate = new Date(firstEventDate);
+  const lastDate = new Date(lastEventDate);
+  if (Number.isNaN(firstDate.getTime()) || Number.isNaN(lastDate.getTime())) return "—";
+
+  let months =
+    (lastDate.getUTCFullYear() - firstDate.getUTCFullYear()) * 12 +
+    (lastDate.getUTCMonth() - firstDate.getUTCMonth());
+  months = Math.max(0, months);
+  if (months === 0) return "same month";
+
+  const years = Math.floor(months / 12);
+  const remainingMonths = months % 12;
+  if (years > 0 && remainingMonths > 0) {
+    return `${years}y ${remainingMonths}m`;
+  }
+  if (years > 0) {
+    return `${years}y`;
+  }
+  return `${remainingMonths}m`;
+}
+
+function formatMajorEventName(value) {
+  return String(value)
+    .replace(/^Trackmania Grand League\b/, "TMGL")
+    .replace(/^Trackmania World Tour\b/, "TMWT");
+}
+
 function ensureTimelineFloatingTooltip() {
   let tooltip = document.getElementById("timeline-floating-tooltip");
   if (tooltip) return tooltip;
@@ -154,7 +259,327 @@ function bindTimelineTooltips(root) {
   window.addEventListener("resize", closeTooltip);
 }
 
-function tableHtml(columns, rows) {
+function ensureTitleFloatingTooltip() {
+  let tooltip = document.getElementById("title-floating-tooltip");
+  if (tooltip) return tooltip;
+
+  tooltip = document.createElement("div");
+  tooltip.id = "title-floating-tooltip";
+  tooltip.className = "title-floating-tooltip";
+  tooltip.style.display = "none";
+  document.body.appendChild(tooltip);
+  return tooltip;
+}
+
+function ensureGoatPlayerFloatingTooltip() {
+  let tooltip = document.getElementById("goat-player-floating-tooltip");
+  if (tooltip) return tooltip;
+
+  tooltip = document.createElement("div");
+  tooltip.id = "goat-player-floating-tooltip";
+  tooltip.className = "title-floating-tooltip goat-player-floating-tooltip";
+  tooltip.style.display = "none";
+  document.body.appendChild(tooltip);
+  return tooltip;
+}
+
+function positionTitleFloatingTooltip(trigger, tooltip) {
+  const rect = trigger.getBoundingClientRect();
+  const tooltipRect = tooltip.getBoundingClientRect();
+  const offset = 8;
+  const left = Math.min(
+    window.innerWidth - tooltipRect.width - 16,
+    Math.max(16, rect.left + rect.width / 2 - tooltipRect.width / 2)
+  );
+  const topAbove = rect.top - tooltipRect.height - offset;
+  const canPlaceAbove = topAbove >= 16;
+  const top = canPlaceAbove
+    ? topAbove
+    : Math.min(window.innerHeight - tooltipRect.height - 16, rect.bottom + offset);
+
+  tooltip.dataset.position = canPlaceAbove ? "above" : "below";
+  tooltip.style.left = `${left}px`;
+  tooltip.style.top = `${top}px`;
+}
+
+function positionGoatPlayerFloatingTooltip(trigger, tooltip) {
+  positionTitleFloatingTooltip(trigger, tooltip);
+}
+
+function bindTitleTooltips(root) {
+  const tooltip = ensureTitleFloatingTooltip();
+  const triggers = root.querySelectorAll("[data-major-results-trigger]");
+  const isTooltipSystemTarget = (target) =>
+    target instanceof Element &&
+    (target.closest("[data-major-results-trigger]") || target.closest(".title-floating-tooltip"));
+
+  const cancelScheduledClose = () => {
+    if (titleTooltipCloseTimer !== null) {
+      window.clearTimeout(titleTooltipCloseTimer);
+      titleTooltipCloseTimer = null;
+    }
+  };
+
+  const closeTooltip = () => {
+    cancelScheduledClose();
+    tooltip.style.display = "none";
+    tooltip.innerHTML = "";
+    delete tooltip.dataset.position;
+    if (activeTitleTooltipTrigger) {
+      activeTitleTooltipTrigger.dataset.open = "false";
+    }
+    activeTitleTooltipTrigger = null;
+  };
+
+  const scheduleCloseTooltip = () => {
+    cancelScheduledClose();
+    titleTooltipCloseTimer = window.setTimeout(() => {
+      const hoveredTrigger = activeTitleTooltipTrigger?.matches(":hover") ?? false;
+      const hoveredTooltip = tooltip.matches(":hover");
+      if (hoveredTrigger || hoveredTooltip) {
+        return;
+      }
+      closeTooltip();
+    }, 260);
+  };
+
+  const openTooltip = (trigger) => {
+    cancelScheduledClose();
+    const rawResults = trigger.dataset.majorResults;
+    if (!rawResults) return;
+    const results = JSON.parse(decodeURIComponent(rawResults));
+    if (!results.length) return;
+
+    activeTitleTooltipTrigger = trigger;
+    trigger.dataset.open = "true";
+    tooltip.innerHTML = `
+      <div class="title-floating-tooltip__eyebrow">Major podiums</div>
+      <div class="title-floating-tooltip__header">
+        <div class="title-floating-tooltip__player">${escapeHtml(trigger.dataset.playerName ?? "")}</div>
+      </div>
+      <div class="title-floating-tooltip__list">
+        ${results
+          .map((result, index) => {
+            const previous = index > 0 ? results[index - 1] : null;
+            const showDivider = previous && previous.is_world_cup && !result.is_world_cup;
+            return `
+              <div class="title-floating-tooltip__item${showDivider ? " title-floating-tooltip__item--group-start" : ""}">
+                <span class="title-floating-tooltip__badge title-floating-tooltip__badge--${result.placement}">${escapeHtml(
+                  formatPlacement(result.placement)
+                )}</span>
+                <div class="title-floating-tooltip__item-copy">
+                  <div class="title-floating-tooltip__item-name">${escapeHtml(formatMajorEventName(result.event_name))}</div>
+                  <div class="title-floating-tooltip__item-meta">
+                    ${result.is_world_cup ? '<span class="title-floating-tooltip__tag">World Cup</span>' : ""}
+                  </div>
+                </div>
+              </div>
+            `
+          })
+          .join("")}
+      </div>
+    `;
+    tooltip.style.display = "block";
+    positionTitleFloatingTooltip(trigger, tooltip);
+  };
+
+  for (const trigger of triggers) {
+    const toggleTooltip = (event) => {
+      event.preventDefault();
+      if (activeTitleTooltipTrigger === trigger) {
+        closeTooltip();
+        return;
+      }
+      openTooltip(trigger);
+    };
+
+    if (window.matchMedia("(hover: hover)").matches) {
+      trigger.addEventListener("pointerenter", () => openTooltip(trigger));
+      trigger.addEventListener("pointerleave", (event) => {
+        if (activeTitleTooltipTrigger === trigger) {
+          if (isTooltipSystemTarget(event.relatedTarget)) {
+            cancelScheduledClose();
+            return;
+          }
+          scheduleCloseTooltip();
+        }
+      });
+    }
+
+    trigger.addEventListener("focus", () => openTooltip(trigger));
+    trigger.addEventListener("blur", (event) => {
+      if (activeTitleTooltipTrigger === trigger) {
+        if (isTooltipSystemTarget(event.relatedTarget)) {
+          cancelScheduledClose();
+          return;
+        }
+        scheduleCloseTooltip();
+      }
+    });
+    trigger.addEventListener("click", toggleTooltip);
+  }
+
+  if (!titleTooltipGlobalListenersBound) {
+    tooltip.addEventListener("pointerenter", cancelScheduledClose);
+    tooltip.addEventListener("pointerleave", (event) => {
+      if (isTooltipSystemTarget(event.relatedTarget)) {
+        cancelScheduledClose();
+        return;
+      }
+      scheduleCloseTooltip();
+    });
+    document.addEventListener("pointerdown", (event) => {
+      if (!activeTitleTooltipTrigger) return;
+      const target = event.target;
+      if (target instanceof Element && target.closest("[data-major-results-trigger]")) return;
+      if (target instanceof Element && target.closest(".title-floating-tooltip")) return;
+      closeTooltip();
+    });
+    window.addEventListener("scroll", closeTooltip, { passive: true });
+    window.addEventListener("resize", closeTooltip);
+    titleTooltipGlobalListenersBound = true;
+  }
+}
+
+function bindGoatPlayerTooltips(root) {
+  const tooltip = ensureGoatPlayerFloatingTooltip();
+  const triggers = root.querySelectorAll("[data-goat-player-trigger]");
+  const isTooltipSystemTarget = (target) =>
+    target instanceof Element &&
+    (target.closest("[data-goat-player-trigger]") || target.closest(".goat-player-floating-tooltip"));
+
+  const cancelScheduledClose = () => {
+    if (goatPlayerTooltipCloseTimer !== null) {
+      window.clearTimeout(goatPlayerTooltipCloseTimer);
+      goatPlayerTooltipCloseTimer = null;
+    }
+  };
+
+  const closeTooltip = () => {
+    cancelScheduledClose();
+    tooltip.style.display = "none";
+    tooltip.innerHTML = "";
+    delete tooltip.dataset.position;
+    if (activeGoatPlayerTooltipTrigger) {
+      activeGoatPlayerTooltipTrigger.dataset.open = "false";
+    }
+    activeGoatPlayerTooltipTrigger = null;
+  };
+
+  const scheduleCloseTooltip = () => {
+    cancelScheduledClose();
+    goatPlayerTooltipCloseTimer = window.setTimeout(() => {
+      const hoveredTrigger = activeGoatPlayerTooltipTrigger?.matches(":hover") ?? false;
+      const hoveredTooltip = tooltip.matches(":hover");
+      if (hoveredTrigger || hoveredTooltip) {
+        return;
+      }
+      closeTooltip();
+    }, 180);
+  };
+
+  const openTooltip = (trigger) => {
+    cancelScheduledClose();
+    const rawInfo = trigger.dataset.goatPlayerInfo;
+    if (!rawInfo) return;
+    const info = JSON.parse(decodeURIComponent(rawInfo));
+
+    if (activeGoatPlayerTooltipTrigger && activeGoatPlayerTooltipTrigger !== trigger) {
+      activeGoatPlayerTooltipTrigger.dataset.open = "false";
+    }
+    activeGoatPlayerTooltipTrigger = trigger;
+    trigger.dataset.open = "true";
+    tooltip.innerHTML = `
+      <div class="title-floating-tooltip__eyebrow">Career snapshot</div>
+      <div class="title-floating-tooltip__header">
+        <div class="title-floating-tooltip__player">${escapeHtml(trigger.dataset.playerName ?? "")}</div>
+      </div>
+      <dl class="goat-player-tooltip__stats">
+        <div class="goat-player-tooltip__stat">
+          <dt>Events played</dt>
+          <dd>${formatInteger(info.events_played)}</dd>
+        </div>
+        <div class="goat-player-tooltip__stat">
+          <dt>Best World Cup</dt>
+          <dd>${escapeHtml(formatBestWorldCupResult(info.best_world_cup_result))}</dd>
+        </div>
+        <div class="goat-player-tooltip__stat">
+          <dt>First event</dt>
+          <dd>${escapeHtml(formatMonthYear(info.first_event_date))}</dd>
+        </div>
+        <div class="goat-player-tooltip__stat">
+          <dt>Last event</dt>
+          <dd>${escapeHtml(formatMonthYear(info.last_event_date))}</dd>
+        </div>
+        <div class="goat-player-tooltip__stat goat-player-tooltip__stat--wide">
+          <dt>Career span</dt>
+          <dd>${escapeHtml(formatCareerSpan(info.first_event_date, info.last_event_date))}</dd>
+        </div>
+      </dl>
+    `;
+    tooltip.style.display = "block";
+    positionGoatPlayerFloatingTooltip(trigger, tooltip);
+  };
+
+  for (const trigger of triggers) {
+    const toggleTooltip = (event) => {
+      event.preventDefault();
+      if (activeGoatPlayerTooltipTrigger === trigger) {
+        closeTooltip();
+        return;
+      }
+      openTooltip(trigger);
+    };
+
+    if (window.matchMedia("(hover: hover)").matches) {
+      trigger.addEventListener("pointerenter", () => openTooltip(trigger));
+      trigger.addEventListener("pointerleave", (event) => {
+        if (activeGoatPlayerTooltipTrigger === trigger) {
+          if (isTooltipSystemTarget(event.relatedTarget)) {
+            cancelScheduledClose();
+            return;
+          }
+          scheduleCloseTooltip();
+        }
+      });
+    }
+
+    trigger.addEventListener("focus", () => openTooltip(trigger));
+    trigger.addEventListener("blur", (event) => {
+      if (activeGoatPlayerTooltipTrigger === trigger) {
+        if (isTooltipSystemTarget(event.relatedTarget)) {
+          cancelScheduledClose();
+          return;
+        }
+        scheduleCloseTooltip();
+      }
+    });
+    trigger.addEventListener("click", toggleTooltip);
+  }
+
+  if (!goatPlayerTooltipGlobalListenersBound) {
+    tooltip.addEventListener("pointerenter", cancelScheduledClose);
+    tooltip.addEventListener("pointerleave", (event) => {
+      if (isTooltipSystemTarget(event.relatedTarget)) {
+        cancelScheduledClose();
+        return;
+      }
+      scheduleCloseTooltip();
+    });
+    document.addEventListener("pointerdown", (event) => {
+      if (!activeGoatPlayerTooltipTrigger) return;
+      const target = event.target;
+      if (target instanceof Element && target.closest("[data-goat-player-trigger]")) return;
+      if (target instanceof Element && target.closest(".goat-player-floating-tooltip")) return;
+      closeTooltip();
+    });
+    window.addEventListener("scroll", closeTooltip, { passive: true });
+    window.addEventListener("resize", closeTooltip);
+    goatPlayerTooltipGlobalListenersBound = true;
+  }
+}
+
+function tableHtml(columns, rows, options = {}) {
   const header = columns.map((column) => `<th>${escapeHtml(column.label)}</th>`).join("");
   const body = rows
     .map((row) => {
@@ -164,40 +589,202 @@ function tableHtml(columns, rows) {
       return `<tr>${cells}</tr>`;
     })
     .join("");
-  return `<table><thead><tr>${header}</tr></thead><tbody>${body}</tbody></table>`;
+  return `
+    <div class="table-scroll">
+      <table class="data-table${options.tableClass ? ` ${options.tableClass}` : ""}">
+        <thead><tr>${header}</tr></thead>
+        <tbody>${body}</tbody>
+      </table>
+    </div>
+  `;
+}
+
+function goatMobileListHtml(rows) {
+  return `
+    <div class="goat-mobile-list">
+      ${rows
+        .map(
+          (row) => `
+            <article class="goat-mobile-card">
+              <div class="goat-mobile-card__header">
+                <div class="goat-mobile-card__identity">
+                  <span class="rank-pill">${row.rank}</span>
+                  <div>
+                    <div class="goat-mobile-card__name">${goatPlayerCell(row, { mobile: true })}</div>
+                    <div class="goat-mobile-card__label">GOAT score</div>
+                  </div>
+                </div>
+                <div class="goat-mobile-card__score">${formatNumber(row.goat_score, 3)}</div>
+              </div>
+              <div class="goat-mobile-card__metrics">
+                <div class="goat-mobile-metric">
+                  <span class="goat-mobile-metric__label">Prime</span>
+                  <span class="goat-mobile-metric__value">${formatNumber(row.prime_rating)}</span>
+                </div>
+                <div class="goat-mobile-metric">
+                  <span class="goat-mobile-metric__label">Elite Area</span>
+                  <span class="goat-mobile-metric__value">${formatNumber(row.elite_area)}</span>
+                </div>
+                <div class="goat-mobile-metric">
+                  <span class="goat-mobile-metric__label">Median</span>
+                  <span class="goat-mobile-metric__value">${formatNumber(row.median_conservative)}</span>
+                </div>
+                <div class="goat-mobile-metric">
+                  <span class="goat-mobile-metric__label">Title Points</span>
+                  <span class="goat-mobile-metric__value">${formatInteger(row.title_points)}</span>
+                </div>
+              </div>
+            </article>
+          `
+        )
+        .join("")}
+    </div>
+  `;
+}
+
+function goatRows(payload) {
+  return (payload.goat_top20 ?? payload.goat_top25 ?? []).slice(0, 20);
+}
+
+function goatPlayerCell(row, options = {}) {
+  const hasTooltip =
+    row.events_played != null &&
+    (row.first_event_date || row.last_event_date || row.best_world_cup_result);
+  if (!hasTooltip) {
+    return escapeHtml(row.player_name);
+  }
+
+  const info = encodeURIComponent(
+    JSON.stringify({
+      events_played: row.events_played,
+      first_event_date: row.first_event_date,
+      last_event_date: row.last_event_date,
+      best_world_cup_result: row.best_world_cup_result,
+    })
+  );
+  return `
+    <button
+      type="button"
+      class="goat-player-trigger${options.mobile ? " goat-player-trigger--mobile" : ""}"
+      data-goat-player-trigger
+      data-open="false"
+      data-player-name="${escapeHtml(row.player_name)}"
+      data-goat-player-info="${info}"
+      aria-label="${escapeHtml(`${row.player_name} career snapshot`)}"
+    >
+      ${escapeHtml(row.player_name)}
+    </button>
+  `;
+}
+
+function currentListHtml(rows) {
+  return `
+    <div class="current-list">
+      <div class="current-list__header" aria-hidden="true">
+        <span>Rank</span>
+        <span>Player</span>
+        <span>Rating</span>
+        <span class="current-list__events-heading"><span>Events</span><span>(last 24m)</span></span>
+      </div>
+      ${rows
+        .map(
+          (row) => `
+            <article class="current-list__row">
+              <div class="current-list__rank">
+                <span class="rank-pill">${row.rank}</span>
+              </div>
+              <div class="current-list__player">${escapeHtml(row.player_name)}</div>
+              <div class="current-list__rating">
+                <span class="current-list__mobile-label">Rating</span>
+                <strong>${formatNumber(row.conservative_score)}</strong>
+              </div>
+              <div class="current-list__events">
+                <span class="current-list__mobile-label">Events (last 24m)</span>
+                <strong>${row.recent_events_24_months ?? row.events_played}</strong>
+              </div>
+            </article>
+          `
+        )
+        .join("")}
+    </div>
+  `;
 }
 
 function renderGoatTable(payload) {
+  const rows = goatRows(payload);
+  const root = document.getElementById("goat-table");
+  if (isCompactViewport()) {
+    root.innerHTML = goatMobileListHtml(rows);
+    bindGoatPlayerTooltips(root);
+    return;
+  }
+
   const columns = [
     { label: "Rank", render: (row) => `<span class="rank-pill">${row.rank}</span>` },
-    { label: "Player", render: (row) => escapeHtml(row.player_name) },
-    { label: "GOAT", render: (row) => `<span class="metric-strong">${row.goat_score.toFixed(4)}</span>` },
-    { label: "Prime", render: (row) => row.prime_rating.toFixed(4) },
-    { label: "Elite Area", render: (row) => row.elite_area.toFixed(1) },
-    { label: "Median", render: (row) => row.median_conservative.toFixed(4) },
-    { label: "Titles", render: (row) => row.title_points.toFixed(1) },
+    { label: "Player", render: (row) => goatPlayerCell(row) },
+    { label: "GOAT", render: (row) => `<span class="metric-strong">${formatNumber(row.goat_score, 3)}</span>` },
+    { label: "Prime", render: (row) => formatNumber(row.prime_rating) },
+    { label: "Elite Area", render: (row) => formatNumber(row.elite_area) },
+    { label: "Median", render: (row) => formatNumber(row.median_conservative) },
+    { label: "Title Points", render: (row) => formatInteger(row.title_points) },
   ];
-  document.getElementById("goat-table").innerHTML = tableHtml(columns, payload.goat_top20);
+  root.innerHTML = tableHtml(columns, rows, { tableClass: "data-table--goat" });
+  bindGoatPlayerTooltips(root);
 }
 
 function renderCurrentTable(payload) {
-  const columns = [
-    { label: "Rank", render: (row) => `<span class="rank-pill">${row.rank}</span>` },
-    { label: "Player", render: (row) => escapeHtml(row.player_name) },
-    { label: "Rating", render: (row) => `<span class="metric-strong">${row.conservative_score.toFixed(4)}</span>` },
-    { label: "Events (24m)", render: (row) => String(row.recent_events_24_months ?? row.events_played) },
-  ];
-  document.getElementById("current-table").innerHTML = tableHtml(columns, payload.current_top10);
+  document.getElementById("current-table").innerHTML = currentListHtml(payload.current_top10);
+}
+
+function titlePointsCell(row) {
+  return `<strong class="metric-strong">${formatInteger(row.title_points)}</strong>`;
+}
+
+function titleLeadersListHtml(rows) {
+  return `
+    <div class="current-list current-list--titles">
+      <div class="current-list__header" aria-hidden="true">
+        <span>Rank</span>
+        <span>Player</span>
+        <span>Title Points</span>
+        <span>Events</span>
+      </div>
+      ${rows
+        .map((row) => {
+          const hasPodiums = Boolean(row.major_podium_results?.length);
+          const tooltipLabel = `${row.player_name} major podium results`;
+          return `
+            <article
+              class="current-list__row${hasPodiums ? " current-list__row--interactive" : ""}"
+              ${hasPodiums ? 'data-major-results-trigger data-open="false" tabindex="0" role="button"' : ""}
+              ${hasPodiums ? `data-player-name="${escapeHtml(row.player_name)}"` : ""}
+              ${hasPodiums ? `data-major-results="${encodeURIComponent(JSON.stringify(row.major_podium_results))}"` : ""}
+              ${hasPodiums ? `aria-label="${escapeHtml(tooltipLabel)}"` : ""}
+            >
+              <div class="current-list__rank">
+                <span class="rank-pill">${row.rank}</span>
+              </div>
+              <div class="current-list__player">${escapeHtml(row.player_name)}</div>
+              <div class="current-list__rating">
+                <span class="current-list__mobile-label">Title Points</span>
+                ${titlePointsCell(row)}
+              </div>
+              <div class="current-list__events">
+                <span class="current-list__mobile-label">Events</span>
+                <strong>${row.events_played}</strong>
+              </div>
+            </article>
+          `;
+        })
+        .join("")}
+    </div>
+  `;
 }
 
 function renderTitlesTable(payload) {
-  const columns = [
-    { label: "Rank", render: (row) => `<span class="rank-pill">${row.rank}</span>` },
-    { label: "Player", render: (row) => escapeHtml(row.player_name) },
-    { label: "Title Points", render: (row) => `<span class="metric-strong">${row.title_points.toFixed(1)}</span>` },
-    { label: "Events", render: (row) => String(row.events_played) },
-  ];
-  document.getElementById("titles-table").innerHTML = tableHtml(columns, payload.title_leaders_top10);
+  const root = document.getElementById("titles-table");
+  root.innerHTML = titleLeadersListHtml(payload.title_leaders_top10);
+  bindTitleTooltips(root);
 }
 
 function buildTimelineSummary(rows) {
@@ -285,7 +872,7 @@ function renderTimeline(payload) {
         ${axisLabels
           .map(
             (label) => `
-              <div class="timeline-axis__tick" style="left:${label.position}%">
+              <div class="timeline-axis__tick${label.position <= 0 ? " timeline-axis__tick--start" : ""}${label.position >= 100 ? " timeline-axis__tick--end" : ""}" style="left:${label.position}%">
                 <span class="timeline-axis__line"></span>
                 <span class="timeline-axis__label">${escapeHtml(label.year)}</span>
               </div>
@@ -297,53 +884,69 @@ function renderTimeline(payload) {
     : "";
 
   const segments = timelineRows
-    .map(
-      (row, index) => `
+    .map((row, index) => {
+      const showInitials = row.months >= 4;
+      return `
         <div
-          class="timeline-segment${row.player_name === dominantPlayer ? " timeline-segment--dominant" : ""}"
+          class="timeline-segment${row.player_name === dominantPlayer ? " timeline-segment--dominant" : ""}${showInitials ? "" : " timeline-segment--compact"}"
           style="--segment-weight:${row.months}; --accent-index:${index % 4}; --player-hue:${hueForName(row.player_name)}; --player-hue-2:${(hueForName(row.player_name) + 28) % 360}"
           data-range="${escapeHtml(formatMonthRange(row.start_month, row.end_month))}"
           data-player="${escapeHtml(row.player_name)}"
           data-months="${row.months}"
-          data-peak="${row.peak_conservative.toFixed(4)}"
+          data-peak="${formatNumber(row.peak_conservative)}"
           aria-label="${escapeHtml(
-            `${row.player_name}, ${formatMonthRange(row.start_month, row.end_month)}, ${row.months} months, peak ${row.peak_conservative.toFixed(4)}`
+            `${row.player_name}, ${formatMonthRange(row.start_month, row.end_month)}, ${row.months} months, peak ${formatNumber(row.peak_conservative)}`
           )}"
           tabindex="0"
         >
-          <span class="timeline-segment__initials">${escapeHtml(initialsForName(row.player_name))}</span>
+          ${showInitials ? `<span class="timeline-segment__label timeline-segment__label--initials">${escapeHtml(initialsForName(row.player_name))}</span>` : ""}
         </div>
-      `
-    )
+      `;
+    })
     .join("");
   document.getElementById("timeline").innerHTML = `
     ${summaryHtml}
     <div class="timeline-ribbon-wrap">
-      <div class="timeline-ribbon">
-        ${segments}
+      <div class="timeline-scroll">
+        <div class="timeline-ribbon-stage">
+          <div class="timeline-ribbon">
+            ${segments}
+          </div>
+          ${axisHtml}
+        </div>
       </div>
-      ${axisHtml}
       <p class="timeline-ribbon__hint">Hover a segment for player, era, reign length, and peak.</p>
     </div>
   `;
   bindTimelineTooltips(document.getElementById("timeline"));
 }
 
-function miniList(rows, valueKey, formatter) {
+function miniList(rows, valueKey, formatter, options = {}) {
   return `
     <ol class="mini-list">
       ${rows
-        .map(
-          (row) => `
-            <li>
+        .map((row) => {
+          const hasPodiums = Boolean(options.podiumTooltips && row.major_podium_results?.length);
+          const tooltipLabel = `${row.player_name} major podium results`;
+          return `
+            <li
+              class="mini-list__row${hasPodiums ? " mini-list__row--interactive" : ""}"
+              ${hasPodiums ? 'data-major-results-trigger data-open="false" tabindex="0" role="button"' : ""}
+              ${hasPodiums ? `data-player-name="${escapeHtml(row.player_name)}"` : ""}
+              ${hasPodiums ? `data-major-results="${encodeURIComponent(JSON.stringify(row.major_podium_results))}"` : ""}
+              ${hasPodiums ? `aria-label="${escapeHtml(tooltipLabel)}"` : ""}
+            >
               <div class="mini-list__identity">
                 <span class="mini-rank-pill">${row.rank}</span>
                 <span class="mini-list__name">${escapeHtml(row.player_name)}</span>
               </div>
-              <strong class="mini-list__value">${formatter(row[valueKey])}</strong>
+              <div class="mini-list__score">
+                ${options.valueLabel ? `<span class="mini-list__value-label">${escapeHtml(options.valueLabel)}</span>` : ""}
+                <strong class="mini-list__value">${formatter(row[valueKey])}</strong>
+              </div>
             </li>
-          `
-        )
+          `;
+        })
         .join("")}
     </ol>
   `;
@@ -359,34 +962,47 @@ function renderProfileCards(manifest, payloadsByProfile) {
         <article class="card profile-card">
           <p class="section__eyebrow">Profile</p>
           <h3>${escapeHtml(profile.label)}</h3>
-          <div class="profile-card__split">
-            <div>
-              <p class="stat__label">GOAT top 5</p>
-              ${miniList(payload.goat_top20.slice(0, 5), "goat_score", (value) => value.toFixed(3))}
-            </div>
-            <div>
-              <p class="stat__label">Current top 5</p>
-              ${miniList(payload.current_top10.slice(0, 5), "conservative_score", (value) => value.toFixed(3))}
-            </div>
-          </div>
+          <p class="stat__label">GOAT top 5</p>
+          ${miniList(goatRows(payload).slice(0, 5), "goat_score", (value) => formatNumber(value, 3), {
+            podiumTooltips: true,
+            valueLabel: "GOAT",
+          })}
         </article>
       `;
     })
     .join("");
 
-  document.getElementById("profile-cards").innerHTML =
-    cards || `<div class="notice">No alternate profiles were exported yet.</div>`;
+  const root = document.getElementById("profile-cards");
+  root.innerHTML = cards || `<div class="notice">No alternate profiles were exported yet.</div>`;
+  bindTitleTooltips(root);
 }
 
 function applyManifestMeta(manifest) {
-  document.getElementById("hero-updated").textContent = formatDate(manifest.generated_at);
-  document.getElementById("footer-updated").textContent = `Updated: ${formatDate(manifest.generated_at)}`;
+  const heroUpdated = document.getElementById("hero-updated");
+  const footerUpdated = document.getElementById("footer-updated");
+
+  if (heroUpdated) {
+    heroUpdated.textContent = formatDate(manifest.generated_at);
+  }
+  if (footerUpdated) {
+    footerUpdated.textContent = `Updated: ${formatDate(manifest.generated_at)}`;
+  }
 
   if (manifest.repo_url) {
-    const repoLink = document.getElementById("repo-link");
-    repoLink.href = manifest.repo_url;
-    repoLink.classList.remove("is-hidden");
+    for (const repoLink of document.querySelectorAll("[data-repo-link]")) {
+      repoLink.href = manifest.repo_url;
+      repoLink.classList.remove("is-hidden");
+    }
   }
+}
+
+function renderPage(manifest, payloadsByProfile) {
+  const defaultPayload = payloadsByProfile[manifest.default_profile];
+  renderGoatTable(defaultPayload);
+  renderCurrentTable(defaultPayload);
+  renderTitlesTable(defaultPayload);
+  renderTimeline(defaultPayload);
+  renderProfileCards(manifest, payloadsByProfile);
 }
 
 function renderError(error) {
@@ -407,13 +1023,15 @@ async function main() {
       manifest.profiles.map(async (profile) => [profile.name, await loadJson(`./data/${profile.path}`)])
     );
     const payloadsByProfile = Object.fromEntries(payloadEntries);
-    const defaultPayload = payloadsByProfile[manifest.default_profile];
+    renderPage(manifest, payloadsByProfile);
 
-    renderGoatTable(defaultPayload);
-    renderCurrentTable(defaultPayload);
-    renderTitlesTable(defaultPayload);
-    renderTimeline(defaultPayload);
-    renderProfileCards(manifest, payloadsByProfile);
+    let compactViewport = isCompactViewport();
+    window.addEventListener("resize", () => {
+      const nextCompactViewport = isCompactViewport();
+      if (nextCompactViewport === compactViewport) return;
+      compactViewport = nextCompactViewport;
+      renderPage(manifest, payloadsByProfile);
+    });
   } catch (error) {
     renderError(error);
   }

@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-14T16:31:31.439196+00:00",
+  "generated_at": "2026-04-23T20:20:43.042424+00:00",
   "default_profile": "default",
-  "repo_url": "https://github.com/georgehansy/tmrank",
+  "repo_url": null,
   "profiles": [
     {
       "name": "default",
@@ -13,6 +13,24 @@
       "name": "seasonal-campaign",
       "label": "Seasonal Campaign",
       "path": "seasonal-campaign.json",
+      "is_default": false
+    },
+    {
+      "name": "zrt-cups",
+      "label": "ZrT Cups",
+      "path": "zrt-cups.json",
+      "is_default": false
+    },
+    {
+      "name": "worldcup-only",
+      "label": "World Cups",
+      "path": "worldcup-only.json",
+      "is_default": false
+    },
+    {
+      "name": "kackiest-kacky",
+      "label": "Kacky",
+      "path": "kackiest-kacky.json",
       "is_default": false
     }
   ]

@@ -1,0 +1,13 @@
+defaults:
+  include: false
+  weight: 0.75
+  tags: []
+
+rules:
+  - name: "Include ZrT Cups and Ascension 2023"
+    match:
+      page_name_regex: "^(ZeratoR/Trackmania_Cup/(1|2|3|4|2017|2018|2019|2020|2021|2022)|Ascension_Tournament/2023)$"
+    include: true
+    weight: 0.75
+    tags:
+      - zrt

@@ -100,6 +100,7 @@ class RatingProfile(BaseModel):
     goat_activity_window_months: int = 12
     goat_prime_window_months: int = 12
     goat_prime_min_active_months: int = 6
+    goat_min_events_played: int = 0
     goat_elite_threshold: float = 25.0
     goat_weights: GoatWeights = Field(default_factory=GoatWeights)
     current_eligibility: CurrentEligibility = Field(default_factory=CurrentEligibility)

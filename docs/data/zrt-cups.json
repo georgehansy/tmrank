@@ -1,0 +1,900 @@
+{
+  "profile": {
+    "name": "zrt-cups",
+    "label": "ZrT Cups"
+  },
+  "generated_at": "2026-04-23T20:20:43.042424+00:00",
+  "goat_top20": [
+    {
+      "rank": 1,
+      "player_slug": "carljr",
+      "player_name": "Carl Jr.",
+      "goat_score": 0.895508,
+      "prime_rating": 27.766,
+      "elite_area": 781.6222,
+      "median_conservative": 22.0865,
+      "title_points": 60.0,
+      "active_months": 114,
+      "events_played": 11,
+      "first_event_date": "2013-10-13",
+      "last_event_date": "2023-10-28",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2019",
+          "page_name": "ZeratoR/Trackmania_Cup/2019",
+          "event_date": "2019-06-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2018",
+          "page_name": "ZeratoR/Trackmania_Cup/2018",
+          "event_date": "2018-06-30",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2017",
+          "page_name": "ZeratoR/Trackmania_Cup/2017",
+          "event_date": "2017-07-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 3",
+          "page_name": "ZeratoR/Trackmania_Cup/3",
+          "event_date": "2015-12-12",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2",
+          "page_name": "ZeratoR/Trackmania_Cup/2",
+          "event_date": "2015-03-07",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Ascension Tournament 2023",
+          "page_name": "Ascension_Tournament/2023",
+          "event_date": "2023-10-28",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2020",
+          "page_name": "ZeratoR/Trackmania_Cup/2020",
+          "event_date": "2020-07-26",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "player_slug": "gwen",
+      "player_name": "Gwen",
+      "goat_score": 0.665219,
+      "prime_rating": 26.2823,
+      "elite_area": 313.7225,
+      "median_conservative": 22.3764,
+      "title_points": 41.0,
+      "active_months": 50,
+      "events_played": 5,
+      "first_event_date": "2019-06-29",
+      "last_event_date": "2023-10-28",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "Ascension Tournament 2023",
+          "page_name": "Ascension_Tournament/2023",
+          "event_date": "2023-10-28",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2022",
+          "page_name": "ZeratoR/Trackmania_Cup/2022",
+          "event_date": "2022-06-04",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2021",
+          "page_name": "ZeratoR/Trackmania_Cup/2021",
+          "event_date": "2021-07-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2020",
+          "page_name": "ZeratoR/Trackmania_Cup/2020",
+          "event_date": "2020-07-26",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "player_slug": "bren",
+      "player_name": "Bren",
+      "goat_score": 0.494892,
+      "prime_rating": 21.6539,
+      "elite_area": 332.2487,
+      "median_conservative": 18.6167,
+      "title_points": 26.0,
+      "active_months": 101,
+      "events_played": 10,
+      "first_event_date": "2015-03-07",
+      "last_event_date": "2023-10-28",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2019",
+          "page_name": "ZeratoR/Trackmania_Cup/2019",
+          "event_date": "2019-06-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2018",
+          "page_name": "ZeratoR/Trackmania_Cup/2018",
+          "event_date": "2018-06-30",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 4",
+          "page_name": "ZeratoR/Trackmania_Cup/4",
+          "event_date": "2016-06-25",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 3",
+          "page_name": "ZeratoR/Trackmania_Cup/3",
+          "event_date": "2015-12-12",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "player_slug": "aurel",
+      "player_name": "Aurel",
+      "goat_score": 0.357584,
+      "prime_rating": 20.2379,
+      "elite_area": 169.6648,
+      "median_conservative": 16.6054,
+      "title_points": 16.0,
+      "active_months": 80,
+      "events_played": 7,
+      "first_event_date": "2015-12-12",
+      "last_event_date": "2021-07-29",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2021",
+          "page_name": "ZeratoR/Trackmania_Cup/2021",
+          "event_date": "2021-07-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2019",
+          "page_name": "ZeratoR/Trackmania_Cup/2019",
+          "event_date": "2019-06-29",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "player_slug": "papou",
+      "player_name": "Papou",
+      "goat_score": 0.301428,
+      "prime_rating": 18.8272,
+      "elite_area": 111.5096,
+      "median_conservative": 15.7342,
+      "title_points": 15.0,
+      "active_months": 74,
+      "events_played": 6,
+      "first_event_date": "2016-06-25",
+      "last_event_date": "2021-07-29",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2021",
+          "page_name": "ZeratoR/Trackmania_Cup/2021",
+          "event_date": "2021-07-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2017",
+          "page_name": "ZeratoR/Trackmania_Cup/2017",
+          "event_date": "2017-07-01",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "player_slug": "koenz",
+      "player_name": "Koenz",
+      "goat_score": 0.300319,
+      "prime_rating": 18.9156,
+      "elite_area": 71.3188,
+      "median_conservative": 17.2685,
+      "title_points": 11.0,
+      "active_months": 35,
+      "events_played": 3,
+      "first_event_date": "2013-10-13",
+      "last_event_date": "2015-12-12",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 1",
+          "page_name": "ZeratoR/Trackmania_Cup/1",
+          "event_date": "2013-10-13",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "player_slug": "scrapie",
+      "player_name": "Scrapie",
+      "goat_score": 0.222614,
+      "prime_rating": 16.6784,
+      "elite_area": 35.976,
+      "median_conservative": 16.1798,
+      "title_points": 6.0,
+      "active_months": 38,
+      "events_played": 3,
+      "first_event_date": "2015-03-07",
+      "last_event_date": "2019-06-29",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2",
+          "page_name": "ZeratoR/Trackmania_Cup/2",
+          "event_date": "2015-03-07",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "player_slug": "revolution",
+      "player_name": "ReVoLuTioN",
+      "goat_score": 0.198019,
+      "prime_rating": 16.3678,
+      "elite_area": 28.4576,
+      "median_conservative": 16.1176,
+      "title_points": 1.0,
+      "active_months": 36,
+      "events_played": 3,
+      "first_event_date": "2017-07-01",
+      "last_event_date": "2019-06-29",
+      "best_world_cup_result": null,
+      "major_podium_results": []
+    },
+    {
+      "rank": 9,
+      "player_slug": "marius89",
+      "player_name": "Marius89",
+      "goat_score": 0.179638,
+      "prime_rating": 16.1094,
+      "elite_area": 14.4226,
+      "median_conservative": 14.6061,
+      "title_points": 5.0,
+      "active_months": 54,
+      "events_played": 5,
+      "first_event_date": "2013-10-13",
+      "last_event_date": "2018-06-30",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 1",
+          "page_name": "ZeratoR/Trackmania_Cup/1",
+          "event_date": "2013-10-13",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "player_slug": "badlulu",
+      "player_name": "Badlulu",
+      "goat_score": 0.155035,
+      "prime_rating": 15.1708,
+      "elite_area": 2.0495,
+      "median_conservative": 14.3786,
+      "title_points": 4.0,
+      "active_months": 61,
+      "events_played": 5,
+      "first_event_date": "2017-07-01",
+      "last_event_date": "2021-07-29",
+      "best_world_cup_result": null,
+      "major_podium_results": []
+    },
+    {
+      "rank": 11,
+      "player_slug": "glast",
+      "player_name": "Glast",
+      "goat_score": 0.144629,
+      "prime_rating": 14.9062,
+      "elite_area": 3.3658,
+      "median_conservative": 12.8555,
+      "title_points": 9.0,
+      "active_months": 37,
+      "events_played": 4,
+      "first_event_date": "2020-07-26",
+      "last_event_date": "2023-10-28",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2022",
+          "page_name": "ZeratoR/Trackmania_Cup/2022",
+          "event_date": "2022-06-04",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2021",
+          "page_name": "ZeratoR/Trackmania_Cup/2021",
+          "event_date": "2021-07-29",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "player_slug": "snow",
+      "player_name": "Snow",
+      "goat_score": 0.134085,
+      "prime_rating": 14.4956,
+      "elite_area": 0.0,
+      "median_conservative": 12.8488,
+      "title_points": 8.0,
+      "active_months": 36,
+      "events_played": 3,
+      "first_event_date": "2020-07-26",
+      "last_event_date": "2022-06-04",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2022",
+          "page_name": "ZeratoR/Trackmania_Cup/2022",
+          "event_date": "2022-06-04",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2021",
+          "page_name": "ZeratoR/Trackmania_Cup/2021",
+          "event_date": "2021-07-29",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "player_slug": "pac",
+      "player_name": "Pac",
+      "goat_score": 0.126687,
+      "prime_rating": 14.4366,
+      "elite_area": 0.0,
+      "median_conservative": 13.0725,
+      "title_points": 5.0,
+      "active_months": 36,
+      "events_played": 3,
+      "first_event_date": "2017-07-01",
+      "last_event_date": "2019-06-29",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2019",
+          "page_name": "ZeratoR/Trackmania_Cup/2019",
+          "event_date": "2019-06-29",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "player_slug": "affi",
+      "player_name": "Affi",
+      "goat_score": 0.119479,
+      "prime_rating": 12.794,
+      "elite_area": 3.8591,
+      "median_conservative": 12.794,
+      "title_points": 11.0,
+      "active_months": 27,
+      "events_played": 3,
+      "first_event_date": "2020-07-26",
+      "last_event_date": "2023-10-28",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2022",
+          "page_name": "ZeratoR/Trackmania_Cup/2022",
+          "event_date": "2022-06-04",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "player_slug": "yannex",
+      "player_name": "Yannex",
+      "goat_score": 0.105775,
+      "prime_rating": 15.278,
+      "elite_area": 3.3356,
+      "median_conservative": 11.7176,
+      "title_points": 1.0,
+      "active_months": 36,
+      "events_played": 3,
+      "first_event_date": "2020-07-26",
+      "last_event_date": "2022-06-04",
+      "best_world_cup_result": null,
+      "major_podium_results": []
+    },
+    {
+      "rank": 16,
+      "player_slug": "ayako",
+      "player_name": "Ayako",
+      "goat_score": 0.078629,
+      "prime_rating": 14.7605,
+      "elite_area": 0.0,
+      "median_conservative": 10.3104,
+      "title_points": 2.0,
+      "active_months": 52,
+      "events_played": 4,
+      "first_event_date": "2016-06-25",
+      "last_event_date": "2021-07-29",
+      "best_world_cup_result": null,
+      "major_podium_results": []
+    },
+    {
+      "rank": 17,
+      "player_slug": "bosswanted",
+      "player_name": "BossWanted",
+      "goat_score": 0.075,
+      "prime_rating": 13.3759,
+      "elite_area": 0.0,
+      "median_conservative": 11.6033,
+      "title_points": 1.0,
+      "active_months": 32,
+      "events_played": 3,
+      "first_event_date": "2015-12-12",
+      "last_event_date": "2017-07-01",
+      "best_world_cup_result": null,
+      "major_podium_results": []
+    },
+    {
+      "rank": 18,
+      "player_slug": "hugo220",
+      "player_name": "Hugo220",
+      "goat_score": 0.067864,
+      "prime_rating": 12.3161,
+      "elite_area": 0.0,
+      "median_conservative": 12.147,
+      "title_points": 1.0,
+      "active_months": 37,
+      "events_played": 3,
+      "first_event_date": "2017-07-01",
+      "last_event_date": "2022-06-04",
+      "best_world_cup_result": null,
+      "major_podium_results": []
+    },
+    {
+      "rank": 19,
+      "player_slug": "capuccino",
+      "player_name": "Capuccino",
+      "goat_score": 0.065833,
+      "prime_rating": 12.7336,
+      "elite_area": 0.0,
+      "median_conservative": 11.8355,
+      "title_points": 0.0,
+      "active_months": 49,
+      "events_played": 4,
+      "first_event_date": "2016-06-25",
+      "last_event_date": "2019-06-29",
+      "best_world_cup_result": null,
+      "major_podium_results": []
+    },
+    {
+      "rank": 20,
+      "player_slug": "otaaaq",
+      "player_name": "Otaaaq",
+      "goat_score": 0.064052,
+      "prime_rating": 12.2753,
+      "elite_area": 0.0,
+      "median_conservative": 12.1548,
+      "title_points": 0.0,
+      "active_months": 25,
+      "events_played": 3,
+      "first_event_date": "2021-07-29",
+      "last_event_date": "2023-10-28",
+      "best_world_cup_result": null,
+      "major_podium_results": []
+    }
+  ],
+  "current_top10": [],
+  "rating_leader_timeline": [
+    {
+      "start_month": "2013-10",
+      "end_month": "2014-10",
+      "player_slug": "koenz",
+      "player_name": "Koenz",
+      "months": 13,
+      "peak_conservative": 18.9156
+    },
+    {
+      "start_month": "2015-03",
+      "end_month": "2021-06",
+      "player_slug": "carljr",
+      "player_name": "Carl Jr.",
+      "months": 76,
+      "peak_conservative": 27.766
+    },
+    {
+      "start_month": "2021-07",
+      "end_month": "2023-06",
+      "player_slug": "gwen",
+      "player_name": "Gwen",
+      "months": 24,
+      "peak_conservative": 25.4993
+    },
+    {
+      "start_month": "2023-10",
+      "end_month": "2023-10",
+      "player_slug": "gwen",
+      "player_name": "Gwen",
+      "months": 1,
+      "peak_conservative": 32.546
+    }
+  ],
+  "title_leaders_top10": [
+    {
+      "rank": 1,
+      "player_slug": "carljr",
+      "player_name": "Carl Jr.",
+      "title_points": 60.0,
+      "events_played": 11,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2019",
+          "page_name": "ZeratoR/Trackmania_Cup/2019",
+          "event_date": "2019-06-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2018",
+          "page_name": "ZeratoR/Trackmania_Cup/2018",
+          "event_date": "2018-06-30",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2017",
+          "page_name": "ZeratoR/Trackmania_Cup/2017",
+          "event_date": "2017-07-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 3",
+          "page_name": "ZeratoR/Trackmania_Cup/3",
+          "event_date": "2015-12-12",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2",
+          "page_name": "ZeratoR/Trackmania_Cup/2",
+          "event_date": "2015-03-07",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Ascension Tournament 2023",
+          "page_name": "Ascension_Tournament/2023",
+          "event_date": "2023-10-28",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2020",
+          "page_name": "ZeratoR/Trackmania_Cup/2020",
+          "event_date": "2020-07-26",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "player_slug": "gwen",
+      "player_name": "Gwen",
+      "title_points": 41.0,
+      "events_played": 5,
+      "major_podium_results": [
+        {
+          "event_name": "Ascension Tournament 2023",
+          "page_name": "Ascension_Tournament/2023",
+          "event_date": "2023-10-28",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2022",
+          "page_name": "ZeratoR/Trackmania_Cup/2022",
+          "event_date": "2022-06-04",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2021",
+          "page_name": "ZeratoR/Trackmania_Cup/2021",
+          "event_date": "2021-07-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2020",
+          "page_name": "ZeratoR/Trackmania_Cup/2020",
+          "event_date": "2020-07-26",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "player_slug": "bren",
+      "player_name": "Bren",
+      "title_points": 26.0,
+      "events_played": 10,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2019",
+          "page_name": "ZeratoR/Trackmania_Cup/2019",
+          "event_date": "2019-06-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2018",
+          "page_name": "ZeratoR/Trackmania_Cup/2018",
+          "event_date": "2018-06-30",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 4",
+          "page_name": "ZeratoR/Trackmania_Cup/4",
+          "event_date": "2016-06-25",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 3",
+          "page_name": "ZeratoR/Trackmania_Cup/3",
+          "event_date": "2015-12-12",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "player_slug": "aurel",
+      "player_name": "Aurel",
+      "title_points": 16.0,
+      "events_played": 7,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2021",
+          "page_name": "ZeratoR/Trackmania_Cup/2021",
+          "event_date": "2021-07-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2019",
+          "page_name": "ZeratoR/Trackmania_Cup/2019",
+          "event_date": "2019-06-29",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "player_slug": "papou",
+      "player_name": "Papou",
+      "title_points": 15.0,
+      "events_played": 6,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2021",
+          "page_name": "ZeratoR/Trackmania_Cup/2021",
+          "event_date": "2021-07-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2017",
+          "page_name": "ZeratoR/Trackmania_Cup/2017",
+          "event_date": "2017-07-01",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "player_slug": "koenz",
+      "player_name": "Koenz",
+      "title_points": 11.0,
+      "events_played": 3,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 1",
+          "page_name": "ZeratoR/Trackmania_Cup/1",
+          "event_date": "2013-10-13",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "player_slug": "affi",
+      "player_name": "Affi",
+      "title_points": 11.0,
+      "events_played": 3,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2022",
+          "page_name": "ZeratoR/Trackmania_Cup/2022",
+          "event_date": "2022-06-04",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "player_slug": "glast",
+      "player_name": "Glast",
+      "title_points": 9.0,
+      "events_played": 4,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2022",
+          "page_name": "ZeratoR/Trackmania_Cup/2022",
+          "event_date": "2022-06-04",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2021",
+          "page_name": "ZeratoR/Trackmania_Cup/2021",
+          "event_date": "2021-07-29",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "player_slug": "snow",
+      "player_name": "Snow",
+      "title_points": 8.0,
+      "events_played": 3,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2022",
+          "page_name": "ZeratoR/Trackmania_Cup/2022",
+          "event_date": "2022-06-04",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2021",
+          "page_name": "ZeratoR/Trackmania_Cup/2021",
+          "event_date": "2021-07-29",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "player_slug": "scrapie",
+      "player_name": "Scrapie",
+      "title_points": 6.0,
+      "events_played": 3,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2",
+          "page_name": "ZeratoR/Trackmania_Cup/2",
+          "event_date": "2015-03-07",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+defaults:
+  include: false
+  weight: 1.0
+  tags: []
+
+rules:
+  - name: "Include World Cup events"
+    match:
+      page_name_regex: "^(Electronic_Sports_World_Cup/(2006|2007|2008|2010|2011|2012|2013|2014|2015/Paris_Games_Week)|Maniaplanet_World_Cup/2016|Trackmania_World_Championship/2018|Trackmania_Grand_League/World_Cup/(2020-2021|2022)|Trackmania_World_Tour/(2023/World_Championship|2024/World_Cup|2025/World_Cup)|Esports_World_Cup/2026)$"
+    include: true
+    weight: 1.0
+    tags:
+      - world-cup

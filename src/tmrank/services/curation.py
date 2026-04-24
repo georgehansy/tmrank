@@ -62,7 +62,10 @@ class MajorEventSelector:
         self.rules = rules
 
     def is_major(self, event: EventView) -> bool:
-        return any(event_matches_rule(rule.match, event) for rule in self.rules)
+        return bool(self.matched_rule_names(event))
+
+    def matched_rule_names(self, event: EventView) -> list[str]:
+        return [rule.name for rule in self.rules if event_matches_rule(rule.match, event)]
 
 
 def event_matches_rule(match: TournamentRuleMatch, event: EventView) -> bool:

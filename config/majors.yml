@@ -30,8 +30,8 @@ rules:
 
   - name: "Trackmania Grand League Finals"
     match:
-      page_name_regex: "^Trackmania_Grand_League/(Beta_Season|Winter_2020|Fall_2020/Playoffs|Winter_2021/Final|Fall_2021/Final|Spring_2022/Final)$"
+      page_name_regex: "^(Trackmania_Grand_League/(Beta_Season|Winter_2020|Fall_2020/Playoffs|Winter_2021/Final|Fall_2021/Final|Spring_2022/Final)|Trackmania_World_Tour/2023/Stage_(1|2)/Grand_League)$"
 
   - name: "Standalone Modern Majors"
     match:
-      page_name_regex: "^(Arctic_Gaming_Experience/2022|Ascension_Tournament/2023)$"
+      page_name_regex: "^(Arctic_Gaming_Experience/2022|Ascension_Tournament/2023|XPEvo/(2024|2025)|Red_Bull_Faster/(2025|2026)|DreamHack/2026/Birmingham)$"

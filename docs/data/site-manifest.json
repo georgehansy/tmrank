@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-23T20:20:43.042424+00:00",
+  "generated_at": "2026-04-24T11:55:31.680241+00:00",
   "default_profile": "default",
-  "repo_url": null,
+  "repo_url": "https://github.com/georgehansy/tmrank",
   "profiles": [
     {
       "name": "default",

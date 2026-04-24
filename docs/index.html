@@ -14,20 +14,20 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="./assets/styles.css?v=20260424i">
+    <link rel="stylesheet" href="./assets/styles.css?v=20260424m">
   </head>
   <body>
     <div class="site-shell">
       <header class="hero">
-        <div class="hero__eyebrow">Trackmania rankings project</div>
+        <div class="hero__topline">
+          <div class="hero__eyebrow">Trackmania rankings project</div>
+          <a class="button hero__methodology" href="./methodology.html">Methodology</a>
+        </div>
         <div class="hero__main">
           <h1>tmrank</h1>
           <p class="hero__lede">
             Independent Trackmania rankings built from curated Liquipedia tournament results.
           </p>
-          <div class="hero__actions">
-            <a class="button" href="./methodology.html">Methodology</a>
-          </div>
         </div>
       </header>
 
@@ -51,26 +51,37 @@
           <div class="card explainer-card">
             <div class="explainer-grid">
               <article class="explainer-item">
-                <h3>GOAT ranking</h3>
-                <p>Who built the strongest all-time case from a mix of peak, longevity, sustained level, and major results.</p>
+                <details class="explainer-disclosure" open>
+                  <summary><h3>GOAT ranking</h3></summary>
+                  <p>Who built the strongest all-time case from a mix of peak, longevity, sustained level, and major results.</p>
+                </details>
               </article>
               <article class="explainer-item">
-                <h3>Current ranking</h3>
-                <p>Who looks strongest right now, with inactivity gradually making old strength count less.</p>
+                <details class="explainer-disclosure" open>
+                  <summary><h3>Current ranking</h3></summary>
+                  <p>Who looks strongest right now, with inactivity gradually making old strength count less.</p>
+                </details>
               </article>
               <article class="explainer-item">
-                <h3>Title points</h3>
-                <p>Credit for major placements only. Useful on its own, but not the whole ranking by itself.</p>
+                <details class="explainer-disclosure" open>
+                  <summary><h3>Title points</h3></summary>
+                  <p>Credit for major placements only. Useful on its own, but not the whole ranking by itself.</p>
+                </details>
               </article>
               <article class="explainer-item">
-                <h3>Profiles</h3>
-                <p>Alternate lenses for formats like campaigns, Kacky, ZrT cups, and World Cups, each using only events from that category.</p>
+                <details class="explainer-disclosure" open>
+                  <summary><h3>Profiles</h3></summary>
+                  <p>Alternate lenses for formats like campaigns, Kacky, ZrT cups, and World Cups, each using only events from that category.</p>
+                </details>
               </article>
             </div>
-            <p class="explainer-note">
-              The default ranking is mainly an esports view. Event inclusion, event weighting, and majors definition
-              are deliberate modeling choices, especially across very different Trackmania formats.
-            </p>
+            <details class="explainer-note-disclosure" open>
+              <summary>Modeling choices</summary>
+              <p class="explainer-note">
+                The default ranking is mainly an esports view. Event inclusion, event weighting, and majors definition
+                are deliberate modeling choices, especially across very different Trackmania formats.
+              </p>
+            </details>
           </div>
         </section>
 
@@ -166,6 +177,6 @@
       </footer>
     </div>
 
-    <script src="./assets/app.js?v=20260424j"></script>
+    <script src="./assets/app.js?v=20260424m"></script>
   </body>
 </html>

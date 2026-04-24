@@ -616,24 +616,27 @@ function goatMobileListHtml(rows) {
                 </div>
                 <div class="goat-mobile-card__score">${formatNumber(row.goat_score, 3)}</div>
               </div>
-              <div class="goat-mobile-card__metrics">
-                <div class="goat-mobile-metric">
-                  <span class="goat-mobile-metric__label">Prime</span>
-                  <span class="goat-mobile-metric__value">${formatNumber(row.prime_rating)}</span>
+              <details class="goat-mobile-card__details">
+                <summary>Metrics</summary>
+                <div class="goat-mobile-card__metrics">
+                  <div class="goat-mobile-metric">
+                    <span class="goat-mobile-metric__label">Prime</span>
+                    <span class="goat-mobile-metric__value">${formatNumber(row.prime_rating)}</span>
+                  </div>
+                  <div class="goat-mobile-metric">
+                    <span class="goat-mobile-metric__label">Elite Area</span>
+                    <span class="goat-mobile-metric__value">${formatNumber(row.elite_area)}</span>
+                  </div>
+                  <div class="goat-mobile-metric">
+                    <span class="goat-mobile-metric__label">Median</span>
+                    <span class="goat-mobile-metric__value">${formatNumber(row.median_conservative)}</span>
+                  </div>
+                  <div class="goat-mobile-metric">
+                    <span class="goat-mobile-metric__label">Title Points</span>
+                    <span class="goat-mobile-metric__value">${formatInteger(row.title_points)}</span>
+                  </div>
                 </div>
-                <div class="goat-mobile-metric">
-                  <span class="goat-mobile-metric__label">Elite Area</span>
-                  <span class="goat-mobile-metric__value">${formatNumber(row.elite_area)}</span>
-                </div>
-                <div class="goat-mobile-metric">
-                  <span class="goat-mobile-metric__label">Median</span>
-                  <span class="goat-mobile-metric__value">${formatNumber(row.median_conservative)}</span>
-                </div>
-                <div class="goat-mobile-metric">
-                  <span class="goat-mobile-metric__label">Title Points</span>
-                  <span class="goat-mobile-metric__value">${formatInteger(row.title_points)}</span>
-                </div>
-              </div>
+              </details>
             </article>
           `
         )
@@ -1010,6 +1013,30 @@ function safeHttpUrl(value) {
   }
 }
 
+function syncResponsiveDisclosures() {
+  const openByDefault = !isCompactViewport();
+  for (const disclosure of document.querySelectorAll(".explainer-disclosure, .explainer-note-disclosure")) {
+    disclosure.open = openByDefault;
+  }
+}
+
+function bindResponsiveDisclosures() {
+  for (const disclosure of document.querySelectorAll(".explainer-disclosure, .explainer-note-disclosure")) {
+    const summary = disclosure.querySelector("summary");
+    if (!summary) continue;
+    summary.addEventListener("click", (event) => {
+      if (isCompactViewport()) return;
+      event.preventDefault();
+      disclosure.open = true;
+    });
+    summary.addEventListener("keydown", (event) => {
+      if (isCompactViewport() || (event.key !== "Enter" && event.key !== " ")) return;
+      event.preventDefault();
+      disclosure.open = true;
+    });
+  }
+}
+
 function renderPage(manifest, payloadsByProfile) {
   const defaultPayload = payloadsByProfile[manifest.default_profile];
   renderGoatTable(defaultPayload);
@@ -1037,6 +1064,8 @@ async function main() {
       manifest.profiles.map(async (profile) => [profile.name, await loadJson(`./data/${profile.path}`)])
     );
     const payloadsByProfile = Object.fromEntries(payloadEntries);
+    bindResponsiveDisclosures();
+    syncResponsiveDisclosures();
     renderPage(manifest, payloadsByProfile);
 
     let compactViewport = isCompactViewport();
@@ -1044,6 +1073,7 @@ async function main() {
       const nextCompactViewport = isCompactViewport();
       if (nextCompactViewport === compactViewport) return;
       compactViewport = nextCompactViewport;
+      syncResponsiveDisclosures();
       renderPage(manifest, payloadsByProfile);
     });
   } catch (error) {

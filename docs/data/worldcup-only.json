@@ -1,0 +1,1320 @@
+{
+  "profile": {
+    "name": "worldcup-only",
+    "label": "World Cups"
+  },
+  "generated_at": "2026-04-23T20:20:43.042424+00:00",
+  "goat_top20": [
+    {
+      "rank": 1,
+      "player_slug": "carljr",
+      "player_name": "Carl Jr.",
+      "goat_score": 0.9,
+      "prime_rating": 41.3182,
+      "elite_area": 1927.7715,
+      "median_conservative": 36.901,
+      "title_points": 84.0,
+      "active_months": 124,
+      "events_played": 11,
+      "first_event_date": "2012-11-03",
+      "last_event_date": "2025-11-01",
+      "best_world_cup_result": {
+        "placement_low": 1,
+        "placement_high": 1,
+        "count": 7
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Cup 2025",
+          "page_name": "Trackmania_World_Tour/2025/World_Cup",
+          "event_date": "2025-11-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Cup 2024",
+          "page_name": "Trackmania_World_Tour/2024/World_Cup",
+          "event_date": "2024-10-25",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League World Cup 2022",
+          "page_name": "Trackmania_Grand_League/World_Cup/2022",
+          "event_date": "2022-07-03",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League World Cup: 2020-2021",
+          "page_name": "Trackmania_Grand_League/World_Cup/2020-2021",
+          "event_date": "2021-07-04",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2015 Paris Games Week",
+          "page_name": "Electronic_Sports_World_Cup/2015/Paris_Games_Week",
+          "event_date": "2015-11-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2014",
+          "page_name": "Electronic_Sports_World_Cup/2014",
+          "event_date": "2014-11-02",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2013",
+          "page_name": "Electronic_Sports_World_Cup/2013",
+          "event_date": "2013-11-03",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - World Championship",
+          "page_name": "Trackmania_World_Tour/2023/World_Championship",
+          "event_date": "2023-11-26",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Maniaplanet World Cup 2016",
+          "page_name": "Maniaplanet_World_Cup/2016",
+          "event_date": "2016-11-07",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Championship 2018",
+          "page_name": "Trackmania_World_Championship/2018",
+          "event_date": "2018-10-30",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2012",
+          "page_name": "Electronic_Sports_World_Cup/2012",
+          "event_date": "2012-11-03",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "player_slug": "pac",
+      "player_name": "Pac",
+      "goat_score": 0.592954,
+      "prime_rating": 38.0012,
+      "elite_area": 927.8165,
+      "median_conservative": 30.3301,
+      "title_points": 39.0,
+      "active_months": 88,
+      "events_played": 8,
+      "first_event_date": "2015-11-01",
+      "last_event_date": "2025-11-01",
+      "best_world_cup_result": {
+        "placement_low": 1,
+        "placement_high": 1,
+        "count": 2
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Cup 2025",
+          "page_name": "Trackmania_World_Tour/2025/World_Cup",
+          "event_date": "2025-11-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Maniaplanet World Cup 2016",
+          "page_name": "Maniaplanet_World_Cup/2016",
+          "event_date": "2016-11-07",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Cup 2024",
+          "page_name": "Trackmania_World_Tour/2024/World_Cup",
+          "event_date": "2024-10-25",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - World Championship",
+          "page_name": "Trackmania_World_Tour/2023/World_Championship",
+          "event_date": "2023-11-26",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League World Cup: 2020-2021",
+          "page_name": "Trackmania_Grand_League/World_Cup/2020-2021",
+          "event_date": "2021-07-04",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2015 Paris Games Week",
+          "page_name": "Electronic_Sports_World_Cup/2015/Paris_Games_Week",
+          "event_date": "2015-11-01",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "player_slug": "tween",
+      "player_name": "Tween",
+      "goat_score": 0.484652,
+      "prime_rating": 34.5232,
+      "elite_area": 779.4962,
+      "median_conservative": 26.7364,
+      "title_points": 23.0,
+      "active_months": 113,
+      "events_played": 9,
+      "first_event_date": "2011-10-25",
+      "last_event_date": "2023-11-26",
+      "best_world_cup_result": {
+        "placement_low": 2,
+        "placement_high": 2,
+        "count": 4
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Championship 2018",
+          "page_name": "Trackmania_World_Championship/2018",
+          "event_date": "2018-10-30",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2014",
+          "page_name": "Electronic_Sports_World_Cup/2014",
+          "event_date": "2014-11-02",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2012",
+          "page_name": "Electronic_Sports_World_Cup/2012",
+          "event_date": "2012-11-03",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2011",
+          "page_name": "Electronic_Sports_World_Cup/2011",
+          "event_date": "2011-10-25",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Maniaplanet World Cup 2016",
+          "page_name": "Maniaplanet_World_Cup/2016",
+          "event_date": "2016-11-07",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2015 Paris Games Week",
+          "page_name": "Electronic_Sports_World_Cup/2015/Paris_Games_Week",
+          "event_date": "2015-11-01",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "player_slug": "carl",
+      "player_name": "Carl",
+      "goat_score": 0.408348,
+      "prime_rating": 32.294,
+      "elite_area": 466.0953,
+      "median_conservative": 25.037,
+      "title_points": 20.0,
+      "active_months": 77,
+      "events_played": 6,
+      "first_event_date": "2006-07-02",
+      "last_event_date": "2013-11-03",
+      "best_world_cup_result": {
+        "placement_low": 1,
+        "placement_high": 1,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "ESWC 2006",
+          "page_name": "Electronic_Sports_World_Cup/2006",
+          "event_date": "2006-07-02",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2007",
+          "page_name": "Electronic_Sports_World_Cup/2007",
+          "event_date": "2007-07-07",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "player_slug": "kappa",
+      "player_name": "Kappa",
+      "goat_score": 0.394153,
+      "prime_rating": 35.4037,
+      "elite_area": 433.0216,
+      "median_conservative": 21.9125,
+      "title_points": 15.0,
+      "active_months": 76,
+      "events_played": 6,
+      "first_event_date": "2015-11-01",
+      "last_event_date": "2023-11-26",
+      "best_world_cup_result": {
+        "placement_low": 1,
+        "placement_high": 1,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Championship 2018",
+          "page_name": "Trackmania_World_Championship/2018",
+          "event_date": "2018-10-30",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League World Cup: 2020-2021",
+          "page_name": "Trackmania_Grand_League/World_Cup/2020-2021",
+          "event_date": "2021-07-04",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "player_slug": "otaaaq",
+      "player_name": "Otaaaq",
+      "goat_score": 0.36705,
+      "prime_rating": 30.7241,
+      "elite_area": 271.5213,
+      "median_conservative": 26.5024,
+      "title_points": 14.0,
+      "active_months": 37,
+      "events_played": 3,
+      "first_event_date": "2022-07-03",
+      "last_event_date": "2024-10-25",
+      "best_world_cup_result": {
+        "placement_low": 1,
+        "placement_high": 1,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Tour 2023 - World Championship",
+          "page_name": "Trackmania_World_Tour/2023/World_Championship",
+          "event_date": "2023-11-26",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "player_slug": "spammiej",
+      "player_name": "Spammiej",
+      "goat_score": 0.329154,
+      "prime_rating": 29.1073,
+      "elite_area": 270.0943,
+      "median_conservative": 21.4081,
+      "title_points": 18.0,
+      "active_months": 100,
+      "events_played": 8,
+      "first_event_date": "2011-10-25",
+      "last_event_date": "2021-07-04",
+      "best_world_cup_result": {
+        "placement_low": 1,
+        "placement_high": 1,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "ESWC 2012",
+          "page_name": "Electronic_Sports_World_Cup/2012",
+          "event_date": "2012-11-03",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "player_slug": "mime",
+      "player_name": "Mime",
+      "goat_score": 0.304072,
+      "prime_rating": 29.669,
+      "elite_area": 174.9982,
+      "median_conservative": 23.7849,
+      "title_points": 4.0,
+      "active_months": 27,
+      "events_played": 3,
+      "first_event_date": "2022-07-03",
+      "last_event_date": "2025-11-01",
+      "best_world_cup_result": {
+        "placement_low": 2,
+        "placement_high": 2,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania Grand League World Cup 2022",
+          "page_name": "Trackmania_Grand_League/World_Cup/2022",
+          "event_date": "2022-07-03",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "player_slug": "affi",
+      "player_name": "Affi",
+      "goat_score": 0.302146,
+      "prime_rating": 27.4877,
+      "elite_area": 171.8353,
+      "median_conservative": 26.3064,
+      "title_points": 3.0,
+      "active_months": 38,
+      "events_played": 3,
+      "first_event_date": "2021-07-04",
+      "last_event_date": "2023-11-26",
+      "best_world_cup_result": {
+        "placement_low": 3,
+        "placement_high": 4,
+        "count": 1
+      },
+      "major_podium_results": []
+    },
+    {
+      "rank": 10,
+      "player_slug": "bergie",
+      "player_name": "Bergie",
+      "goat_score": 0.302117,
+      "prime_rating": 28.9614,
+      "elite_area": 180.4127,
+      "median_conservative": 20.0202,
+      "title_points": 16.0,
+      "active_months": 87,
+      "events_played": 7,
+      "first_event_date": "2010-07-04",
+      "last_event_date": "2016-11-07",
+      "best_world_cup_result": {
+        "placement_low": 1,
+        "placement_high": 1,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "ESWC 2010",
+          "page_name": "Electronic_Sports_World_Cup/2010",
+          "event_date": "2010-07-04",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "player_slug": "yoyo",
+      "player_name": "YoYo",
+      "goat_score": 0.297956,
+      "prime_rating": 26.6629,
+      "elite_area": 223.8675,
+      "median_conservative": 23.1975,
+      "title_points": 10.0,
+      "active_months": 76,
+      "events_played": 6,
+      "first_event_date": "2010-07-04",
+      "last_event_date": "2018-10-30",
+      "best_world_cup_result": {
+        "placement_low": 3,
+        "placement_high": 3,
+        "count": 3
+      },
+      "major_podium_results": [
+        {
+          "event_name": "ESWC 2014",
+          "page_name": "Electronic_Sports_World_Cup/2014",
+          "event_date": "2014-11-02",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2011",
+          "page_name": "Electronic_Sports_World_Cup/2011",
+          "event_date": "2011-10-25",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2010",
+          "page_name": "Electronic_Sports_World_Cup/2010",
+          "event_date": "2010-07-04",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "player_slug": "massa",
+      "player_name": "Massa",
+      "goat_score": 0.28883,
+      "prime_rating": 26.6537,
+      "elite_area": 238.2887,
+      "median_conservative": 22.6471,
+      "title_points": 7.0,
+      "active_months": 89,
+      "events_played": 8,
+      "first_event_date": "2014-11-02",
+      "last_event_date": "2025-11-01",
+      "best_world_cup_result": {
+        "placement_low": 3,
+        "placement_high": 4,
+        "count": 1
+      },
+      "major_podium_results": []
+    },
+    {
+      "rank": 13,
+      "player_slug": "mudda",
+      "player_name": "Mudda",
+      "goat_score": 0.277569,
+      "prime_rating": 27.1091,
+      "elite_area": 174.0915,
+      "median_conservative": 21.3737,
+      "title_points": 8.0,
+      "active_months": 50,
+      "events_played": 5,
+      "first_event_date": "2021-07-04",
+      "last_event_date": "2025-11-01",
+      "best_world_cup_result": {
+        "placement_low": 2,
+        "placement_high": 2,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Cup 2025",
+          "page_name": "Trackmania_World_Tour/2025/World_Cup",
+          "event_date": "2025-11-01",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League World Cup 2022",
+          "page_name": "Trackmania_Grand_League/World_Cup/2022",
+          "event_date": "2022-07-03",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "player_slug": "binks",
+      "player_name": "Binks",
+      "goat_score": 0.261711,
+      "prime_rating": 27.2952,
+      "elite_area": 113.1887,
+      "median_conservative": 21.3969,
+      "title_points": 4.0,
+      "active_months": 49,
+      "events_played": 4,
+      "first_event_date": "2021-07-04",
+      "last_event_date": "2024-10-25",
+      "best_world_cup_result": {
+        "placement_low": 3,
+        "placement_high": 3,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Cup 2024",
+          "page_name": "Trackmania_World_Tour/2024/World_Cup",
+          "event_date": "2024-10-25",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "player_slug": "hakkijunior",
+      "player_name": "HakkiJunior",
+      "goat_score": 0.259012,
+      "prime_rating": 28.3368,
+      "elite_area": 108.3785,
+      "median_conservative": 17.527,
+      "title_points": 11.0,
+      "active_months": 50,
+      "events_played": 4,
+      "first_event_date": "2011-10-25",
+      "last_event_date": "2014-11-02",
+      "best_world_cup_result": {
+        "placement_low": 1,
+        "placement_high": 1,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "ESWC 2011",
+          "page_name": "Electronic_Sports_World_Cup/2011",
+          "event_date": "2011-10-25",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "player_slug": "gallo",
+      "player_name": "GaLLo",
+      "goat_score": 0.247116,
+      "prime_rating": 25.4534,
+      "elite_area": 91.3893,
+      "median_conservative": 21.708,
+      "title_points": 4.0,
+      "active_months": 38,
+      "events_played": 3,
+      "first_event_date": "2006-07-02",
+      "last_event_date": "2008-08-27",
+      "best_world_cup_result": {
+        "placement_low": 3,
+        "placement_high": 3,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "ESWC 2006",
+          "page_name": "Electronic_Sports_World_Cup/2006",
+          "event_date": "2006-07-02",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "player_slug": "moriah",
+      "player_name": "Moriah",
+      "goat_score": 0.237712,
+      "prime_rating": 26.7194,
+      "elite_area": 87.3516,
+      "median_conservative": 19.026,
+      "title_points": 4.0,
+      "active_months": 39,
+      "events_played": 3,
+      "first_event_date": "2007-07-07",
+      "last_event_date": "2010-07-04",
+      "best_world_cup_result": {
+        "placement_low": 2,
+        "placement_high": 2,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "ESWC 2010",
+          "page_name": "Electronic_Sports_World_Cup/2010",
+          "event_date": "2010-07-04",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "player_slug": "koenz",
+      "player_name": "Koenz",
+      "goat_score": 0.211197,
+      "prime_rating": 24.4294,
+      "elite_area": 53.1526,
+      "median_conservative": 18.3296,
+      "title_points": 4.0,
+      "active_months": 49,
+      "events_played": 4,
+      "first_event_date": "2013-11-03",
+      "last_event_date": "2016-11-07",
+      "best_world_cup_result": {
+        "placement_low": 3,
+        "placement_high": 3,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "ESWC 2013",
+          "page_name": "Electronic_Sports_World_Cup/2013",
+          "event_date": "2013-11-03",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 19,
+      "player_slug": "bren",
+      "player_name": "Bren",
+      "goat_score": 0.193899,
+      "prime_rating": 20.2223,
+      "elite_area": 5.1233,
+      "median_conservative": 17.531,
+      "title_points": 15.0,
+      "active_months": 40,
+      "events_played": 4,
+      "first_event_date": "2018-10-30",
+      "last_event_date": "2025-11-01",
+      "best_world_cup_result": {
+        "placement_low": 1,
+        "placement_high": 1,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Tour 2023 - World Championship",
+          "page_name": "Trackmania_World_Tour/2023/World_Championship",
+          "event_date": "2023-11-26",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Cup 2025",
+          "page_name": "Trackmania_World_Tour/2025/World_Cup",
+          "event_date": "2025-11-01",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 20,
+      "player_slug": "granady",
+      "player_name": "GranaDy",
+      "goat_score": 0.190769,
+      "prime_rating": 23.7383,
+      "elite_area": 48.5977,
+      "median_conservative": 16.896,
+      "title_points": 2.0,
+      "active_months": 27,
+      "events_played": 3,
+      "first_event_date": "2022-07-03",
+      "last_event_date": "2025-11-01",
+      "best_world_cup_result": {
+        "placement_low": 3,
+        "placement_high": 4,
+        "count": 1
+      },
+      "major_podium_results": []
+    }
+  ],
+  "current_top10": [
+    {
+      "rank": 1,
+      "player_slug": "carljr",
+      "player_name": "Carl Jr.",
+      "conservative_score": 37.7869,
+      "mu": 54.4529,
+      "sigma": 8.333,
+      "events_played": 11,
+      "recent_events_24_months": 2,
+      "last_event_date": "2025-11-01"
+    },
+    {
+      "rank": 2,
+      "player_slug": "pac",
+      "player_name": "Pac",
+      "conservative_score": 25.4793,
+      "mu": 42.1453,
+      "sigma": 8.333,
+      "events_played": 8,
+      "recent_events_24_months": 2,
+      "last_event_date": "2025-11-01"
+    },
+    {
+      "rank": 3,
+      "player_slug": "bren",
+      "player_name": "Bren",
+      "conservative_score": 21.4168,
+      "mu": 37.139,
+      "sigma": 7.8611,
+      "events_played": 4,
+      "recent_events_24_months": 1,
+      "last_event_date": "2025-11-01"
+    },
+    {
+      "rank": 4,
+      "player_slug": "binks",
+      "player_name": "Binks",
+      "conservative_score": 20.9791,
+      "mu": 37.6451,
+      "sigma": 8.333,
+      "events_played": 4,
+      "recent_events_24_months": 1,
+      "last_event_date": "2024-10-25"
+    },
+    {
+      "rank": 5,
+      "player_slug": "otaaaq",
+      "player_name": "Otaaaq",
+      "conservative_score": 20.0144,
+      "mu": 36.6804,
+      "sigma": 8.333,
+      "events_played": 3,
+      "recent_events_24_months": 1,
+      "last_event_date": "2024-10-25"
+    },
+    {
+      "rank": 6,
+      "player_slug": "mime",
+      "player_name": "Mime",
+      "conservative_score": 19.2558,
+      "mu": 34.5238,
+      "sigma": 7.634,
+      "events_played": 3,
+      "recent_events_24_months": 1,
+      "last_event_date": "2025-11-01"
+    },
+    {
+      "rank": 7,
+      "player_slug": "mudda",
+      "player_name": "Mudda",
+      "conservative_score": 18.1466,
+      "mu": 33.6156,
+      "sigma": 7.7345,
+      "events_played": 5,
+      "recent_events_24_months": 2,
+      "last_event_date": "2025-11-01"
+    },
+    {
+      "rank": 8,
+      "player_slug": "granady",
+      "player_name": "GranaDy",
+      "conservative_score": 14.5291,
+      "mu": 29.7947,
+      "sigma": 7.6328,
+      "events_played": 3,
+      "recent_events_24_months": 1,
+      "last_event_date": "2025-11-01"
+    },
+    {
+      "rank": 9,
+      "player_slug": "massa",
+      "player_name": "Massa",
+      "conservative_score": 13.9527,
+      "mu": 28.998,
+      "sigma": 7.5227,
+      "events_played": 8,
+      "recent_events_24_months": 2,
+      "last_event_date": "2025-11-01"
+    },
+    {
+      "rank": 10,
+      "player_slug": "pusztitopako",
+      "player_name": "pusztitopako",
+      "conservative_score": 10.386,
+      "mu": 25.441,
+      "sigma": 7.5275,
+      "events_played": 3,
+      "recent_events_24_months": 2,
+      "last_event_date": "2025-11-01"
+    }
+  ],
+  "rating_leader_timeline": [
+    {
+      "start_month": "2006-07",
+      "end_month": "2008-07",
+      "player_slug": "carl",
+      "player_name": "Carl",
+      "months": 25,
+      "peak_conservative": 32.294
+    },
+    {
+      "start_month": "2008-08",
+      "end_month": "2009-08",
+      "player_slug": "xenogear",
+      "player_name": "XeNoGeaR",
+      "months": 13,
+      "peak_conservative": 35.5886
+    },
+    {
+      "start_month": "2010-07",
+      "end_month": "2011-07",
+      "player_slug": "bergie",
+      "player_name": "Bergie",
+      "months": 13,
+      "peak_conservative": 28.9614
+    },
+    {
+      "start_month": "2011-10",
+      "end_month": "2012-10",
+      "player_slug": "hakkijunior",
+      "player_name": "HakkiJunior",
+      "months": 13,
+      "peak_conservative": 28.3368
+    },
+    {
+      "start_month": "2012-11",
+      "end_month": "2013-10",
+      "player_slug": "spammiej",
+      "player_name": "Spammiej",
+      "months": 12,
+      "peak_conservative": 29.1073
+    },
+    {
+      "start_month": "2013-11",
+      "end_month": "2016-10",
+      "player_slug": "carljr",
+      "player_name": "Carl Jr.",
+      "months": 36,
+      "peak_conservative": 38.3987
+    },
+    {
+      "start_month": "2016-11",
+      "end_month": "2017-11",
+      "player_slug": "pac",
+      "player_name": "Pac",
+      "months": 13,
+      "peak_conservative": 38.0012
+    },
+    {
+      "start_month": "2018-10",
+      "end_month": "2019-10",
+      "player_slug": "kappa",
+      "player_name": "Kappa",
+      "months": 13,
+      "peak_conservative": 35.4037
+    },
+    {
+      "start_month": "2021-07",
+      "end_month": "2023-07",
+      "player_slug": "carljr",
+      "player_name": "Carl Jr.",
+      "months": 25,
+      "peak_conservative": 41.3182
+    },
+    {
+      "start_month": "2023-11",
+      "end_month": "2025-11",
+      "player_slug": "carljr",
+      "player_name": "Carl Jr.",
+      "months": 25,
+      "peak_conservative": 39.9734
+    }
+  ],
+  "title_leaders_top10": [
+    {
+      "rank": 1,
+      "player_slug": "carljr",
+      "player_name": "Carl Jr.",
+      "title_points": 84.0,
+      "events_played": 11,
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Cup 2025",
+          "page_name": "Trackmania_World_Tour/2025/World_Cup",
+          "event_date": "2025-11-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Cup 2024",
+          "page_name": "Trackmania_World_Tour/2024/World_Cup",
+          "event_date": "2024-10-25",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League World Cup 2022",
+          "page_name": "Trackmania_Grand_League/World_Cup/2022",
+          "event_date": "2022-07-03",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League World Cup: 2020-2021",
+          "page_name": "Trackmania_Grand_League/World_Cup/2020-2021",
+          "event_date": "2021-07-04",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2015 Paris Games Week",
+          "page_name": "Electronic_Sports_World_Cup/2015/Paris_Games_Week",
+          "event_date": "2015-11-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2014",
+          "page_name": "Electronic_Sports_World_Cup/2014",
+          "event_date": "2014-11-02",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2013",
+          "page_name": "Electronic_Sports_World_Cup/2013",
+          "event_date": "2013-11-03",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - World Championship",
+          "page_name": "Trackmania_World_Tour/2023/World_Championship",
+          "event_date": "2023-11-26",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Maniaplanet World Cup 2016",
+          "page_name": "Maniaplanet_World_Cup/2016",
+          "event_date": "2016-11-07",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Championship 2018",
+          "page_name": "Trackmania_World_Championship/2018",
+          "event_date": "2018-10-30",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2012",
+          "page_name": "Electronic_Sports_World_Cup/2012",
+          "event_date": "2012-11-03",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "player_slug": "pac",
+      "player_name": "Pac",
+      "title_points": 39.0,
+      "events_played": 8,
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Cup 2025",
+          "page_name": "Trackmania_World_Tour/2025/World_Cup",
+          "event_date": "2025-11-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Maniaplanet World Cup 2016",
+          "page_name": "Maniaplanet_World_Cup/2016",
+          "event_date": "2016-11-07",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Cup 2024",
+          "page_name": "Trackmania_World_Tour/2024/World_Cup",
+          "event_date": "2024-10-25",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - World Championship",
+          "page_name": "Trackmania_World_Tour/2023/World_Championship",
+          "event_date": "2023-11-26",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League World Cup: 2020-2021",
+          "page_name": "Trackmania_Grand_League/World_Cup/2020-2021",
+          "event_date": "2021-07-04",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2015 Paris Games Week",
+          "page_name": "Electronic_Sports_World_Cup/2015/Paris_Games_Week",
+          "event_date": "2015-11-01",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "player_slug": "tween",
+      "player_name": "Tween",
+      "title_points": 23.0,
+      "events_played": 9,
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Championship 2018",
+          "page_name": "Trackmania_World_Championship/2018",
+          "event_date": "2018-10-30",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2014",
+          "page_name": "Electronic_Sports_World_Cup/2014",
+          "event_date": "2014-11-02",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2012",
+          "page_name": "Electronic_Sports_World_Cup/2012",
+          "event_date": "2012-11-03",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2011",
+          "page_name": "Electronic_Sports_World_Cup/2011",
+          "event_date": "2011-10-25",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Maniaplanet World Cup 2016",
+          "page_name": "Maniaplanet_World_Cup/2016",
+          "event_date": "2016-11-07",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2015 Paris Games Week",
+          "page_name": "Electronic_Sports_World_Cup/2015/Paris_Games_Week",
+          "event_date": "2015-11-01",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "player_slug": "carl",
+      "player_name": "Carl",
+      "title_points": 20.0,
+      "events_played": 6,
+      "major_podium_results": [
+        {
+          "event_name": "ESWC 2006",
+          "page_name": "Electronic_Sports_World_Cup/2006",
+          "event_date": "2006-07-02",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2007",
+          "page_name": "Electronic_Sports_World_Cup/2007",
+          "event_date": "2007-07-07",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "player_slug": "spammiej",
+      "player_name": "Spammiej",
+      "title_points": 18.0,
+      "events_played": 8,
+      "major_podium_results": [
+        {
+          "event_name": "ESWC 2012",
+          "page_name": "Electronic_Sports_World_Cup/2012",
+          "event_date": "2012-11-03",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "player_slug": "bergie",
+      "player_name": "Bergie",
+      "title_points": 16.0,
+      "events_played": 7,
+      "major_podium_results": [
+        {
+          "event_name": "ESWC 2010",
+          "page_name": "Electronic_Sports_World_Cup/2010",
+          "event_date": "2010-07-04",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "player_slug": "kappa",
+      "player_name": "Kappa",
+      "title_points": 15.0,
+      "events_played": 6,
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Championship 2018",
+          "page_name": "Trackmania_World_Championship/2018",
+          "event_date": "2018-10-30",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League World Cup: 2020-2021",
+          "page_name": "Trackmania_Grand_League/World_Cup/2020-2021",
+          "event_date": "2021-07-04",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "player_slug": "bren",
+      "player_name": "Bren",
+      "title_points": 15.0,
+      "events_played": 4,
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Tour 2023 - World Championship",
+          "page_name": "Trackmania_World_Tour/2023/World_Championship",
+          "event_date": "2023-11-26",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Cup 2025",
+          "page_name": "Trackmania_World_Tour/2025/World_Cup",
+          "event_date": "2025-11-01",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "player_slug": "otaaaq",
+      "player_name": "Otaaaq",
+      "title_points": 14.0,
+      "events_played": 3,
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Tour 2023 - World Championship",
+          "page_name": "Trackmania_World_Tour/2023/World_Championship",
+          "event_date": "2023-11-26",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "player_slug": "hakkijunior",
+      "player_name": "HakkiJunior",
+      "title_points": 11.0,
+      "events_played": 4,
+      "major_podium_results": [
+        {
+          "event_name": "ESWC 2011",
+          "page_name": "Electronic_Sports_World_Cup/2011",
+          "event_date": "2011-10-25",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        }
+      ]
+    }
+  ]
+}

@@ -14,33 +14,19 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="stylesheet" href="./assets/styles.css?v=20260424i">
   </head>
   <body>
     <div class="site-shell">
       <header class="hero">
         <div class="hero__eyebrow">Trackmania rankings project</div>
-        <div class="hero__grid">
-          <div class="hero__main">
-            <h1>tmrank</h1>
-            <p class="hero__lede">
-              Curated current-strength and GOAT rankings built from Liquipedia event history, published as an
-              independent community project.
-            </p>
-          </div>
-          <div class="hero__meta card">
-            <div class="stat">
-              <span class="stat__label">Last updated</span>
-              <span class="stat__value" id="hero-updated">Loading...</span>
-            </div>
-            <p class="hero__method">
-              GOAT combines prime rating, elite area, median conservative rating, and major title points.
-            </p>
-            <div class="hero__actions">
-              <a class="button button--accent is-hidden" id="repo-link" href="#" target="_blank" rel="noreferrer">GitHub Repo</a>
-              <a class="button" href="./methodology.html">Methodology</a>
-              <a class="button" href="./legal.html">Attribution &amp; Legal</a>
-            </div>
+        <div class="hero__main">
+          <h1>tmrank</h1>
+          <p class="hero__lede">
+            Independent Trackmania rankings built from curated Liquipedia tournament results.
+          </p>
+          <div class="hero__actions">
+            <a class="button" href="./methodology.html">Methodology</a>
           </div>
         </div>
       </header>
@@ -49,13 +35,45 @@
         <section class="section">
           <div class="section__header">
             <div>
+              <p class="section__eyebrow">Start here</p>
+              <h2>How to read tmrank</h2>
+            </div>
+          </div>
+          <div class="card explainer-card">
+            <div class="explainer-grid">
+              <article class="explainer-item">
+                <h3>GOAT ranking</h3>
+                <p>Who built the strongest all-time case from a mix of peak, longevity, sustained level, and major results.</p>
+              </article>
+              <article class="explainer-item">
+                <h3>Current ranking</h3>
+                <p>Who looks strongest right now, with inactivity gradually making old strength count less.</p>
+              </article>
+              <article class="explainer-item">
+                <h3>Title points</h3>
+                <p>Credit for major placements only. Useful on its own, but not the whole ranking by itself.</p>
+              </article>
+              <article class="explainer-item">
+                <h3>Profiles</h3>
+                <p>Alternate lenses for formats like campaigns, Kacky, ZrT cups, and World Cups, each using only events from that category.</p>
+              </article>
+            </div>
+            <p class="explainer-note">
+              The default ranking is mainly an esports view. Event inclusion, event weighting, and majors definition
+              are deliberate modeling choices, especially across very different Trackmania formats.
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__header">
+            <div>
               <p class="section__eyebrow">Hall of fame</p>
               <h2>GOAT Top 20</h2>
             </div>
-            <p class="section__copy">
-              The default esports profile combines sustained prime level, accumulated elite area, median monthly
-              strength, and major title points.
-            </p>
+            <div class="section__copy section__copy--wide">
+              <p class="section__hint">Strongest all-time players, determined by blending: Prime = best sustained high point. Elite area = how much top-level strength a player built over time. Median = typical active-month level. Title points = major placements only.</p>
+            </div>
           </div>
           <div class="card table-card">
             <div id="goat-table"></div>
@@ -69,6 +87,10 @@
                 <p class="section__eyebrow">Right now</p>
                 <h2>Current Top 10</h2>
               </div>
+              <p class="section__copy">
+                Strongest active players right now. Good recent results against strong fields help most, while long
+                inactivity lowers confidence.
+              </p>
             </div>
             <div class="card table-card">
               <div id="current-table"></div>
@@ -80,6 +102,10 @@
                 <p class="section__eyebrow">Major résumé</p>
                 <h2>Major Titles Leaders</h2>
               </div>
+              <p class="section__copy">
+                Best major-event resumés on their own. This is separate from the main rating model and only tracks the
+                curated majors list.
+              </p>
             </div>
             <div class="card table-card">
               <div id="titles-table"></div>
@@ -94,8 +120,8 @@
               <h2>Rating Leader Timeline</h2>
             </div>
             <p class="section__copy">
-              Monthly #1 rating reigns, grouped into continuous eras and shown as a compact ribbon with
-              width-proportional segments.
+              Who held the #1 rating over time, month by month, grouped into continuous eras and shown as a compact
+              ribbon.
             </p>
           </div>
           <div class="card timeline-card">
@@ -110,8 +136,8 @@
               <h2>Alternate Profiles</h2>
             </div>
             <p class="section__copy">
-              Compact snapshots from non-default ranking profiles. New profiles appear here automatically when they
-              are exported.
+              Side views for formats that reward different things. They are meant to show different ranking
+              philosophies, not pretend one list fits every corner of Trackmania.
             </p>
           </div>
           <div class="profile-grid" id="profile-cards"></div>
@@ -121,18 +147,16 @@
       <footer class="site-footer card">
         <div>
           <strong>Data sourced from Liquipedia.</strong>
-          <p class="site-footer__copy">
-            This site shows independent derived rankings based on curated Liquipedia event history.
-          </p>
         </div>
         <div class="site-footer__links">
           <a href="https://liquipedia.net/api-terms-of-use" target="_blank" rel="noreferrer">Liquipedia API terms</a>
+          <a class="is-hidden" data-repo-link href="#" target="_blank" rel="noreferrer">GitHub repo</a>
           <a href="./legal.html">License &amp; notices</a>
           <span id="footer-updated">Updated: loading...</span>
         </div>
       </footer>
     </div>
 
-    <script src="./assets/app.js"></script>
+    <script src="./assets/app.js?v=20260424j"></script>
   </body>
 </html>

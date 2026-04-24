@@ -3,247 +3,1275 @@
     "name": "default",
     "label": "Esports"
   },
-  "generated_at": "2026-04-14T16:31:31.439196+00:00",
+  "generated_at": "2026-04-23T20:20:43.042424+00:00",
   "goat_top20": [
     {
       "rank": 1,
       "player_slug": "carljr",
       "player_name": "Carl Jr.",
-      "goat_score": 0.977785,
+      "goat_score": 0.986786,
       "prime_rating": 37.6822,
-      "elite_area": 1180.0991,
-      "median_conservative": 31.1118,
-      "title_points": 172.0,
-      "active_months": 182,
-      "events_played": 125
+      "elite_area": 1201.0362,
+      "median_conservative": 31.2138,
+      "title_points": 203.0,
+      "active_months": 183,
+      "events_played": 125,
+      "first_event_date": "2010-11-06",
+      "last_event_date": "2026-03-29",
+      "best_world_cup_result": {
+        "placement_low": 1,
+        "placement_high": 1,
+        "count": 7
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Cup 2025",
+          "page_name": "Trackmania_World_Tour/2025/World_Cup",
+          "event_date": "2025-11-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Cup 2024",
+          "page_name": "Trackmania_World_Tour/2024/World_Cup",
+          "event_date": "2024-10-25",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League World Cup 2022",
+          "page_name": "Trackmania_Grand_League/World_Cup/2022",
+          "event_date": "2022-07-03",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League World Cup: 2020-2021",
+          "page_name": "Trackmania_Grand_League/World_Cup/2020-2021",
+          "event_date": "2021-07-04",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2015 Paris Games Week",
+          "page_name": "Electronic_Sports_World_Cup/2015/Paris_Games_Week",
+          "event_date": "2015-11-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2014",
+          "page_name": "Electronic_Sports_World_Cup/2014",
+          "event_date": "2014-11-02",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2013",
+          "page_name": "Electronic_Sports_World_Cup/2013",
+          "event_date": "2013-11-03",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - World Championship",
+          "page_name": "Trackmania_World_Tour/2023/World_Championship",
+          "event_date": "2023-11-26",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Maniaplanet World Cup 2016",
+          "page_name": "Maniaplanet_World_Cup/2016",
+          "event_date": "2016-11-07",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Championship 2018",
+          "page_name": "Trackmania_World_Championship/2018",
+          "event_date": "2018-10-30",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2012",
+          "page_name": "Electronic_Sports_World_Cup/2012",
+          "event_date": "2012-11-03",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Red Bull Faster 2025",
+          "page_name": "Red_Bull_Faster/2025",
+          "event_date": "2025-03-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - Stage 1 - Grand League",
+          "page_name": "Trackmania_World_Tour/2023/Stage_1/Grand_League",
+          "event_date": "2023-03-19",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League: Winter 2021 Final",
+          "page_name": "Trackmania_Grand_League/Winter_2021/Final",
+          "event_date": "2021-03-14",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League: Fall 2020 Playoffs",
+          "page_name": "Trackmania_Grand_League/Fall_2020/Playoffs",
+          "event_date": "2020-11-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League: Winter 2020",
+          "page_name": "Trackmania_Grand_League/Winter_2020",
+          "event_date": "2020-02-28",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2019",
+          "page_name": "ZeratoR/Trackmania_Cup/2019",
+          "event_date": "2019-06-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2017",
+          "page_name": "ZeratoR/Trackmania_Cup/2017",
+          "event_date": "2017-07-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 3",
+          "page_name": "ZeratoR/Trackmania_Cup/3",
+          "event_date": "2015-12-12",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2",
+          "page_name": "ZeratoR/Trackmania_Cup/2",
+          "event_date": "2015-03-07",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Road to EWC: DreamHack Birmingham 2026",
+          "page_name": "DreamHack/2026/Birmingham",
+          "event_date": "2026-03-29",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "XPEvo 2025",
+          "page_name": "XPEvo/2025",
+          "event_date": "2025-09-28",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Ascension Tournament 2023",
+          "page_name": "Ascension_Tournament/2023",
+          "event_date": "2023-10-28",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League - Spring 2022 - Final",
+          "page_name": "Trackmania_Grand_League/Spring_2022/Final",
+          "event_date": "2022-04-24",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2020",
+          "page_name": "ZeratoR/Trackmania_Cup/2020",
+          "event_date": "2020-07-26",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - Stage 2 - Grand League",
+          "page_name": "Trackmania_World_Tour/2023/Stage_2/Grand_League",
+          "event_date": "2023-06-25",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Arctic Gaming Experience 2022",
+          "page_name": "Arctic_Gaming_Experience/2022",
+          "event_date": "2022-08-14",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 2,
       "player_slug": "pac",
       "player_name": "Pac",
-      "goat_score": 0.702577,
+      "goat_score": 0.682985,
       "prime_rating": 34.316,
-      "elite_area": 637.6156,
-      "median_conservative": 31.045,
-      "title_points": 77.0,
-      "active_months": 123,
-      "events_played": 106
+      "elite_area": 656.7792,
+      "median_conservative": 31.304,
+      "title_points": 107.0,
+      "active_months": 124,
+      "events_played": 106,
+      "first_event_date": "2015-06-27",
+      "last_event_date": "2026-03-29",
+      "best_world_cup_result": {
+        "placement_low": 1,
+        "placement_high": 1,
+        "count": 2
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Cup 2025",
+          "page_name": "Trackmania_World_Tour/2025/World_Cup",
+          "event_date": "2025-11-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Maniaplanet World Cup 2016",
+          "page_name": "Maniaplanet_World_Cup/2016",
+          "event_date": "2016-11-07",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Cup 2024",
+          "page_name": "Trackmania_World_Tour/2024/World_Cup",
+          "event_date": "2024-10-25",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - World Championship",
+          "page_name": "Trackmania_World_Tour/2023/World_Championship",
+          "event_date": "2023-11-26",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League World Cup: 2020-2021",
+          "page_name": "Trackmania_Grand_League/World_Cup/2020-2021",
+          "event_date": "2021-07-04",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2015 Paris Games Week",
+          "page_name": "Electronic_Sports_World_Cup/2015/Paris_Games_Week",
+          "event_date": "2015-11-01",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Road to EWC: DreamHack Birmingham 2026",
+          "page_name": "DreamHack/2026/Birmingham",
+          "event_date": "2026-03-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - Stage 1 - Grand League",
+          "page_name": "Trackmania_World_Tour/2023/Stage_1/Grand_League",
+          "event_date": "2023-03-19",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Arctic Gaming Experience 2022",
+          "page_name": "Arctic_Gaming_Experience/2022",
+          "event_date": "2022-08-14",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League Fall 2021: Finals",
+          "page_name": "Trackmania_Grand_League/Fall_2021/Final",
+          "event_date": "2021-12-19",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "XPEvo 2024",
+          "page_name": "XPEvo/2024",
+          "event_date": "2024-10-13",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League: Winter 2021 Final",
+          "page_name": "Trackmania_Grand_League/Winter_2021/Final",
+          "event_date": "2021-03-14",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2019",
+          "page_name": "ZeratoR/Trackmania_Cup/2019",
+          "event_date": "2019-06-29",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Red Bull Faster 2025",
+          "page_name": "Red_Bull_Faster/2025",
+          "event_date": "2025-03-01",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - Stage 2 - Grand League",
+          "page_name": "Trackmania_World_Tour/2023/Stage_2/Grand_League",
+          "event_date": "2023-06-25",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League - Spring 2022 - Final",
+          "page_name": "Trackmania_Grand_League/Spring_2022/Final",
+          "event_date": "2022-04-24",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League: Fall 2020 Playoffs",
+          "page_name": "Trackmania_Grand_League/Fall_2020/Playoffs",
+          "event_date": "2020-11-01",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League: Beta Season",
+          "page_name": "Trackmania_Grand_League/Beta_Season",
+          "event_date": "2019-10-30",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 3,
       "player_slug": "frostbeule",
       "player_name": "FrostBeule",
-      "goat_score": 0.677978,
+      "goat_score": 0.602537,
       "prime_rating": 38.5614,
       "elite_area": 627.4367,
       "median_conservative": 34.0154,
       "title_points": 31.0,
       "active_months": 84,
-      "events_played": 31
+      "events_played": 31,
+      "first_event_date": "2006-11-19",
+      "last_event_date": "2014-02-22",
+      "best_world_cup_result": {
+        "placement_low": 1,
+        "placement_high": 1,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "ESWC 2008",
+          "page_name": "Electronic_Sports_World_Cup/2008",
+          "event_date": "2008-08-27",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "World Cyber Games 2010",
+          "page_name": "World_Cyber_Games/2010",
+          "event_date": "2010-10-03",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "World Cyber Games 2009",
+          "page_name": "World_Cyber_Games/2009",
+          "event_date": "2009-11-13",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Verizon Playlinc",
+          "page_name": "Verizon_Playlinc",
+          "event_date": "2006-11-19",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ESWC Masters of Paris",
+          "page_name": "Electronic_Sports_World_Cup/2008/Masters_of_Paris",
+          "event_date": "2008-07-06",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 4,
       "player_slug": "gwen",
       "player_name": "Gwen",
-      "goat_score": 0.5985,
+      "goat_score": 0.534317,
       "prime_rating": 34.7804,
-      "elite_area": 360.1707,
-      "median_conservative": 29.4508,
-      "title_points": 50.0,
-      "active_months": 77,
-      "events_played": 99
+      "elite_area": 366.0968,
+      "median_conservative": 29.4126,
+      "title_points": 56.0,
+      "active_months": 78,
+      "events_played": 99,
+      "first_event_date": "2019-04-21",
+      "last_event_date": "2026-03-29",
+      "best_world_cup_result": {
+        "placement_low": 7,
+        "placement_high": 8,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Ascension Tournament 2023",
+          "page_name": "Ascension_Tournament/2023",
+          "event_date": "2023-10-28",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2022",
+          "page_name": "ZeratoR/Trackmania_Cup/2022",
+          "event_date": "2022-06-04",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2021",
+          "page_name": "ZeratoR/Trackmania_Cup/2021",
+          "event_date": "2021-07-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2020",
+          "page_name": "ZeratoR/Trackmania_Cup/2020",
+          "event_date": "2020-07-26",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League: Fall 2020 Playoffs",
+          "page_name": "Trackmania_Grand_League/Fall_2020/Playoffs",
+          "event_date": "2020-11-01",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - Stage 1 - Grand League",
+          "page_name": "Trackmania_World_Tour/2023/Stage_1/Grand_League",
+          "event_date": "2023-03-19",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League Fall 2021: Finals",
+          "page_name": "Trackmania_Grand_League/Fall_2021/Final",
+          "event_date": "2021-12-19",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 5,
       "player_slug": "bren",
       "player_name": "Bren",
-      "goat_score": 0.574474,
-      "prime_rating": 32.5662,
-      "elite_area": 393.0129,
+      "goat_score": 0.512169,
+      "prime_rating": 32.8606,
+      "elite_area": 404.0464,
       "median_conservative": 28.5716,
-      "title_points": 42.0,
-      "active_months": 123,
-      "events_played": 123
+      "title_points": 46.0,
+      "active_months": 124,
+      "events_played": 123,
+      "first_event_date": "2015-03-07",
+      "last_event_date": "2026-03-29",
+      "best_world_cup_result": {
+        "placement_low": 1,
+        "placement_high": 1,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Tour 2023 - World Championship",
+          "page_name": "Trackmania_World_Tour/2023/World_Championship",
+          "event_date": "2023-11-26",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Cup 2025",
+          "page_name": "Trackmania_World_Tour/2025/World_Cup",
+          "event_date": "2025-11-01",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2019",
+          "page_name": "ZeratoR/Trackmania_Cup/2019",
+          "event_date": "2019-06-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 4",
+          "page_name": "ZeratoR/Trackmania_Cup/4",
+          "event_date": "2016-06-25",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 3",
+          "page_name": "ZeratoR/Trackmania_Cup/3",
+          "event_date": "2015-12-12",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 6,
       "player_slug": "mudda",
       "player_name": "Mudda",
-      "goat_score": 0.532595,
+      "goat_score": 0.479935,
       "prime_rating": 32.1886,
-      "elite_area": 325.1333,
-      "median_conservative": 29.5336,
-      "title_points": 21.0,
-      "active_months": 74,
-      "events_played": 80
+      "elite_area": 343.9727,
+      "median_conservative": 29.7922,
+      "title_points": 36.0,
+      "active_months": 75,
+      "events_played": 80,
+      "first_event_date": "2020-02-16",
+      "last_event_date": "2026-03-29",
+      "best_world_cup_result": {
+        "placement_low": 2,
+        "placement_high": 2,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Cup 2025",
+          "page_name": "Trackmania_World_Tour/2025/World_Cup",
+          "event_date": "2025-11-01",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League World Cup 2022",
+          "page_name": "Trackmania_Grand_League/World_Cup/2022",
+          "event_date": "2022-07-03",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - Stage 2 - Grand League",
+          "page_name": "Trackmania_World_Tour/2023/Stage_2/Grand_League",
+          "event_date": "2023-06-25",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League - Spring 2022 - Final",
+          "page_name": "Trackmania_Grand_League/Spring_2022/Final",
+          "event_date": "2022-04-24",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 7,
       "player_slug": "affi",
       "player_name": "Affi",
-      "goat_score": 0.521837,
+      "goat_score": 0.462344,
       "prime_rating": 32.8185,
-      "elite_area": 306.0634,
-      "median_conservative": 28.1458,
-      "title_points": 19.0,
-      "active_months": 76,
-      "events_played": 95
+      "elite_area": 318.5979,
+      "median_conservative": 29.1884,
+      "title_points": 26.0,
+      "active_months": 77,
+      "events_played": 95,
+      "first_event_date": "2019-10-30",
+      "last_event_date": "2026-03-14",
+      "best_world_cup_result": {
+        "placement_low": 3,
+        "placement_high": 4,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2022",
+          "page_name": "ZeratoR/Trackmania_Cup/2022",
+          "event_date": "2022-06-04",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - Stage 1 - Grand League",
+          "page_name": "Trackmania_World_Tour/2023/Stage_1/Grand_League",
+          "event_date": "2023-03-19",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League Fall 2021: Finals",
+          "page_name": "Trackmania_Grand_League/Fall_2021/Final",
+          "event_date": "2021-12-19",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 8,
+      "player_slug": "carl",
+      "player_name": "Carl",
+      "goat_score": 0.452771,
+      "prime_rating": 32.5702,
+      "elite_area": 327.3276,
+      "median_conservative": 24.8706,
+      "title_points": 26.0,
+      "active_months": 147,
+      "events_played": 66,
+      "first_event_date": "2006-07-02",
+      "last_event_date": "2026-02-15",
+      "best_world_cup_result": {
+        "placement_low": 1,
+        "placement_high": 1,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "ESWC 2006",
+          "page_name": "Electronic_Sports_World_Cup/2006",
+          "event_date": "2006-07-02",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2007",
+          "page_name": "Electronic_Sports_World_Cup/2007",
+          "event_date": "2007-07-07",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "World Cyber Games 2010",
+          "page_name": "World_Cyber_Games/2010",
+          "event_date": "2010-10-03",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "player_slug": "granady",
+      "player_name": "GranaDy",
+      "goat_score": 0.44637,
+      "prime_rating": 32.2017,
+      "elite_area": 320.7288,
+      "median_conservative": 29.8886,
+      "title_points": 17.0,
+      "active_months": 76,
+      "events_played": 109,
+      "first_event_date": "2020-01-18",
+      "last_event_date": "2026-03-29",
+      "best_world_cup_result": {
+        "placement_low": 3,
+        "placement_high": 4,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Red Bull Faster 2025",
+          "page_name": "Red_Bull_Faster/2025",
+          "event_date": "2025-03-01",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - Stage 2 - Grand League",
+          "page_name": "Trackmania_World_Tour/2023/Stage_2/Grand_League",
+          "event_date": "2023-06-25",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Road to EWC: DreamHack Birmingham 2026",
+          "page_name": "DreamHack/2026/Birmingham",
+          "event_date": "2026-03-29",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Ascension Tournament 2023",
+          "page_name": "Ascension_Tournament/2023",
+          "event_date": "2023-10-28",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 10,
       "player_slug": "papou",
       "player_name": "Papou",
-      "goat_score": 0.519752,
+      "goat_score": 0.440648,
       "prime_rating": 32.1096,
       "elite_area": 265.3713,
       "median_conservative": 28.5696,
       "title_points": 25.0,
       "active_months": 80,
-      "events_played": 66
-    },
-    {
-      "rank": 9,
-      "player_slug": "carl",
-      "player_name": "Carl",
-      "goat_score": 0.516526,
-      "prime_rating": 32.5702,
-      "elite_area": 327.3276,
-      "median_conservative": 24.9142,
-      "title_points": 26.0,
-      "active_months": 146,
-      "events_played": 66
-    },
-    {
-      "rank": 10,
-      "player_slug": "granady",
-      "player_name": "GranaDy",
-      "goat_score": 0.504279,
-      "prime_rating": 31.796,
-      "elite_area": 308.8919,
-      "median_conservative": 29.6965,
-      "title_points": 5.0,
-      "active_months": 75,
-      "events_played": 109
+      "events_played": 66,
+      "first_event_date": "2014-03-09",
+      "last_event_date": "2022-07-03",
+      "best_world_cup_result": {
+        "placement_low": 6,
+        "placement_high": 6,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2021",
+          "page_name": "ZeratoR/Trackmania_Cup/2021",
+          "event_date": "2021-07-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League: Beta Season",
+          "page_name": "Trackmania_Grand_League/Beta_Season",
+          "event_date": "2019-10-30",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2017",
+          "page_name": "ZeratoR/Trackmania_Cup/2017",
+          "event_date": "2017-07-01",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 11,
       "player_slug": "kappa",
       "player_name": "Kappa",
-      "goat_score": 0.50198,
+      "goat_score": 0.432313,
       "prime_rating": 31.0208,
-      "elite_area": 237.0649,
-      "median_conservative": 25.9514,
-      "title_points": 32.0,
+      "elite_area": 236.5913,
+      "median_conservative": 25.9423,
+      "title_points": 34.0,
       "active_months": 125,
-      "events_played": 75
+      "events_played": 75,
+      "first_event_date": "2011-05-29",
+      "last_event_date": "2023-11-26",
+      "best_world_cup_result": {
+        "placement_low": 1,
+        "placement_high": 1,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Championship 2018",
+          "page_name": "Trackmania_World_Championship/2018",
+          "event_date": "2018-10-30",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League World Cup: 2020-2021",
+          "page_name": "Trackmania_Grand_League/World_Cup/2020-2021",
+          "event_date": "2021-07-04",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League: Beta Season",
+          "page_name": "Trackmania_Grand_League/Beta_Season",
+          "event_date": "2019-10-30",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League: Winter 2020",
+          "page_name": "Trackmania_Grand_League/Winter_2020",
+          "event_date": "2020-02-28",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 12,
+      "player_slug": "tween",
+      "player_name": "Tween",
+      "goat_score": 0.42394,
+      "prime_rating": 29.5897,
+      "elite_area": 277.968,
+      "median_conservative": 26.5105,
+      "title_points": 28.0,
+      "active_months": 172,
+      "events_played": 108,
+      "first_event_date": "2011-05-29",
+      "last_event_date": "2026-03-29",
+      "best_world_cup_result": {
+        "placement_low": 2,
+        "placement_high": 2,
+        "count": 4
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Championship 2018",
+          "page_name": "Trackmania_World_Championship/2018",
+          "event_date": "2018-10-30",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2014",
+          "page_name": "Electronic_Sports_World_Cup/2014",
+          "event_date": "2014-11-02",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2012",
+          "page_name": "Electronic_Sports_World_Cup/2012",
+          "event_date": "2012-11-03",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2011",
+          "page_name": "Electronic_Sports_World_Cup/2011",
+          "event_date": "2011-10-25",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Maniaplanet World Cup 2016",
+          "page_name": "Maniaplanet_World_Cup/2016",
+          "event_date": "2016-11-07",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2015 Paris Games Week",
+          "page_name": "Electronic_Sports_World_Cup/2015/Paris_Games_Week",
+          "event_date": "2015-11-01",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "player_slug": "aurel",
+      "player_name": "Aurel",
+      "goat_score": 0.423345,
+      "prime_rating": 31.042,
+      "elite_area": 233.6708,
+      "median_conservative": 27.4456,
+      "title_points": 26.0,
+      "active_months": 103,
+      "events_played": 99,
+      "first_event_date": "2015-12-12",
+      "last_event_date": "2026-03-14",
+      "best_world_cup_result": {
+        "placement_low": 8,
+        "placement_high": 8,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2021",
+          "page_name": "ZeratoR/Trackmania_Cup/2021",
+          "event_date": "2021-07-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - Stage 1 - Grand League",
+          "page_name": "Trackmania_World_Tour/2023/Stage_1/Grand_League",
+          "event_date": "2023-03-19",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2019",
+          "page_name": "ZeratoR/Trackmania_Cup/2019",
+          "event_date": "2019-06-29",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 14,
       "player_slug": "lign",
       "player_name": "Lign",
-      "goat_score": 0.495991,
+      "goat_score": 0.410261,
       "prime_rating": 34.0399,
       "elite_area": 127.0681,
       "median_conservative": 29.6428,
       "title_points": 16.0,
       "active_months": 27,
-      "events_played": 8
-    },
-    {
-      "rank": 13,
-      "player_slug": "tween",
-      "player_name": "Tween",
-      "goat_score": 0.49503,
-      "prime_rating": 29.5897,
-      "elite_area": 274.2104,
-      "median_conservative": 26.5105,
-      "title_points": 26.0,
-      "active_months": 171,
-      "events_played": 108
-    },
-    {
-      "rank": 14,
-      "player_slug": "aurel",
-      "player_name": "Aurel",
-      "goat_score": 0.493472,
-      "prime_rating": 31.042,
-      "elite_area": 230.5426,
-      "median_conservative": 27.4854,
-      "title_points": 21.0,
-      "active_months": 102,
-      "events_played": 99
+      "events_played": 8,
+      "first_event_date": "2007-07-07",
+      "last_event_date": "2009-08-01",
+      "best_world_cup_result": {
+        "placement_low": 3,
+        "placement_high": 3,
+        "count": 2
+      },
+      "major_podium_results": [
+        {
+          "event_name": "ESWC 2008",
+          "page_name": "Electronic_Sports_World_Cup/2008",
+          "event_date": "2008-08-27",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2007",
+          "page_name": "Electronic_Sports_World_Cup/2007",
+          "event_date": "2007-07-07",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC Masters of Paris",
+          "page_name": "Electronic_Sports_World_Cup/2008/Masters_of_Paris",
+          "event_date": "2008-07-06",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 15,
-      "player_slug": "mime",
-      "player_name": "Mime",
-      "goat_score": 0.47775,
-      "prime_rating": 31.3845,
-      "elite_area": 224.1347,
-      "median_conservative": 28.6583,
-      "title_points": 5.0,
-      "active_months": 65,
-      "events_played": 52
+      "player_slug": "binks",
+      "player_name": "Binks",
+      "goat_score": 0.408006,
+      "prime_rating": 30.1293,
+      "elite_area": 232.8622,
+      "median_conservative": 28.4604,
+      "title_points": 19.0,
+      "active_months": 79,
+      "events_played": 105,
+      "first_event_date": "2019-08-31",
+      "last_event_date": "2026-03-29",
+      "best_world_cup_result": {
+        "placement_low": 3,
+        "placement_high": 3,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Cup 2024",
+          "page_name": "Trackmania_World_Tour/2024/World_Cup",
+          "event_date": "2024-10-25",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Arctic Gaming Experience 2022",
+          "page_name": "Arctic_Gaming_Experience/2022",
+          "event_date": "2022-08-14",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "XPEvo 2024",
+          "page_name": "XPEvo/2024",
+          "event_date": "2024-10-13",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - Stage 1 - Grand League",
+          "page_name": "Trackmania_World_Tour/2023/Stage_1/Grand_League",
+          "event_date": "2023-03-19",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 16,
-      "player_slug": "binks",
-      "player_name": "Binks",
-      "goat_score": 0.472148,
-      "prime_rating": 29.7881,
-      "elite_area": 219.4945,
-      "median_conservative": 28.388,
+      "player_slug": "mime",
+      "player_name": "Mime",
+      "goat_score": 0.405623,
+      "prime_rating": 31.3765,
+      "elite_area": 235.5194,
+      "median_conservative": 28.7023,
       "title_points": 10.0,
-      "active_months": 78,
-      "events_played": 105
+      "active_months": 66,
+      "events_played": 52,
+      "first_event_date": "2020-11-29",
+      "last_event_date": "2026-03-29",
+      "best_world_cup_result": {
+        "placement_low": 2,
+        "placement_high": 2,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania Grand League World Cup 2022",
+          "page_name": "Trackmania_Grand_League/World_Cup/2022",
+          "event_date": "2022-07-03",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "XPEvo 2025",
+          "page_name": "XPEvo/2025",
+          "event_date": "2025-09-28",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 17,
       "player_slug": "otaaaq",
       "player_name": "Otaaaq",
-      "goat_score": 0.468006,
-      "prime_rating": 30.3818,
-      "elite_area": 173.5584,
-      "median_conservative": 27.6718,
-      "title_points": 14.0,
-      "active_months": 72,
-      "events_played": 63
+      "goat_score": 0.396415,
+      "prime_rating": 30.6569,
+      "elite_area": 182.9707,
+      "median_conservative": 27.6886,
+      "title_points": 18.0,
+      "active_months": 73,
+      "events_played": 63,
+      "first_event_date": "2020-04-19",
+      "last_event_date": "2026-03-29",
+      "best_world_cup_result": {
+        "placement_low": 1,
+        "placement_high": 1,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Tour 2023 - World Championship",
+          "page_name": "Trackmania_World_Tour/2023/World_Championship",
+          "event_date": "2023-11-26",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        }
+      ]
     },
     {
       "rank": 18,
-      "player_slug": "spammiej",
-      "player_name": "Spammiej",
-      "goat_score": 0.465333,
-      "prime_rating": 29.4445,
-      "elite_area": 194.8618,
-      "median_conservative": 25.4324,
-      "title_points": 22.0,
-      "active_months": 169,
-      "events_played": 107
+      "player_slug": "epos",
+      "player_name": "Epos",
+      "goat_score": 0.396004,
+      "prime_rating": 31.0831,
+      "elite_area": 125.5774,
+      "median_conservative": 28.454,
+      "title_points": 24.0,
+      "active_months": 39,
+      "events_played": 37,
+      "first_event_date": "2023-02-25",
+      "last_event_date": "2026-03-29",
+      "best_world_cup_result": {
+        "placement_low": 5,
+        "placement_high": 8,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "XPEvo 2025",
+          "page_name": "XPEvo/2025",
+          "event_date": "2025-09-28",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "XPEvo 2024",
+          "page_name": "XPEvo/2024",
+          "event_date": "2024-10-13",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 19,
-      "player_slug": "elconn21",
-      "player_name": "ELconn21",
-      "goat_score": 0.46462,
-      "prime_rating": 30.751,
-      "elite_area": 186.8665,
-      "median_conservative": 29.7376,
-      "title_points": 0.0,
-      "active_months": 54,
-      "events_played": 71
+      "player_slug": "spammiej",
+      "player_name": "Spammiej",
+      "goat_score": 0.392561,
+      "prime_rating": 29.4445,
+      "elite_area": 196.2677,
+      "median_conservative": 25.4324,
+      "title_points": 23.0,
+      "active_months": 170,
+      "events_played": 107,
+      "first_event_date": "2010-12-20",
+      "last_event_date": "2026-03-14",
+      "best_world_cup_result": {
+        "placement_low": 1,
+        "placement_high": 1,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "ESWC 2012",
+          "page_name": "Electronic_Sports_World_Cup/2012",
+          "event_date": "2012-11-03",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        }
+      ]
     },
     {
       "rank": 20,
       "player_slug": "massa",
       "player_name": "Massa",
-      "goat_score": 0.452618,
+      "goat_score": 0.392235,
       "prime_rating": 29.7381,
-      "elite_area": 224.567,
+      "elite_area": 236.3754,
       "median_conservative": 25.0781,
-      "title_points": 9.0,
-      "active_months": 170,
-      "events_played": 128
+      "title_points": 15.0,
+      "active_months": 171,
+      "events_played": 128,
+      "first_event_date": "2011-05-29",
+      "last_event_date": "2026-03-29",
+      "best_world_cup_result": {
+        "placement_low": 3,
+        "placement_high": 4,
+        "count": 1
+      },
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Tour 2023 - Stage 2 - Grand League",
+          "page_name": "Trackmania_World_Tour/2023/Stage_2/Grand_League",
+          "event_date": "2023-06-25",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
     }
   ],
   "current_top10": [
@@ -251,9 +1279,9 @@
       "rank": 1,
       "player_slug": "carljr",
       "player_name": "Carl Jr.",
-      "conservative_score": 36.1754,
-      "mu": 40.9619,
-      "sigma": 1.5955,
+      "conservative_score": 36.6095,
+      "mu": 41.2924,
+      "sigma": 1.561,
       "events_played": 125,
       "recent_events_24_months": 25,
       "last_event_date": "2026-03-29"
@@ -262,42 +1290,42 @@
       "rank": 2,
       "player_slug": "bren",
       "player_name": "Bren",
-      "conservative_score": 33.907,
-      "mu": 38.3282,
-      "sigma": 1.4737,
+      "conservative_score": 34.0025,
+      "mu": 38.3578,
+      "sigma": 1.4517,
       "events_played": 123,
       "recent_events_24_months": 25,
       "last_event_date": "2026-03-29"
     },
     {
       "rank": 3,
-      "player_slug": "granady",
-      "player_name": "GranaDy",
-      "conservative_score": 33.3101,
-      "mu": 37.382,
-      "sigma": 1.3573,
-      "events_played": 109,
-      "recent_events_24_months": 36,
+      "player_slug": "pac",
+      "player_name": "Pac",
+      "conservative_score": 33.6772,
+      "mu": 38.5658,
+      "sigma": 1.6295,
+      "events_played": 106,
+      "recent_events_24_months": 22,
       "last_event_date": "2026-03-29"
     },
     {
       "rank": 4,
-      "player_slug": "pac",
-      "player_name": "Pac",
-      "conservative_score": 33.1697,
-      "mu": 38.1837,
-      "sigma": 1.6713,
-      "events_played": 106,
-      "recent_events_24_months": 22,
+      "player_slug": "granady",
+      "player_name": "GranaDy",
+      "conservative_score": 33.5652,
+      "mu": 37.5911,
+      "sigma": 1.342,
+      "events_played": 109,
+      "recent_events_24_months": 36,
       "last_event_date": "2026-03-29"
     },
     {
       "rank": 5,
       "player_slug": "mudda",
       "player_name": "Mudda",
-      "conservative_score": 32.1406,
-      "mu": 36.4128,
-      "sigma": 1.424,
+      "conservative_score": 32.5138,
+      "mu": 36.7053,
+      "sigma": 1.3972,
       "events_played": 80,
       "recent_events_24_months": 30,
       "last_event_date": "2026-03-29"
@@ -306,55 +1334,55 @@
       "rank": 6,
       "player_slug": "binks",
       "player_name": "Binks",
-      "conservative_score": 31.9318,
-      "mu": 36.7945,
-      "sigma": 1.6209,
+      "conservative_score": 32.0279,
+      "mu": 36.7913,
+      "sigma": 1.5878,
       "events_played": 105,
       "recent_events_24_months": 30,
       "last_event_date": "2026-03-29"
     },
     {
       "rank": 7,
-      "player_slug": "epos",
-      "player_name": "Epos",
-      "conservative_score": 31.5531,
-      "mu": 36.2017,
-      "sigma": 1.5495,
-      "events_played": 37,
-      "recent_events_24_months": 27,
+      "player_slug": "wosile",
+      "player_name": "Wosile",
+      "conservative_score": 31.6966,
+      "mu": 36.2846,
+      "sigma": 1.5293,
+      "events_played": 86,
+      "recent_events_24_months": 22,
       "last_event_date": "2026-03-29"
     },
     {
       "rank": 8,
-      "player_slug": "wosile",
-      "player_name": "Wosile",
-      "conservative_score": 31.3965,
-      "mu": 36.0577,
-      "sigma": 1.5537,
-      "events_played": 86,
-      "recent_events_24_months": 22,
+      "player_slug": "epos",
+      "player_name": "Epos",
+      "conservative_score": 31.6804,
+      "mu": 36.219,
+      "sigma": 1.5129,
+      "events_played": 37,
+      "recent_events_24_months": 27,
       "last_event_date": "2026-03-29"
     },
     {
       "rank": 9,
       "player_slug": "massa",
       "player_name": "Massa",
-      "conservative_score": 30.86,
-      "mu": 35.1097,
-      "sigma": 1.4166,
+      "conservative_score": 31.0288,
+      "mu": 35.1972,
+      "sigma": 1.3895,
       "events_played": 128,
       "recent_events_24_months": 31,
       "last_event_date": "2026-03-29"
     },
     {
       "rank": 10,
-      "player_slug": "elconn21",
-      "player_name": "ELconn21",
-      "conservative_score": 30.2175,
-      "mu": 34.2492,
-      "sigma": 1.3439,
-      "events_played": 71,
-      "recent_events_24_months": 35,
+      "player_slug": "mime",
+      "player_name": "Mime",
+      "conservative_score": 30.6313,
+      "mu": 35.3338,
+      "sigma": 1.5675,
+      "events_played": 52,
+      "recent_events_24_months": 26,
       "last_event_date": "2026-03-29"
     }
   ],
@@ -501,7 +1529,7 @@
       "player_slug": "granady",
       "player_name": "GranaDy",
       "months": 1,
-      "peak_conservative": 30.7298
+      "peak_conservative": 30.8175
     },
     {
       "start_month": "2023-08",
@@ -509,7 +1537,7 @@
       "player_slug": "bren",
       "player_name": "Bren",
       "months": 1,
-      "peak_conservative": 30.9061
+      "peak_conservative": 30.9062
     },
     {
       "start_month": "2023-09",
@@ -517,7 +1545,7 @@
       "player_slug": "granady",
       "player_name": "GranaDy",
       "months": 2,
-      "peak_conservative": 31.4854
+      "peak_conservative": 31.5385
     },
     {
       "start_month": "2023-11",
@@ -525,47 +1553,23 @@
       "player_slug": "carljr",
       "player_name": "Carl Jr.",
       "months": 1,
-      "peak_conservative": 31.5431
+      "peak_conservative": 31.6219
     },
     {
       "start_month": "2023-12",
-      "end_month": "2024-04",
-      "player_slug": "granady",
-      "player_name": "GranaDy",
-      "months": 5,
-      "peak_conservative": 32.3008
-    },
-    {
-      "start_month": "2024-05",
-      "end_month": "2024-05",
-      "player_slug": "elconn21",
-      "player_name": "ELconn21",
-      "months": 1,
-      "peak_conservative": 31.6759
-    },
-    {
-      "start_month": "2024-06",
-      "end_month": "2024-08",
-      "player_slug": "granady",
-      "player_name": "GranaDy",
-      "months": 3,
-      "peak_conservative": 31.6861
-    },
-    {
-      "start_month": "2024-09",
       "end_month": "2024-09",
-      "player_slug": "epos",
-      "player_name": "Epos",
-      "months": 1,
-      "peak_conservative": 31.6142
+      "player_slug": "granady",
+      "player_name": "GranaDy",
+      "months": 10,
+      "peak_conservative": 32.3282
     },
     {
       "start_month": "2024-10",
-      "end_month": "2026-03",
+      "end_month": "2026-04",
       "player_slug": "carljr",
       "player_name": "Carl Jr.",
-      "months": 18,
-      "peak_conservative": 36.2608
+      "months": 19,
+      "peak_conservative": 36.6968
     }
   ],
   "title_leaders_top10": [
@@ -573,71 +1577,747 @@
       "rank": 1,
       "player_slug": "carljr",
       "player_name": "Carl Jr.",
-      "title_points": 172.0,
-      "events_played": 125
+      "title_points": 203.0,
+      "events_played": 125,
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Cup 2025",
+          "page_name": "Trackmania_World_Tour/2025/World_Cup",
+          "event_date": "2025-11-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Cup 2024",
+          "page_name": "Trackmania_World_Tour/2024/World_Cup",
+          "event_date": "2024-10-25",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League World Cup 2022",
+          "page_name": "Trackmania_Grand_League/World_Cup/2022",
+          "event_date": "2022-07-03",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League World Cup: 2020-2021",
+          "page_name": "Trackmania_Grand_League/World_Cup/2020-2021",
+          "event_date": "2021-07-04",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2015 Paris Games Week",
+          "page_name": "Electronic_Sports_World_Cup/2015/Paris_Games_Week",
+          "event_date": "2015-11-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2014",
+          "page_name": "Electronic_Sports_World_Cup/2014",
+          "event_date": "2014-11-02",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2013",
+          "page_name": "Electronic_Sports_World_Cup/2013",
+          "event_date": "2013-11-03",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - World Championship",
+          "page_name": "Trackmania_World_Tour/2023/World_Championship",
+          "event_date": "2023-11-26",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Maniaplanet World Cup 2016",
+          "page_name": "Maniaplanet_World_Cup/2016",
+          "event_date": "2016-11-07",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Championship 2018",
+          "page_name": "Trackmania_World_Championship/2018",
+          "event_date": "2018-10-30",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2012",
+          "page_name": "Electronic_Sports_World_Cup/2012",
+          "event_date": "2012-11-03",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Red Bull Faster 2025",
+          "page_name": "Red_Bull_Faster/2025",
+          "event_date": "2025-03-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - Stage 1 - Grand League",
+          "page_name": "Trackmania_World_Tour/2023/Stage_1/Grand_League",
+          "event_date": "2023-03-19",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League: Winter 2021 Final",
+          "page_name": "Trackmania_Grand_League/Winter_2021/Final",
+          "event_date": "2021-03-14",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League: Fall 2020 Playoffs",
+          "page_name": "Trackmania_Grand_League/Fall_2020/Playoffs",
+          "event_date": "2020-11-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League: Winter 2020",
+          "page_name": "Trackmania_Grand_League/Winter_2020",
+          "event_date": "2020-02-28",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2019",
+          "page_name": "ZeratoR/Trackmania_Cup/2019",
+          "event_date": "2019-06-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2017",
+          "page_name": "ZeratoR/Trackmania_Cup/2017",
+          "event_date": "2017-07-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 3",
+          "page_name": "ZeratoR/Trackmania_Cup/3",
+          "event_date": "2015-12-12",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2",
+          "page_name": "ZeratoR/Trackmania_Cup/2",
+          "event_date": "2015-03-07",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Road to EWC: DreamHack Birmingham 2026",
+          "page_name": "DreamHack/2026/Birmingham",
+          "event_date": "2026-03-29",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "XPEvo 2025",
+          "page_name": "XPEvo/2025",
+          "event_date": "2025-09-28",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Ascension Tournament 2023",
+          "page_name": "Ascension_Tournament/2023",
+          "event_date": "2023-10-28",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League - Spring 2022 - Final",
+          "page_name": "Trackmania_Grand_League/Spring_2022/Final",
+          "event_date": "2022-04-24",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2020",
+          "page_name": "ZeratoR/Trackmania_Cup/2020",
+          "event_date": "2020-07-26",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - Stage 2 - Grand League",
+          "page_name": "Trackmania_World_Tour/2023/Stage_2/Grand_League",
+          "event_date": "2023-06-25",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Arctic Gaming Experience 2022",
+          "page_name": "Arctic_Gaming_Experience/2022",
+          "event_date": "2022-08-14",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 2,
       "player_slug": "pac",
       "player_name": "Pac",
-      "title_points": 77.0,
-      "events_played": 106
+      "title_points": 107.0,
+      "events_played": 106,
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Cup 2025",
+          "page_name": "Trackmania_World_Tour/2025/World_Cup",
+          "event_date": "2025-11-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Maniaplanet World Cup 2016",
+          "page_name": "Maniaplanet_World_Cup/2016",
+          "event_date": "2016-11-07",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Cup 2024",
+          "page_name": "Trackmania_World_Tour/2024/World_Cup",
+          "event_date": "2024-10-25",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - World Championship",
+          "page_name": "Trackmania_World_Tour/2023/World_Championship",
+          "event_date": "2023-11-26",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League World Cup: 2020-2021",
+          "page_name": "Trackmania_Grand_League/World_Cup/2020-2021",
+          "event_date": "2021-07-04",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2015 Paris Games Week",
+          "page_name": "Electronic_Sports_World_Cup/2015/Paris_Games_Week",
+          "event_date": "2015-11-01",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Road to EWC: DreamHack Birmingham 2026",
+          "page_name": "DreamHack/2026/Birmingham",
+          "event_date": "2026-03-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - Stage 1 - Grand League",
+          "page_name": "Trackmania_World_Tour/2023/Stage_1/Grand_League",
+          "event_date": "2023-03-19",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Arctic Gaming Experience 2022",
+          "page_name": "Arctic_Gaming_Experience/2022",
+          "event_date": "2022-08-14",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League Fall 2021: Finals",
+          "page_name": "Trackmania_Grand_League/Fall_2021/Final",
+          "event_date": "2021-12-19",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "XPEvo 2024",
+          "page_name": "XPEvo/2024",
+          "event_date": "2024-10-13",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League: Winter 2021 Final",
+          "page_name": "Trackmania_Grand_League/Winter_2021/Final",
+          "event_date": "2021-03-14",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2019",
+          "page_name": "ZeratoR/Trackmania_Cup/2019",
+          "event_date": "2019-06-29",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Red Bull Faster 2025",
+          "page_name": "Red_Bull_Faster/2025",
+          "event_date": "2025-03-01",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - Stage 2 - Grand League",
+          "page_name": "Trackmania_World_Tour/2023/Stage_2/Grand_League",
+          "event_date": "2023-06-25",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League - Spring 2022 - Final",
+          "page_name": "Trackmania_Grand_League/Spring_2022/Final",
+          "event_date": "2022-04-24",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League: Fall 2020 Playoffs",
+          "page_name": "Trackmania_Grand_League/Fall_2020/Playoffs",
+          "event_date": "2020-11-01",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League: Beta Season",
+          "page_name": "Trackmania_Grand_League/Beta_Season",
+          "event_date": "2019-10-30",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 3,
       "player_slug": "gwen",
       "player_name": "Gwen",
-      "title_points": 50.0,
-      "events_played": 99
+      "title_points": 56.0,
+      "events_played": 99,
+      "major_podium_results": [
+        {
+          "event_name": "Ascension Tournament 2023",
+          "page_name": "Ascension_Tournament/2023",
+          "event_date": "2023-10-28",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2022",
+          "page_name": "ZeratoR/Trackmania_Cup/2022",
+          "event_date": "2022-06-04",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2021",
+          "page_name": "ZeratoR/Trackmania_Cup/2021",
+          "event_date": "2021-07-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2020",
+          "page_name": "ZeratoR/Trackmania_Cup/2020",
+          "event_date": "2020-07-26",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League: Fall 2020 Playoffs",
+          "page_name": "Trackmania_Grand_League/Fall_2020/Playoffs",
+          "event_date": "2020-11-01",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - Stage 1 - Grand League",
+          "page_name": "Trackmania_World_Tour/2023/Stage_1/Grand_League",
+          "event_date": "2023-03-19",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League Fall 2021: Finals",
+          "page_name": "Trackmania_Grand_League/Fall_2021/Final",
+          "event_date": "2021-12-19",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 4,
       "player_slug": "bren",
       "player_name": "Bren",
-      "title_points": 42.0,
-      "events_played": 123
+      "title_points": 46.0,
+      "events_played": 123,
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Tour 2023 - World Championship",
+          "page_name": "Trackmania_World_Tour/2023/World_Championship",
+          "event_date": "2023-11-26",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Cup 2025",
+          "page_name": "Trackmania_World_Tour/2025/World_Cup",
+          "event_date": "2025-11-01",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 2019",
+          "page_name": "ZeratoR/Trackmania_Cup/2019",
+          "event_date": "2019-06-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 4",
+          "page_name": "ZeratoR/Trackmania_Cup/4",
+          "event_date": "2016-06-25",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ZrT Trackmania Cup 3",
+          "page_name": "ZeratoR/Trackmania_Cup/3",
+          "event_date": "2015-12-12",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 5,
-      "player_slug": "kappa",
-      "player_name": "Kappa",
-      "title_points": 32.0,
-      "events_played": 75
+      "player_slug": "mudda",
+      "player_name": "Mudda",
+      "title_points": 36.0,
+      "events_played": 80,
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Cup 2025",
+          "page_name": "Trackmania_World_Tour/2025/World_Cup",
+          "event_date": "2025-11-01",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League World Cup 2022",
+          "page_name": "Trackmania_Grand_League/World_Cup/2022",
+          "event_date": "2022-07-03",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - Stage 2 - Grand League",
+          "page_name": "Trackmania_World_Tour/2023/Stage_2/Grand_League",
+          "event_date": "2023-06-25",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League - Spring 2022 - Final",
+          "page_name": "Trackmania_Grand_League/Spring_2022/Final",
+          "event_date": "2022-04-24",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 6,
-      "player_slug": "frostbeule",
-      "player_name": "FrostBeule",
-      "title_points": 31.0,
-      "events_played": 31
+      "player_slug": "kappa",
+      "player_name": "Kappa",
+      "title_points": 34.0,
+      "events_played": 75,
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Championship 2018",
+          "page_name": "Trackmania_World_Championship/2018",
+          "event_date": "2018-10-30",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League World Cup: 2020-2021",
+          "page_name": "Trackmania_Grand_League/World_Cup/2020-2021",
+          "event_date": "2021-07-04",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Trackmania Grand League: Beta Season",
+          "page_name": "Trackmania_Grand_League/Beta_Season",
+          "event_date": "2019-10-30",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League: Winter 2020",
+          "page_name": "Trackmania_Grand_League/Winter_2020",
+          "event_date": "2020-02-28",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 7,
-      "player_slug": "carl",
-      "player_name": "Carl",
-      "title_points": 26.0,
-      "events_played": 66
+      "player_slug": "frostbeule",
+      "player_name": "FrostBeule",
+      "title_points": 31.0,
+      "events_played": 31,
+      "major_podium_results": [
+        {
+          "event_name": "ESWC 2008",
+          "page_name": "Electronic_Sports_World_Cup/2008",
+          "event_date": "2008-08-27",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "World Cyber Games 2010",
+          "page_name": "World_Cyber_Games/2010",
+          "event_date": "2010-10-03",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "World Cyber Games 2009",
+          "page_name": "World_Cyber_Games/2009",
+          "event_date": "2009-11-13",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Verizon Playlinc",
+          "page_name": "Verizon_Playlinc",
+          "event_date": "2006-11-19",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "ESWC Masters of Paris",
+          "page_name": "Electronic_Sports_World_Cup/2008/Masters_of_Paris",
+          "event_date": "2008-07-06",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 8,
       "player_slug": "tween",
       "player_name": "Tween",
-      "title_points": 26.0,
-      "events_played": 108
+      "title_points": 28.0,
+      "events_played": 108,
+      "major_podium_results": [
+        {
+          "event_name": "Trackmania World Championship 2018",
+          "page_name": "Trackmania_World_Championship/2018",
+          "event_date": "2018-10-30",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2014",
+          "page_name": "Electronic_Sports_World_Cup/2014",
+          "event_date": "2014-11-02",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2012",
+          "page_name": "Electronic_Sports_World_Cup/2012",
+          "event_date": "2012-11-03",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2011",
+          "page_name": "Electronic_Sports_World_Cup/2011",
+          "event_date": "2011-10-25",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "Maniaplanet World Cup 2016",
+          "page_name": "Maniaplanet_World_Cup/2016",
+          "event_date": "2016-11-07",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2015 Paris Games Week",
+          "page_name": "Electronic_Sports_World_Cup/2015/Paris_Games_Week",
+          "event_date": "2015-11-01",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": true
+        }
+      ]
     },
     {
       "rank": 9,
-      "player_slug": "papou",
-      "player_name": "Papou",
-      "title_points": 25.0,
-      "events_played": 66
+      "player_slug": "affi",
+      "player_name": "Affi",
+      "title_points": 26.0,
+      "events_played": 95,
+      "major_podium_results": [
+        {
+          "event_name": "ZrT Trackmania Cup 2022",
+          "page_name": "ZeratoR/Trackmania_Cup/2022",
+          "event_date": "2022-06-04",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania World Tour 2023 - Stage 1 - Grand League",
+          "page_name": "Trackmania_World_Tour/2023/Stage_1/Grand_League",
+          "event_date": "2023-03-19",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Trackmania Grand League Fall 2021: Finals",
+          "page_name": "Trackmania_Grand_League/Fall_2021/Final",
+          "event_date": "2021-12-19",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
     },
     {
       "rank": 10,
-      "player_slug": "spammiej",
-      "player_name": "Spammiej",
-      "title_points": 22.0,
-      "events_played": 107
+      "player_slug": "carl",
+      "player_name": "Carl",
+      "title_points": 26.0,
+      "events_played": 66,
+      "major_podium_results": [
+        {
+          "event_name": "ESWC 2006",
+          "page_name": "Electronic_Sports_World_Cup/2006",
+          "event_date": "2006-07-02",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "ESWC 2007",
+          "page_name": "Electronic_Sports_World_Cup/2007",
+          "event_date": "2007-07-07",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": true
+        },
+        {
+          "event_name": "World Cyber Games 2010",
+          "page_name": "World_Cyber_Games/2010",
+          "event_date": "2010-10-03",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
     }
   ]
 }

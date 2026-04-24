@@ -1,0 +1,13 @@
+defaults:
+  include: false
+  weight: 0.75
+  tags: []
+
+rules:
+  - name: "Include Kackiest Kacky events"
+    match:
+      series: "Kackiest_Kacky"
+    include: true
+    weight: 0.75
+    tags:
+      - kacky

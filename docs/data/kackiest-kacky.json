@@ -1,0 +1,1180 @@
+{
+  "profile": {
+    "name": "kackiest-kacky",
+    "label": "Kacky"
+  },
+  "generated_at": "2026-04-23T20:20:43.042424+00:00",
+  "goat_top20": [
+    {
+      "rank": 1,
+      "player_slug": "simo-900",
+      "player_name": "Simo 900",
+      "goat_score": 0.976252,
+      "prime_rating": 25.0609,
+      "elite_area": 254.9799,
+      "median_conservative": 19.311,
+      "title_points": 48.0,
+      "active_months": 59,
+      "events_played": 9,
+      "first_event_date": "2017-09-24",
+      "last_event_date": "2024-11-30",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "Kacky Reloaded 5",
+          "page_name": "Kacky/Reloaded/5",
+          "event_date": "2024-11-30",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 8",
+          "page_name": "Kacky/Kackiest_Kacky/8",
+          "event_date": "2023-04-02",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 6",
+          "page_name": "Kacky/Kackiest_Kacky/6",
+          "event_date": "2021-02-28",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 5",
+          "page_name": "Kacky/Kackiest_Kacky/5",
+          "event_date": "2020-03-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 7",
+          "page_name": "Kacky/Kackiest_Kacky/7",
+          "event_date": "2022-01-30",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "player_slug": "tekky",
+      "player_name": "Tekky",
+      "goat_score": 0.850194,
+      "prime_rating": 26.2639,
+      "elite_area": 227.9194,
+      "median_conservative": 17.3651,
+      "title_points": 32.0,
+      "active_months": 48,
+      "events_played": 8,
+      "first_event_date": "2019-09-08",
+      "last_event_date": "2025-12-01",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "Kacky Reloaded 4",
+          "page_name": "Kacky/Reloaded/4",
+          "event_date": "2023-09-17",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kacky Reloaded 3",
+          "page_name": "Kacky/Reloaded/3",
+          "event_date": "2022-09-18",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kacky Reloaded 2",
+          "page_name": "Kacky/Reloaded/2",
+          "event_date": "2021-08-31",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kacky Reloaded 1",
+          "page_name": "Kacky/Reloaded/1",
+          "event_date": "2020-09-30",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "player_slug": "mig",
+      "player_name": "Mig",
+      "goat_score": 0.760968,
+      "prime_rating": 21.7172,
+      "elite_area": 229.4752,
+      "median_conservative": 20.0239,
+      "title_points": 24.0,
+      "active_months": 61,
+      "events_played": 10,
+      "first_event_date": "2019-09-08",
+      "last_event_date": "2024-06-30",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "Kacky Reloaded 1",
+          "page_name": "Kacky/Reloaded/1",
+          "event_date": "2020-09-30",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 6",
+          "page_name": "Kacky/Kackiest_Kacky/6",
+          "event_date": "2021-02-28",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "player_slug": "skandear",
+      "player_name": "SkandeaR",
+      "goat_score": 0.596248,
+      "prime_rating": 21.04,
+      "elite_area": 121.8954,
+      "median_conservative": 21.7566,
+      "title_points": 18.0,
+      "active_months": 26,
+      "events_played": 4,
+      "first_event_date": "2022-01-30",
+      "last_event_date": "2023-09-17",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "Kackiest Kacky 7",
+          "page_name": "Kacky/Kackiest_Kacky/7",
+          "event_date": "2022-01-30",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kacky Reloaded 4",
+          "page_name": "Kacky/Reloaded/4",
+          "event_date": "2023-09-17",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kacky Reloaded 3",
+          "page_name": "Kacky/Reloaded/3",
+          "event_date": "2022-09-18",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "player_slug": "link-australian",
+      "player_name": "Link (Australian)",
+      "goat_score": 0.549281,
+      "prime_rating": 20.1793,
+      "elite_area": 92.2447,
+      "median_conservative": 18.1517,
+      "title_points": 20.0,
+      "active_months": 39,
+      "events_played": 7,
+      "first_event_date": "2021-02-28",
+      "last_event_date": "2025-12-01",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "Kacky Reloaded 6",
+          "page_name": "Kacky/Reloaded/6",
+          "event_date": "2025-12-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 8",
+          "page_name": "Kacky/Kackiest_Kacky/8",
+          "event_date": "2023-04-02",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 9",
+          "page_name": "Kacky/Kackiest_Kacky/9",
+          "event_date": "2024-06-30",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "player_slug": "sileenz",
+      "player_name": "Sileenz",
+      "goat_score": 0.543951,
+      "prime_rating": 21.5216,
+      "elite_area": 122.9221,
+      "median_conservative": 18.0282,
+      "title_points": 11.0,
+      "active_months": 33,
+      "events_played": 6,
+      "first_event_date": "2022-09-18",
+      "last_event_date": "2025-12-01",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "Kacky Reloaded 5",
+          "page_name": "Kacky/Reloaded/5",
+          "event_date": "2024-11-30",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "player_slug": "mikmos",
+      "player_name": "Mikmos",
+      "goat_score": 0.452195,
+      "prime_rating": 20.3281,
+      "elite_area": 72.8331,
+      "median_conservative": 19.4481,
+      "title_points": 7.0,
+      "active_months": 21,
+      "events_played": 4,
+      "first_event_date": "2023-09-17",
+      "last_event_date": "2025-12-01",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "Kacky Reloaded 5",
+          "page_name": "Kacky/Reloaded/5",
+          "event_date": "2024-11-30",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "player_slug": "plastorex",
+      "player_name": "Plastorex",
+      "goat_score": 0.43548,
+      "prime_rating": 18.163,
+      "elite_area": 32.852,
+      "median_conservative": 14.5734,
+      "title_points": 19.0,
+      "active_months": 39,
+      "events_played": 6,
+      "first_event_date": "2017-09-24",
+      "last_event_date": "2022-01-30",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "Kackiest Kacky 2",
+          "page_name": "Kacky/Kackiest_Kacky/2",
+          "event_date": "2018-03-31",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kacky Reloaded 2",
+          "page_name": "Kacky/Reloaded/2",
+          "event_date": "2021-08-31",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 1",
+          "page_name": "Kacky/Kackiest_Kacky/1",
+          "event_date": "2017-09-24",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "player_slug": "tres",
+      "player_name": "Tres",
+      "goat_score": 0.409144,
+      "prime_rating": 18.062,
+      "elite_area": 36.7435,
+      "median_conservative": 11.8824,
+      "title_points": 16.0,
+      "active_months": 41,
+      "events_played": 7,
+      "first_event_date": "2020-03-29",
+      "last_event_date": "2023-09-17",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "Kacky Reloaded 2",
+          "page_name": "Kacky/Reloaded/2",
+          "event_date": "2021-08-31",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kacky Reloaded 1",
+          "page_name": "Kacky/Reloaded/1",
+          "event_date": "2020-09-30",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "player_slug": "wirtual",
+      "player_name": "Wirtual",
+      "goat_score": 0.374294,
+      "prime_rating": 16.4644,
+      "elite_area": 16.6929,
+      "median_conservative": 15.1184,
+      "title_points": 15.0,
+      "active_months": 34,
+      "events_played": 6,
+      "first_event_date": "2019-09-08",
+      "last_event_date": "2025-12-01",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "Kackiest Kacky 4",
+          "page_name": "Kacky/Kackiest_Kacky/4",
+          "event_date": "2019-09-08",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kacky Reloaded 3",
+          "page_name": "Kacky/Reloaded/3",
+          "event_date": "2022-09-18",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "player_slug": "hefest",
+      "player_name": "Hefest",
+      "goat_score": 0.35122,
+      "prime_rating": 15.7939,
+      "elite_area": 21.7648,
+      "median_conservative": 14.4747,
+      "title_points": 12.0,
+      "active_months": 56,
+      "events_played": 9,
+      "first_event_date": "2018-12-23",
+      "last_event_date": "2023-09-17",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "Kackiest Kacky 5",
+          "page_name": "Kacky/Kackiest_Kacky/5",
+          "event_date": "2020-03-29",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 6",
+          "page_name": "Kacky/Kackiest_Kacky/6",
+          "event_date": "2021-02-28",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 3",
+          "page_name": "Kacky/Kackiest_Kacky/3",
+          "event_date": "2018-12-23",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "player_slug": "marmerladi",
+      "player_name": "Marmerladi",
+      "goat_score": 0.347314,
+      "prime_rating": 17.2877,
+      "elite_area": 18.4025,
+      "median_conservative": 14.8992,
+      "title_points": 9.0,
+      "active_months": 27,
+      "events_played": 4,
+      "first_event_date": "2018-03-31",
+      "last_event_date": "2021-02-28",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "Kackiest Kacky 5",
+          "page_name": "Kacky/Kackiest_Kacky/5",
+          "event_date": "2020-03-29",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 4",
+          "page_name": "Kacky/Kackiest_Kacky/4",
+          "event_date": "2019-09-08",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "player_slug": "insane-german",
+      "player_name": "Insane (German)",
+      "goat_score": 0.311865,
+      "prime_rating": 16.1519,
+      "elite_area": 13.3201,
+      "median_conservative": 15.4502,
+      "title_points": 6.0,
+      "active_months": 20,
+      "events_played": 3,
+      "first_event_date": "2017-09-24",
+      "last_event_date": "2018-12-23",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "Kackiest Kacky 2",
+          "page_name": "Kacky/Kackiest_Kacky/2",
+          "event_date": "2018-03-31",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "player_slug": "iihugo",
+      "player_name": "IiHugo",
+      "goat_score": 0.304629,
+      "prime_rating": 15.9061,
+      "elite_area": 11.6908,
+      "median_conservative": 14.8365,
+      "title_points": 6.0,
+      "active_months": 21,
+      "events_played": 4,
+      "first_event_date": "2023-09-17",
+      "last_event_date": "2025-12-01",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "Kacky Reloaded 6",
+          "page_name": "Kacky/Reloaded/6",
+          "event_date": "2025-12-01",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "player_slug": "nixion",
+      "player_name": "Nixion",
+      "goat_score": 0.279145,
+      "prime_rating": 16.1205,
+      "elite_area": 7.8435,
+      "median_conservative": 7.5884,
+      "title_points": 7.0,
+      "active_months": 28,
+      "events_played": 4,
+      "first_event_date": "2017-09-24",
+      "last_event_date": "2023-04-02",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "Kackiest Kacky 8",
+          "page_name": "Kacky/Kackiest_Kacky/8",
+          "event_date": "2023-04-02",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 7",
+          "page_name": "Kacky/Kackiest_Kacky/7",
+          "event_date": "2022-01-30",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "player_slug": "zetos",
+      "player_name": "Zetos",
+      "goat_score": 0.265668,
+      "prime_rating": 14.7012,
+      "elite_area": 7.641,
+      "median_conservative": 12.8976,
+      "title_points": 4.0,
+      "active_months": 19,
+      "events_played": 4,
+      "first_event_date": "2024-06-30",
+      "last_event_date": "2025-12-01",
+      "best_world_cup_result": null,
+      "major_podium_results": []
+    },
+    {
+      "rank": 17,
+      "player_slug": "ssano",
+      "player_name": "SSano",
+      "goat_score": 0.263622,
+      "prime_rating": 14.5985,
+      "elite_area": 4.1523,
+      "median_conservative": 13.6877,
+      "title_points": 4.0,
+      "active_months": 15,
+      "events_played": 3,
+      "first_event_date": "2023-09-17",
+      "last_event_date": "2025-12-01",
+      "best_world_cup_result": null,
+      "major_podium_results": [
+        {
+          "event_name": "Kacky Reloaded 6",
+          "page_name": "Kacky/Reloaded/6",
+          "event_date": "2025-12-01",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "player_slug": "igntul",
+      "player_name": "Igntul",
+      "goat_score": 0.259161,
+      "prime_rating": 13.9498,
+      "elite_area": 0.0,
+      "median_conservative": 11.0195,
+      "title_points": 7.0,
+      "active_months": 34,
+      "events_played": 5,
+      "first_event_date": "2017-09-24",
+      "last_event_date": "2022-01-30",
+      "best_world_cup_result": null,
+      "major_podium_results": []
+    },
+    {
+      "rank": 19,
+      "player_slug": "dawe",
+      "player_name": "Dawe",
+      "goat_score": 0.204483,
+      "prime_rating": 10.8611,
+      "elite_area": 0.0,
+      "median_conservative": 10.8611,
+      "title_points": 4.0,
+      "active_months": 19,
+      "events_played": 3,
+      "first_event_date": "2019-09-08",
+      "last_event_date": "2020-09-30",
+      "best_world_cup_result": null,
+      "major_podium_results": []
+    },
+    {
+      "rank": 20,
+      "player_slug": "buuuuurd",
+      "player_name": "Buuuuurd",
+      "goat_score": 0.130199,
+      "prime_rating": 7.3285,
+      "elite_area": 0.0,
+      "median_conservative": 5.6233,
+      "title_points": 2.0,
+      "active_months": 25,
+      "events_played": 4,
+      "first_event_date": "2020-09-30",
+      "last_event_date": "2023-04-02",
+      "best_world_cup_result": null,
+      "major_podium_results": []
+    }
+  ],
+  "current_top10": [
+    {
+      "rank": 1,
+      "player_slug": "link-australian",
+      "player_name": "Link (Australian)",
+      "conservative_score": 22.5042,
+      "mu": 35.8514,
+      "sigma": 4.4491,
+      "events_played": 7,
+      "recent_events_24_months": 3,
+      "last_event_date": "2025-12-01"
+    },
+    {
+      "rank": 2,
+      "player_slug": "mikmos",
+      "player_name": "Mikmos",
+      "conservative_score": 22.0366,
+      "mu": 33.767,
+      "sigma": 3.9101,
+      "events_played": 4,
+      "recent_events_24_months": 3,
+      "last_event_date": "2025-12-01"
+    },
+    {
+      "rank": 3,
+      "player_slug": "tekky",
+      "player_name": "Tekky",
+      "conservative_score": 21.4735,
+      "mu": 35.3562,
+      "sigma": 4.6276,
+      "events_played": 8,
+      "recent_events_24_months": 2,
+      "last_event_date": "2025-12-01"
+    },
+    {
+      "rank": 4,
+      "player_slug": "iihugo",
+      "player_name": "IiHugo",
+      "conservative_score": 20.9849,
+      "mu": 32.7274,
+      "sigma": 3.9142,
+      "events_played": 4,
+      "recent_events_24_months": 3,
+      "last_event_date": "2025-12-01"
+    },
+    {
+      "rank": 5,
+      "player_slug": "sileenz",
+      "player_name": "Sileenz",
+      "conservative_score": 20.4142,
+      "mu": 31.3111,
+      "sigma": 3.6323,
+      "events_played": 6,
+      "recent_events_24_months": 4,
+      "last_event_date": "2025-12-01"
+    },
+    {
+      "rank": 6,
+      "player_slug": "ssano",
+      "player_name": "SSano",
+      "conservative_score": 18.6896,
+      "mu": 32.9236,
+      "sigma": 4.7447,
+      "events_played": 3,
+      "recent_events_24_months": 2,
+      "last_event_date": "2025-12-01"
+    },
+    {
+      "rank": 7,
+      "player_slug": "zetos",
+      "player_name": "Zetos",
+      "conservative_score": 15.1359,
+      "mu": 26.6273,
+      "sigma": 3.8305,
+      "events_played": 4,
+      "recent_events_24_months": 4,
+      "last_event_date": "2025-12-01"
+    },
+    {
+      "rank": 8,
+      "player_slug": "wirtual",
+      "player_name": "Wirtual",
+      "conservative_score": 3.7437,
+      "mu": 18.8343,
+      "sigma": 5.0302,
+      "events_played": 6,
+      "recent_events_24_months": 2,
+      "last_event_date": "2025-12-01"
+    },
+    {
+      "rank": 9,
+      "player_slug": "wingobear",
+      "player_name": "Wingobear",
+      "conservative_score": -0.4565,
+      "mu": 16.2753,
+      "sigma": 5.5773,
+      "events_played": 3,
+      "recent_events_24_months": 1,
+      "last_event_date": "2025-12-01"
+    }
+  ],
+  "rating_leader_timeline": [
+    {
+      "start_month": "2017-09",
+      "end_month": "2018-02",
+      "player_slug": "johalss",
+      "player_name": "Johalss",
+      "months": 6,
+      "peak_conservative": 15.4353
+    },
+    {
+      "start_month": "2018-03",
+      "end_month": "2018-09",
+      "player_slug": "plastorex",
+      "player_name": "Plastorex",
+      "months": 7,
+      "peak_conservative": 19.6931
+    },
+    {
+      "start_month": "2018-12",
+      "end_month": "2019-06",
+      "player_slug": "edge",
+      "player_name": "Edge",
+      "months": 7,
+      "peak_conservative": 20.2792
+    },
+    {
+      "start_month": "2019-09",
+      "end_month": "2020-02",
+      "player_slug": "wirtual",
+      "player_name": "Wirtual",
+      "months": 6,
+      "peak_conservative": 15.1184
+    },
+    {
+      "start_month": "2020-03",
+      "end_month": "2020-09",
+      "player_slug": "marmerladi",
+      "player_name": "Marmerladi",
+      "months": 7,
+      "peak_conservative": 17.6289
+    },
+    {
+      "start_month": "2020-10",
+      "end_month": "2021-01",
+      "player_slug": "tekky",
+      "player_name": "Tekky",
+      "months": 4,
+      "peak_conservative": 14.3668
+    },
+    {
+      "start_month": "2021-02",
+      "end_month": "2021-07",
+      "player_slug": "simo-900",
+      "player_name": "Simo 900",
+      "months": 6,
+      "peak_conservative": 19.311
+    },
+    {
+      "start_month": "2021-08",
+      "end_month": "2021-12",
+      "player_slug": "tres",
+      "player_name": "Tres",
+      "months": 5,
+      "peak_conservative": 19.0835
+    },
+    {
+      "start_month": "2022-01",
+      "end_month": "2022-07",
+      "player_slug": "simo-900",
+      "player_name": "Simo 900",
+      "months": 7,
+      "peak_conservative": 21.5409
+    },
+    {
+      "start_month": "2022-09",
+      "end_month": "2023-03",
+      "player_slug": "skandear",
+      "player_name": "SkandeaR",
+      "months": 7,
+      "peak_conservative": 23.5612
+    },
+    {
+      "start_month": "2023-04",
+      "end_month": "2023-08",
+      "player_slug": "simo-900",
+      "player_name": "Simo 900",
+      "months": 5,
+      "peak_conservative": 23.7883
+    },
+    {
+      "start_month": "2023-09",
+      "end_month": "2024-03",
+      "player_slug": "tekky",
+      "player_name": "Tekky",
+      "months": 7,
+      "peak_conservative": 26.2639
+    },
+    {
+      "start_month": "2024-06",
+      "end_month": "2024-10",
+      "player_slug": "mig",
+      "player_name": "Mig",
+      "months": 5,
+      "peak_conservative": 20.1063
+    },
+    {
+      "start_month": "2024-11",
+      "end_month": "2025-05",
+      "player_slug": "tekky",
+      "player_name": "Tekky",
+      "months": 7,
+      "peak_conservative": 25.2074
+    },
+    {
+      "start_month": "2025-06",
+      "end_month": "2025-11",
+      "player_slug": "social",
+      "player_name": "Social",
+      "months": 6,
+      "peak_conservative": 22.8976
+    },
+    {
+      "start_month": "2025-12",
+      "end_month": "2025-12",
+      "player_slug": "link-australian",
+      "player_name": "Link (Australian)",
+      "months": 1,
+      "peak_conservative": 22.9989
+    }
+  ],
+  "title_leaders_top10": [
+    {
+      "rank": 1,
+      "player_slug": "simo-900",
+      "player_name": "Simo 900",
+      "title_points": 48.0,
+      "events_played": 9,
+      "major_podium_results": [
+        {
+          "event_name": "Kacky Reloaded 5",
+          "page_name": "Kacky/Reloaded/5",
+          "event_date": "2024-11-30",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 8",
+          "page_name": "Kacky/Kackiest_Kacky/8",
+          "event_date": "2023-04-02",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 6",
+          "page_name": "Kacky/Kackiest_Kacky/6",
+          "event_date": "2021-02-28",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 5",
+          "page_name": "Kacky/Kackiest_Kacky/5",
+          "event_date": "2020-03-29",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 7",
+          "page_name": "Kacky/Kackiest_Kacky/7",
+          "event_date": "2022-01-30",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "player_slug": "tekky",
+      "player_name": "Tekky",
+      "title_points": 32.0,
+      "events_played": 8,
+      "major_podium_results": [
+        {
+          "event_name": "Kacky Reloaded 4",
+          "page_name": "Kacky/Reloaded/4",
+          "event_date": "2023-09-17",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kacky Reloaded 3",
+          "page_name": "Kacky/Reloaded/3",
+          "event_date": "2022-09-18",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kacky Reloaded 2",
+          "page_name": "Kacky/Reloaded/2",
+          "event_date": "2021-08-31",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kacky Reloaded 1",
+          "page_name": "Kacky/Reloaded/1",
+          "event_date": "2020-09-30",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "player_slug": "mig",
+      "player_name": "Mig",
+      "title_points": 24.0,
+      "events_played": 10,
+      "major_podium_results": [
+        {
+          "event_name": "Kacky Reloaded 1",
+          "page_name": "Kacky/Reloaded/1",
+          "event_date": "2020-09-30",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 6",
+          "page_name": "Kacky/Kackiest_Kacky/6",
+          "event_date": "2021-02-28",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "player_slug": "link-australian",
+      "player_name": "Link (Australian)",
+      "title_points": 20.0,
+      "events_played": 7,
+      "major_podium_results": [
+        {
+          "event_name": "Kacky Reloaded 6",
+          "page_name": "Kacky/Reloaded/6",
+          "event_date": "2025-12-01",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 8",
+          "page_name": "Kacky/Kackiest_Kacky/8",
+          "event_date": "2023-04-02",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 9",
+          "page_name": "Kacky/Kackiest_Kacky/9",
+          "event_date": "2024-06-30",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "player_slug": "plastorex",
+      "player_name": "Plastorex",
+      "title_points": 19.0,
+      "events_played": 6,
+      "major_podium_results": [
+        {
+          "event_name": "Kackiest Kacky 2",
+          "page_name": "Kacky/Kackiest_Kacky/2",
+          "event_date": "2018-03-31",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kacky Reloaded 2",
+          "page_name": "Kacky/Reloaded/2",
+          "event_date": "2021-08-31",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 1",
+          "page_name": "Kacky/Kackiest_Kacky/1",
+          "event_date": "2017-09-24",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "player_slug": "skandear",
+      "player_name": "SkandeaR",
+      "title_points": 18.0,
+      "events_played": 4,
+      "major_podium_results": [
+        {
+          "event_name": "Kackiest Kacky 7",
+          "page_name": "Kacky/Kackiest_Kacky/7",
+          "event_date": "2022-01-30",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kacky Reloaded 4",
+          "page_name": "Kacky/Reloaded/4",
+          "event_date": "2023-09-17",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kacky Reloaded 3",
+          "page_name": "Kacky/Reloaded/3",
+          "event_date": "2022-09-18",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "player_slug": "tres",
+      "player_name": "Tres",
+      "title_points": 16.0,
+      "events_played": 7,
+      "major_podium_results": [
+        {
+          "event_name": "Kacky Reloaded 2",
+          "page_name": "Kacky/Reloaded/2",
+          "event_date": "2021-08-31",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kacky Reloaded 1",
+          "page_name": "Kacky/Reloaded/1",
+          "event_date": "2020-09-30",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "player_slug": "wirtual",
+      "player_name": "Wirtual",
+      "title_points": 15.0,
+      "events_played": 6,
+      "major_podium_results": [
+        {
+          "event_name": "Kackiest Kacky 4",
+          "page_name": "Kacky/Kackiest_Kacky/4",
+          "event_date": "2019-09-08",
+          "placement": 1,
+          "title_points": 10.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kacky Reloaded 3",
+          "page_name": "Kacky/Reloaded/3",
+          "event_date": "2022-09-18",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "player_slug": "hefest",
+      "player_name": "Hefest",
+      "title_points": 12.0,
+      "events_played": 9,
+      "major_podium_results": [
+        {
+          "event_name": "Kackiest Kacky 5",
+          "page_name": "Kacky/Kackiest_Kacky/5",
+          "event_date": "2020-03-29",
+          "placement": 2,
+          "title_points": 4.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 6",
+          "page_name": "Kacky/Kackiest_Kacky/6",
+          "event_date": "2021-02-28",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        },
+        {
+          "event_name": "Kackiest Kacky 3",
+          "page_name": "Kacky/Kackiest_Kacky/3",
+          "event_date": "2018-12-23",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "player_slug": "sileenz",
+      "player_name": "Sileenz",
+      "title_points": 11.0,
+      "events_played": 6,
+      "major_podium_results": [
+        {
+          "event_name": "Kacky Reloaded 5",
+          "page_name": "Kacky/Reloaded/5",
+          "event_date": "2024-11-30",
+          "placement": 3,
+          "title_points": 3.0,
+          "is_world_cup": false
+        }
+      ]
+    }
+  ]
+}

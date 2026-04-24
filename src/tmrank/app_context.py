@@ -14,6 +14,19 @@ from tmrank.source.liquipedia import LiquipediaProvider
 CONFIG_DIR = Path("config")
 PROFILE_CONFIG_DIR = CONFIG_DIR / "profiles"
 DEFAULT_PROFILE_NAME = "default"
+PROFILE_LABELS = {
+    DEFAULT_PROFILE_NAME: "Esports",
+    "kackiest-kacky": "Kacky",
+    "zrt-cups": "ZrT Cups",
+    "worldcup-only": "World Cups",
+}
+PROFILE_ORDER = [
+    DEFAULT_PROFILE_NAME,
+    "seasonal-campaign",
+    "zrt-cups",
+    "worldcup-only",
+    "kackiest-kacky",
+]
 
 
 class AppContext:
@@ -54,16 +67,26 @@ def resolve_profile_config_path(profile_name: str | None, filename: str) -> Path
 
 
 def list_profile_names() -> list[str]:
-    profile_names = [DEFAULT_PROFILE_NAME]
+    discovered = []
     if PROFILE_CONFIG_DIR.is_dir():
-        profile_names.extend(
-            sorted(
-                path.name
-                for path in PROFILE_CONFIG_DIR.iterdir()
-                if path.is_dir()
-            )
+        discovered.extend(
+            path.name
+            for path in PROFILE_CONFIG_DIR.iterdir()
+            if path.is_dir()
         )
-    return profile_names
+    profile_names = [DEFAULT_PROFILE_NAME, *discovered]
+    order_index = {profile_name: index for index, profile_name in enumerate(PROFILE_ORDER)}
+    return sorted(
+        profile_names,
+        key=lambda profile_name: (
+            order_index.get(profile_name, len(PROFILE_ORDER)),
+            profile_name,
+        ),
+    )
+
+
+def profile_label(profile_name: str) -> str:
+    return PROFILE_LABELS.get(profile_name, profile_name.replace("-", " ").title())
 
 
 def _load_discovered_aliases(session: Session) -> AliasesConfig:

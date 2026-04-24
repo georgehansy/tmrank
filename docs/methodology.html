@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="stylesheet" href="./assets/styles.css?v=20260424j">
   </head>
   <body class="subpage-body">
     <main class="subpage">
@@ -19,27 +19,91 @@
       <h1>How tmrank works</h1>
       <div class="card prose">
         <p>
-          tmrank builds rankings from curated Trackmania event placements stored locally after syncing Liquipedia
-          tournament data. The project is intentionally opinionated: event inclusion, profile definitions, weighting,
-          title logic, and GOAT components are all configured locally.
+          tmrank takes Trackmania tournament placements and turns them into player ratings over time. The goal is not
+          to find one perfect truth, but to build a readable ranking system that matches competitive intuition better
+          than a simple count of wins or podiums.
+        </p>
+        <p>
+          Curation and weighting are part of the project, not hidden implementation details. Which events are included,
+          how different formats are grouped, and which tournaments count as majors are all local choices that shape the
+          final output.
+        </p>
+        <h2>What counts in the default ranking</h2>
+        <p>
+          The default profile is mainly an esports ranking. It starts from Liquipedia Tier 1 and Tier 2 Trackmania
+          tournaments, then applies local curation on top.
+        </p>
+        <p>
+          Some events are excluded from the default profile because they are different enough to deserve their own
+          lens, including seasonal campaigns, Kacky events, and Formula-style events. Those kinds of tournaments can
+          still appear in separate side profiles that only track that category.
+        </p>
+        <h2>GOAT ranking</h2>
+        <p>
+          The GOAT ranking is not driven by one tournament or one hot streak. It combines four different ideas about
+          greatness, then blends them into one score with configured weights.
+        </p>
+        <ul>
+          <li><strong>Prime rating:</strong> a player’s best sustained high point, not just one spike month.</li>
+          <li><strong>Elite area:</strong> how much top-level strength they accumulated over time.</li>
+          <li><strong>Median conservative:</strong> their typical level across active months.</li>
+          <li><strong>Title points:</strong> credit for results in the curated major-events list.</li>
+        </ul>
+        <p>
+          Majors are hand-curated, not pulled automatically from Liquipedia. In the default esports profile, that list
+          currently includes things like World Cups, TMGL, ZrT Cups, XPEvo, Red Bull Faster, and other notable
+          tournaments selected in the project config.
+        </p>
+        <p>
+          These components are normalized so they can be compared on the same scale, then combined with configured
+          weights. In the default esports profile, prime rating, elite area, and title points carry the biggest share
+          of the final GOAT score.
+        </p>
+        <p>
+          The idea is simple: GOAT should reward more than one kind of greatness.
         </p>
         <h2>Current ranking</h2>
         <p>
-          Current ranking is based on conservative rating from the local skill model. Inactive players become more
-          uncertain over time, which lowers their current conservative score until they compete again.
+          The current ranking is meant to answer one question: who looks strongest right now? Better placements against
+          stronger fields help more, while weaker finishes hurt. The model uses a conservative rating, which is
+          basically a safer estimate of strength that discounts uncertainty.
         </p>
-        <h2>GOAT ranking</h2>
-        <p>GOAT ranking currently combines four components with plain min-max normalization:</p>
-        <ul>
-          <li><strong>Prime rating:</strong> best rolling prime window average, subject to a minimum active-month threshold.</li>
-          <li><strong>Elite area:</strong> accumulated monthly strength above the configured elite threshold.</li>
-          <li><strong>Median conservative:</strong> median monthly conservative rating across active months.</li>
-          <li><strong>Title points:</strong> major-event placement points using the configured majors list.</li>
-        </ul>
-        <h2>Profiles</h2>
         <p>
-          Profiles are isolated config bundles under <code>config/profiles/&lt;name&gt;/</code>. A profile can override
-          event curation, rating settings, majors, or aliases without changing the default esports profile.
+          Long inactivity raises that uncertainty, so old strength counts less with time until a player competes again.
+          In simple terms: inactive players are not erased, but the system becomes less confident that their old level
+          still reflects the present.
+        </p>
+        <p>
+          That means current ranking is not a “best ever” list. It is a present-tense view of active strength.
+        </p>
+        <h2>What this ranking is not</h2>
+        <p>
+          tmrank is not official, not fully objective, and not exhaustive. It does not pretend every tournament is
+          equally important, and it does not assume sparse eras and modern eras are perfectly comparable.
+        </p>
+        <p>
+          The main subjective choices are event inclusion, event weighting, and majors definition. Those are all
+          visible project choices rather than hidden claims of objectivity.
+        </p>
+        <p>
+          Different profiles can disagree on purpose. That is a feature, not a bug: Trackmania has formats that reward
+          very different skills.
+        </p>
+        <h2>Why profiles exist</h2>
+        <p>
+          Esports, campaigns, Kacky, ZrT cups, and World Cups do not test the same thing. Side-by-side profiles let
+          the project compare different ranking philosophies without forcing them into one shared list.
+        </p>
+        <p>
+          The default profile stays focused on the esports scene, while side profiles are specialized views that only
+          include events from their own category. A profile can override event curation, rating settings, majors, or
+          aliases without changing the default esports profile.
+        </p>
+        <h2>Technical notes</h2>
+        <p>
+          Under the hood, tmrank uses a placement-based rating model. Large fields are dampened so one giant event does
+          not dominate the whole system, title points come from a curated major-events list, and profile configs control
+          curation and weighting locally.
         </p>
       </div>
     </main>

@@ -5,7 +5,7 @@ import json
 import math
 import statistics
 from collections.abc import Iterable
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -15,13 +15,16 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from tmrank.config_models import MajorEventsConfig, RatingProfile, TournamentRulesConfig
+from tmrank.app_context import profile_label
 from tmrank.db.models import Event, EventCompetitor, EventResult, Player, TeamMembership
 from tmrank.domain import (
     ActivePlayersMonthRow,
     GoatRow,
+    MajorPodiumResult,
     RatingLeaderTimelineMonthRow,
     RatingLeaderTimelineRow,
     RatingRow,
+    TitleLeaderRow,
     TournamentStrengthRow,
 )
 from tmrank.services.curation import EventView, MajorEventSelector, TournamentCurator
@@ -38,6 +41,8 @@ class PlayerState:
     first_event_date: date | None = None
     last_event_date: date | None = None
     title_points: float = 0.0
+    major_podium_results: list[MajorPodiumResult] = field(default_factory=list)
+    world_cup_results: list[tuple[int, int]] = field(default_factory=list)
 
 
 @dataclass(slots=True)
@@ -49,6 +54,8 @@ class RatedEvent:
     field_size: int
     effective_field_size: int
     is_major: bool
+    major_rule_names: list[str] = field(default_factory=list)
+    tags: list[str] = field(default_factory=list)
 
 
 class RatingsService:
@@ -119,6 +126,9 @@ class RatingsService:
         state, metrics, active_month_counts = self._compute_goat_metrics()
         if not state:
             return []
+        state, metrics, active_month_counts = self._filter_goat_pool(state, metrics, active_month_counts)
+        if not state:
+            return []
         normalized = _normalize_goat_metrics(metrics, sqrt_metrics=sqrt_metrics)
         weights = self.profile.goat_weights
         rows: list[GoatRow] = []
@@ -153,7 +163,8 @@ class RatingsService:
         return rows
 
     def compute_goat_metric_summary(self) -> dict[str, dict[str, float | int]]:
-        _, metrics, _ = self._compute_goat_metrics()
+        state, metrics, active_month_counts = self._compute_goat_metrics()
+        state, metrics, active_month_counts = self._filter_goat_pool(state, metrics, active_month_counts)
         summary: dict[str, dict[str, float | int]] = {}
         for metric_name, metric_values in metrics.items():
             values = list(metric_values.values())
@@ -401,16 +412,32 @@ class RatingsService:
         goat_rows = self.compute_goat_rankings()
         current_rows = self.compute_current_rankings()
         timeline_rows = self.compute_rating_leader_timeline()
+        state = self._build_state()
 
         title_leaders = sorted(
             goat_rows,
             key=lambda row: (-row.title_points, -row.goat_score, row.player_name.casefold()),
         )[:10]
+        title_leader_rows: list[TitleLeaderRow] = []
+        for index, row in enumerate(title_leaders, start=1):
+            player_state = state.get(row.player_slug)
+            title_leader_rows.append(
+                TitleLeaderRow(
+                    rank=index,
+                    player_slug=row.player_slug,
+                    player_name=row.player_name,
+                    title_points=row.title_points,
+                    events_played=row.events_played,
+                    major_podium_results=self._sorted_major_podium_results(
+                        player_state.major_podium_results if player_state else []
+                    ),
+                )
+            )
 
         return {
             "profile": {
                 "name": profile_name,
-                "label": _profile_label(profile_name),
+                "label": profile_label(profile_name),
             },
             "generated_at": generated_at.isoformat(),
             "goat_top20": [
@@ -425,6 +452,14 @@ class RatingsService:
                     "title_points": row.title_points,
                     "active_months": row.active_months,
                     "events_played": row.events_played,
+                    "first_event_date": state[row.player_slug].first_event_date.isoformat()
+                    if state[row.player_slug].first_event_date
+                    else None,
+                    "last_event_date": state[row.player_slug].last_event_date.isoformat()
+                    if state[row.player_slug].last_event_date
+                    else None,
+                    "best_world_cup_result": self._site_best_world_cup_result_payload(row.player_slug, state),
+                    "major_podium_results": self._site_major_podium_payload(row.player_slug, state),
                 }
                 for row in goat_rows[:20]
             ],
@@ -455,13 +490,14 @@ class RatingsService:
             ],
             "title_leaders_top10": [
                 {
-                    "rank": index,
+                    "rank": row.rank,
                     "player_slug": row.player_slug,
                     "player_name": row.player_name,
                     "title_points": row.title_points,
                     "events_played": row.events_played,
+                    "major_podium_results": self._site_major_podium_payload(row.player_slug, state),
                 }
-                for index, row in enumerate(title_leaders, start=1)
+                for row in title_leader_rows
             ],
         }
 
@@ -524,6 +560,7 @@ class RatingsService:
             curated = self.curator.evaluate(event_view)
             if not curated.include:
                 continue
+            major_rule_names = self.major_selector.matched_rule_names(event_view)
             competitors = self._load_event_competitors(event.id)
             field_size = len(competitors)
             effective_field_size = self._effective_field_size(field_size)
@@ -538,7 +575,9 @@ class RatingsService:
                     competitors=competitors,
                     field_size=field_size,
                     effective_field_size=effective_field_size,
-                    is_major=self.major_selector.is_major(event_view),
+                    is_major=bool(major_rule_names),
+                    major_rule_names=major_rule_names,
+                    tags=list(curated.tags),
                 )
             )
         return rated_events
@@ -601,14 +640,34 @@ class RatingsService:
                 state.events_played += 1
                 state.first_event_date = state.first_event_date or rated_event.event_date
                 state.last_event_date = rated_event.event_date
+                if "world-cup" in rated_event.tags:
+                    state.world_cup_results.append(
+                        (competitor["placement_low"], competitor["placement_high"])
+                    )
             if rated_event.is_major:
                 placement_points = self._major_points_for_placement(
                     competitor["placement_low"],
                     competitor["placement_high"],
                 )
                 if placement_points > 0:
+                    is_podium = (
+                        competitor["placement_low"] == competitor["placement_high"]
+                        and competitor["placement_low"] in {1, 2, 3}
+                    )
                     for player in competitor["players"]:
-                        player_states[player["slug"]].title_points += placement_points
+                        state = player_states[player["slug"]]
+                        state.title_points += placement_points
+                        if is_podium:
+                            state.major_podium_results.append(
+                                MajorPodiumResult(
+                                    event_name=rated_event.event.name,
+                                    page_name=rated_event.event.page_name,
+                                    event_date=rated_event.event_date,
+                                    placement=competitor["placement_low"],
+                                    title_points=placement_points,
+                                    is_world_cup="world-cup" in rated_event.tags,
+                                )
+                            )
 
     def _major_points_for_placement(self, placement_low: int, placement_high: int) -> float:
         for placement in self.major_placement_points:
@@ -669,6 +728,30 @@ class RatingsService:
         )
         return months_since_last <= max_months
 
+    def _filter_goat_pool(
+        self,
+        state: dict[str, PlayerState],
+        metrics: dict[str, dict[str, float]],
+        active_month_counts: dict[str, int],
+    ) -> tuple[dict[str, PlayerState], dict[str, dict[str, float]], dict[str, int]]:
+        min_events = self.profile.goat_min_events_played
+        if min_events <= 0:
+            return state, metrics, active_month_counts
+
+        eligible_slugs = {
+            slug
+            for slug, player in state.items()
+            if player.events_played >= min_events
+        }
+        return (
+            {slug: player for slug, player in state.items() if slug in eligible_slugs},
+            {
+                metric_name: {slug: value for slug, value in metric_values.items() if slug in eligible_slugs}
+                for metric_name, metric_values in metrics.items()
+            },
+            {slug: count for slug, count in active_month_counts.items() if slug in eligible_slugs},
+        )
+
     def _compute_rating_leader_month_leaders(
         self,
         snapshots: list[tuple[str, dict[str, dict[str, float | date | None]]]],
@@ -727,6 +810,69 @@ class RatingsService:
             return 1.0
         progress = math.log2(effective_field_size / start) / math.log2(max_effective / start)
         return 1.0 - strength * (progress**2)
+
+    def _sorted_major_podium_results(self, results: list[MajorPodiumResult]) -> list[MajorPodiumResult]:
+        return sorted(
+            results,
+            key=lambda result: (
+                not result.is_world_cup,
+                result.placement,
+                -result.event_date.toordinal(),
+                result.event_name.casefold(),
+            ),
+        )
+
+    def _site_major_podium_payload(
+        self,
+        player_slug: str,
+        state: dict[str, PlayerState],
+    ) -> list[dict[str, Any]]:
+        player_state = state.get(player_slug)
+        if player_state is None:
+            return []
+        return [
+            {
+                "event_name": result.event_name,
+                "page_name": result.page_name,
+                "event_date": result.event_date.isoformat(),
+                "placement": result.placement,
+                "title_points": result.title_points,
+                "is_world_cup": result.is_world_cup,
+            }
+            for result in self._sorted_major_podium_results(player_state.major_podium_results)
+        ]
+
+    def _best_world_cup_result(self, player_state: PlayerState) -> tuple[int, int, int] | None:
+        if not player_state.world_cup_results:
+            return None
+
+        best_low, best_high = min(player_state.world_cup_results, key=lambda result: (result[0], result[1]))
+        count = sum(
+            1
+            for placement_low, placement_high in player_state.world_cup_results
+            if placement_low == best_low and placement_high == best_high
+        )
+        return best_low, best_high, count
+
+    def _site_best_world_cup_result_payload(
+        self,
+        player_slug: str,
+        state: dict[str, PlayerState],
+    ) -> dict[str, int] | None:
+        player_state = state.get(player_slug)
+        if player_state is None:
+            return None
+
+        best_result = self._best_world_cup_result(player_state)
+        if best_result is None:
+            return None
+
+        placement_low, placement_high, count = best_result
+        return {
+            "placement_low": placement_low,
+            "placement_high": placement_high,
+            "count": count,
+        }
 
 
 def _inflate_sigma(
@@ -788,12 +934,6 @@ def _normalize_goat_metrics(
         )
         for metric_name, values in metrics.items()
     }
-
-
-def _profile_label(profile_name: str) -> str:
-    if profile_name == "default":
-        return "Esports"
-    return profile_name.replace("-", " ").title()
 
 
 def _best_rolling_average(

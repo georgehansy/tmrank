@@ -8,7 +8,7 @@ from typing import Optional
 import typer
 from sqlalchemy.orm import Session
 
-from tmrank.app_context import DEFAULT_PROFILE_NAME, build_context, list_profile_names
+from tmrank.app_context import DEFAULT_PROFILE_NAME, build_context, list_profile_names, profile_label
 from tmrank.db.session import session_scope
 from tmrank.services.alias_qa import AliasQaService
 from tmrank.services.inspect import InspectService
@@ -68,7 +68,7 @@ def _build_site_manifest(profile_names: list[str], generated_at: datetime, repo_
         "profiles": [
             {
                 "name": profile_name,
-                "label": "Esports" if profile_name == DEFAULT_PROFILE_NAME else profile_name.replace("-", " ").title(),
+                "label": profile_label(profile_name),
                 "path": f"{profile_name}.json",
                 "is_default": profile_name == default_profile,
             }

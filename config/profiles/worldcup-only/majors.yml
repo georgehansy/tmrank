@@ -1,0 +1,21 @@
+placement_points:
+  - placement_low: 1
+    placement_high: 1
+    points: 10.0
+  - placement_low: 2
+    placement_high: 2
+    points: 4.0
+  - placement_low: 3
+    placement_high: 3
+    points: 3.0
+  - placement_low: 4
+    placement_high: 4
+    points: 2.0
+  - placement_low: 5
+    placement_high: 8
+    points: 1.0
+
+rules:
+  - name: "World Cup majors"
+    match:
+      page_name_regex: "^(Electronic_Sports_World_Cup/(2006|2007|2008|2010|2011|2012|2013|2014|2015/Paris_Games_Week)|Maniaplanet_World_Cup/2016|Trackmania_World_Championship/2018|Trackmania_Grand_League/World_Cup/(2020-2021|2022)|Trackmania_World_Tour/(2023/World_Championship|2024/World_Cup|2025/World_Cup)|Esports_World_Cup/2026)$"

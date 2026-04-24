@@ -1,0 +1,6 @@
+goat_activity_window_months: 12
+goat_min_events_played: 3
+goat_elite_threshold: 20.0
+current_eligibility:
+  min_events_played: 3
+  max_months_since_last_event: 24

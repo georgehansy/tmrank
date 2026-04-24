@@ -103,6 +103,26 @@ class GoatRow:
 
 
 @dataclass(slots=True)
+class MajorPodiumResult:
+    event_name: str
+    page_name: str | None
+    event_date: date
+    placement: int
+    title_points: float
+    is_world_cup: bool
+
+
+@dataclass(slots=True)
+class TitleLeaderRow:
+    rank: int
+    player_slug: str
+    player_name: str
+    title_points: float
+    events_played: int
+    major_podium_results: list[MajorPodiumResult] = field(default_factory=list)
+
+
+@dataclass(slots=True)
 class RatingLeaderTimelineRow:
     start_month: str
     end_month: str

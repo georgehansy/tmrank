@@ -476,6 +476,7 @@ def test_export_rankings_supports_slotted_dataclasses(tmp_path: Path) -> None:
 
 def test_build_site_payload_trims_expected_views() -> None:
     today = date.today()
+    first_date = date(max(2000, today.year - 3), 1, 15)
     engine = create_engine("sqlite+pysqlite:///:memory:", future=True)
     Base.metadata.create_all(engine)
 
@@ -494,7 +495,13 @@ def test_build_site_payload_trims_expected_views() -> None:
             name="Site Event",
             end_date=today,
         )
-        session.add(event)
+        first_event = Event(
+            source="liquipedia",
+            source_event_id="site-event-first",
+            name="First Event",
+            end_date=first_date,
+        )
+        session.add_all([event, first_event])
         session.flush()
 
         winner = EventCompetitor(
@@ -511,11 +518,41 @@ def test_build_site_payload_trims_expected_views() -> None:
             display_name="Runner Up",
             player_id=2,
         )
-        session.add_all([winner, runner_up])
+        first_winner = EventCompetitor(
+            event_id=first_event.id,
+            competitor_type="player",
+            canonical_slug="winner",
+            display_name="Winner",
+            player_id=1,
+        )
+        first_runner_up = EventCompetitor(
+            event_id=first_event.id,
+            competitor_type="player",
+            canonical_slug="runner-up",
+            display_name="Runner Up",
+            player_id=2,
+        )
+        session.add_all([winner, runner_up, first_winner, first_runner_up])
         session.flush()
 
         session.add_all(
             [
+                EventResult(
+                    event_id=first_event.id,
+                    competitor_id=first_winner.id,
+                    placement_low=1,
+                    placement_high=1,
+                    placement_text="1",
+                    raw_payload={},
+                ),
+                EventResult(
+                    event_id=first_event.id,
+                    competitor_id=first_runner_up.id,
+                    placement_low=2,
+                    placement_high=2,
+                    placement_text="2",
+                    raw_payload={},
+                ),
                 EventResult(
                     event_id=event.id,
                     competitor_id=winner.id,
@@ -538,9 +575,45 @@ def test_build_site_payload_trims_expected_views() -> None:
 
         service = RatingsService(
             session,
-            TournamentRulesConfig.model_validate({"defaults": {"include": True, "weight": 1.0, "tags": []}, "rules": []}),
-            RatingProfile(),
-            MajorEventsConfig.model_validate({"rules": [{"name": "Major", "match": {"source_event_id": "site-event"}}]}),
+            TournamentRulesConfig.model_validate(
+                {
+                    "defaults": {"include": True, "weight": 1.0, "tags": []},
+                    "rules": [
+                        {
+                            "name": "World Cup",
+                            "match": {"source_event_id": "site-event"},
+                            "tags": ["world-cup"],
+                        },
+                        {
+                            "name": "World Cup (Legacy)",
+                            "match": {"source_event_id": "site-event-first"},
+                            "tags": ["world-cup"],
+                        }
+                    ],
+                }
+            ),
+            RatingProfile.model_validate(
+                {
+                    "current_eligibility": {
+                        "min_events_played": 1,
+                        "max_months_since_last_event": 24,
+                    }
+                }
+            ),
+            MajorEventsConfig.model_validate(
+                {
+                    "rules": [
+                        {
+                            "name": "Major",
+                            "match": {"source_event_id": "site-event"},
+                        },
+                        {
+                            "name": "Major (Legacy)",
+                            "match": {"source_event_id": "site-event-first"},
+                        }
+                    ]
+                }
+            ),
         )
         payload = service.build_site_payload("default")
 
@@ -556,8 +629,111 @@ def test_build_site_payload_trims_expected_views() -> None:
         assert len(payload["goat_top20"]) == 2
         assert len(payload["current_top10"]) == 2
         assert len(payload["title_leaders_top10"]) == 2
-        assert payload["title_leaders_top10"][0]["title_points"] == 10.0
+        assert payload["goat_top20"][0]["major_podium_results"] == [
+            {
+                "event_name": "Site Event",
+                "page_name": None,
+                "event_date": today.isoformat(),
+                "placement": 1,
+                "title_points": 10.0,
+                "is_world_cup": True,
+            },
+            {
+                "event_name": "First Event",
+                "page_name": None,
+                "event_date": first_date.isoformat(),
+                "placement": 1,
+                "title_points": 10.0,
+                "is_world_cup": True,
+            }
+        ]
+        assert payload["goat_top20"][0]["events_played"] == 2
+        assert payload["goat_top20"][0]["first_event_date"] == first_date.isoformat()
+        assert payload["goat_top20"][0]["last_event_date"] == today.isoformat()
+        assert payload["goat_top20"][0]["best_world_cup_result"] == {
+            "placement_low": 1,
+            "placement_high": 1,
+            "count": 2,
+        }
+        assert payload["title_leaders_top10"][0]["title_points"] == 20.0
+        assert payload["title_leaders_top10"][0]["major_podium_results"] == [
+            {
+                "event_name": "Site Event",
+                "page_name": None,
+                "event_date": today.isoformat(),
+                "placement": 1,
+                "title_points": 10.0,
+                "is_world_cup": True,
+            },
+            {
+                "event_name": "First Event",
+                "page_name": None,
+                "event_date": first_date.isoformat(),
+                "placement": 1,
+                "title_points": 10.0,
+                "is_world_cup": True,
+            }
+        ]
         assert payload["current_top10"][0]["recent_events_24_months"] == 1
+
+
+def test_site_payload_trims_goat_to_25_rows() -> None:
+    engine = create_engine("sqlite+pysqlite:///:memory:", future=True)
+    Base.metadata.create_all(engine)
+
+    with Session(engine) as session:
+        players = [
+            Player(id=index, canonical_slug=f"player-{index}", display_name=f"Player {index}", source_ids=[])
+            for index in range(1, 32)
+        ]
+        session.add_all(players)
+        session.flush()
+
+        event = Event(
+            source="liquipedia",
+            source_event_id="large-site-event",
+            name="Large Site Event",
+            end_date=date.today(),
+        )
+        session.add(event)
+        session.flush()
+
+        competitors = [
+            EventCompetitor(
+                event_id=event.id,
+                competitor_type="player",
+                canonical_slug=player.canonical_slug,
+                display_name=player.display_name,
+                player_id=player.id,
+            )
+            for player in players
+        ]
+        session.add_all(competitors)
+        session.flush()
+
+        session.add_all(
+            [
+                EventResult(
+                    event_id=event.id,
+                    competitor_id=competitor.id,
+                    placement_low=index,
+                    placement_high=index,
+                    placement_text=str(index),
+                    raw_payload={},
+                )
+                for index, competitor in enumerate(competitors, start=1)
+            ]
+        )
+        session.commit()
+
+        service = RatingsService(
+            session,
+            TournamentRulesConfig.model_validate({"defaults": {"include": True, "weight": 1.0, "tags": []}, "rules": []}),
+            RatingProfile(),
+        )
+        payload = service.build_site_payload("default")
+
+        assert len(payload["goat_top20"]) == 20
 
 
 def test_current_rankings_apply_inactivity_drift_as_of_today() -> None:
@@ -727,6 +903,150 @@ def test_goat_metric_summary_reports_min_median_max() -> None:
         assert "p99" in summary["prime_rating"]
         assert float(summary["prime_rating"]["max"]) >= float(summary["prime_rating"]["median"])
         assert float(summary["prime_rating"]["median"]) >= float(summary["prime_rating"]["min"])
+
+
+def test_site_payload_title_leaders_include_sorted_major_podium_results_only() -> None:
+    engine = create_engine("sqlite+pysqlite:///:memory:", future=True)
+    Base.metadata.create_all(engine)
+
+    with Session(engine) as session:
+        session.add_all(
+            [
+                Player(id=1, canonical_slug="hero", display_name="Hero", source_ids=[]),
+                Player(id=2, canonical_slug="rival", display_name="Rival", source_ids=[]),
+                Player(id=3, canonical_slug="third", display_name="Third", source_ids=[]),
+                Player(id=4, canonical_slug="fourth", display_name="Fourth", source_ids=[]),
+            ]
+        )
+        session.flush()
+
+        event_specs = [
+            ("wc-win", "World Cup Win", date(2023, 6, 1), 1),
+            ("wc-third", "World Cup Third", date(2024, 6, 1), 3),
+            ("major-win-old", "Major Win Old", date(2024, 9, 1), 1),
+            ("major-win-new", "Major Win New", date(2025, 9, 1), 1),
+            ("major-fourth", "Major Fourth", date(2026, 1, 1), 4),
+        ]
+
+        for source_event_id, name, end_date, hero_place in event_specs:
+            event = Event(
+                source="liquipedia",
+                source_event_id=source_event_id,
+                page_name=source_event_id,
+                name=name,
+                end_date=end_date,
+            )
+            session.add(event)
+            session.flush()
+
+            hero = EventCompetitor(event_id=event.id, competitor_type="player", canonical_slug="hero", display_name="Hero", player_id=1)
+            rival = EventCompetitor(event_id=event.id, competitor_type="player", canonical_slug="rival", display_name="Rival", player_id=2)
+            third = EventCompetitor(event_id=event.id, competitor_type="player", canonical_slug="third", display_name="Third", player_id=3)
+            fourth = EventCompetitor(event_id=event.id, competitor_type="player", canonical_slug="fourth", display_name="Fourth", player_id=4)
+            session.add_all([hero, rival, third, fourth])
+            session.flush()
+
+            placements = {
+                1: hero.id,
+                2: rival.id,
+                3: third.id,
+            }
+            if hero_place == 3:
+                placements = {
+                    1: rival.id,
+                    2: third.id,
+                    3: hero.id,
+                }
+            elif hero_place == 4:
+                placements = {
+                    1: rival.id,
+                    2: third.id,
+                    3: fourth.id,
+                    4: hero.id,
+                }
+
+            session.add_all(
+                [
+                    EventResult(event_id=event.id, competitor_id=competitor_id, placement_low=placement, placement_high=placement, placement_text=str(placement), raw_payload={})
+                    for placement, competitor_id in placements.items()
+                ]
+            )
+
+        session.commit()
+
+        service = RatingsService(
+            session,
+            TournamentRulesConfig.model_validate(
+                {
+                    "defaults": {"include": True, "weight": 1.0, "tags": []},
+                    "rules": [
+                        {
+                            "name": "World cup events",
+                            "match": {"source_event_id": "wc-win"},
+                            "tags": ["world-cup"],
+                        },
+                        {
+                            "name": "World cup events",
+                            "match": {"source_event_id": "wc-third"},
+                            "tags": ["world-cup"],
+                        },
+                    ],
+                }
+            ),
+            RatingProfile(),
+            MajorEventsConfig.model_validate(
+                {
+                    "rules": [
+                        {"name": "Historic Majors", "match": {"source_event_id": "wc-win"}},
+                        {"name": "Historic Majors", "match": {"source_event_id": "wc-third"}},
+                        {"name": "Historic Majors", "match": {"source_event_id": "major-win-old"}},
+                        {"name": "Historic Majors", "match": {"source_event_id": "major-win-new"}},
+                        {"name": "Historic Majors", "match": {"source_event_id": "major-fourth"}},
+                    ]
+                }
+            ),
+        )
+
+        payload = service.build_site_payload("default")
+        hero_row = next(row for row in payload["title_leaders_top10"] if row["player_slug"] == "hero")
+        hero_goat_row = next(row for row in payload["goat_top20"] if row["player_slug"] == "hero")
+
+        assert hero_row["title_points"] == 35.0
+        assert hero_row["major_podium_results"] == [
+            {
+                "event_name": "World Cup Win",
+                "page_name": "wc-win",
+                "event_date": "2023-06-01",
+                "placement": 1,
+                "title_points": 10.0,
+                "is_world_cup": True,
+            },
+            {
+                "event_name": "World Cup Third",
+                "page_name": "wc-third",
+                "event_date": "2024-06-01",
+                "placement": 3,
+                "title_points": 3.0,
+                "is_world_cup": True,
+            },
+            {
+                "event_name": "Major Win New",
+                "page_name": "major-win-new",
+                "event_date": "2025-09-01",
+                "placement": 1,
+                "title_points": 10.0,
+                "is_world_cup": False,
+            },
+            {
+                "event_name": "Major Win Old",
+                "page_name": "major-win-old",
+                "event_date": "2024-09-01",
+                "placement": 1,
+                "title_points": 10.0,
+                "is_world_cup": False,
+            },
+        ]
+        assert hero_goat_row["major_podium_results"] == hero_row["major_podium_results"]
 
 
 def test_goat_rankings_use_full_monthly_snapshots_with_12_month_activity_window() -> None:
@@ -1309,3 +1629,94 @@ def test_current_rankings_apply_profile_eligibility_filters() -> None:
         )
         rows = service.compute_current_rankings()
         assert [row.player_slug for row in rows] == ["eligible-a", "eligible-b"]
+
+
+def test_goat_rankings_apply_profile_min_events_filter_before_normalization() -> None:
+    today = date.today()
+    engine = create_engine("sqlite+pysqlite:///:memory:", future=True)
+    Base.metadata.create_all(engine)
+
+    with Session(engine) as session:
+        session.add_all(
+            [
+                Player(id=1, canonical_slug="veteran-a", display_name="Veteran A", source_ids=[]),
+                Player(id=2, canonical_slug="veteran-b", display_name="Veteran B", source_ids=[]),
+                Player(id=3, canonical_slug="newcomer-a", display_name="Newcomer A", source_ids=[]),
+                Player(id=4, canonical_slug="newcomer-b", display_name="Newcomer B", source_ids=[]),
+            ]
+        )
+        session.flush()
+
+        for index in range(1, 4):
+            event = Event(
+                source="liquipedia",
+                source_event_id=f"event-{index}",
+                name=f"Event {index}",
+                end_date=date(2025, index, 1),
+            )
+            session.add(event)
+            session.flush()
+
+            veteran_a = EventCompetitor(
+                event_id=event.id,
+                competitor_type="player",
+                canonical_slug="veteran-a",
+                display_name="Veteran A",
+                player_id=1,
+            )
+            veteran_b = EventCompetitor(
+                event_id=event.id,
+                competitor_type="player",
+                canonical_slug="veteran-b",
+                display_name="Veteran B",
+                player_id=2,
+            )
+            session.add_all([veteran_a, veteran_b])
+            session.flush()
+            session.add_all(
+                [
+                    EventResult(event_id=event.id, competitor_id=veteran_a.id, placement_low=1, placement_high=1, placement_text="1", raw_payload={}),
+                    EventResult(event_id=event.id, competitor_id=veteran_b.id, placement_low=2, placement_high=2, placement_text="2", raw_payload={}),
+                ]
+            )
+
+        newcomer_event = Event(
+            source="liquipedia",
+            source_event_id="event-4",
+            name="Event 4",
+            end_date=today,
+        )
+        session.add(newcomer_event)
+        session.flush()
+        newcomer_a = EventCompetitor(
+            event_id=newcomer_event.id,
+            competitor_type="player",
+            canonical_slug="newcomer-a",
+            display_name="Newcomer A",
+            player_id=3,
+        )
+        newcomer_b = EventCompetitor(
+            event_id=newcomer_event.id,
+            competitor_type="player",
+            canonical_slug="newcomer-b",
+            display_name="Newcomer B",
+            player_id=4,
+        )
+        session.add_all([newcomer_a, newcomer_b])
+        session.flush()
+        session.add_all(
+            [
+                EventResult(event_id=newcomer_event.id, competitor_id=newcomer_a.id, placement_low=1, placement_high=1, placement_text="1", raw_payload={}),
+                EventResult(event_id=newcomer_event.id, competitor_id=newcomer_b.id, placement_low=2, placement_high=2, placement_text="2", raw_payload={}),
+            ]
+        )
+        session.commit()
+
+        service = RatingsService(
+            session,
+            TournamentRulesConfig.model_validate({"defaults": {"include": True, "weight": 1.0, "tags": []}, "rules": []}),
+            RatingProfile.model_validate({"goat_min_events_played": 3}),
+        )
+        rows = service.compute_goat_rankings()
+
+        assert [row.player_slug for row in rows] == ["veteran-a", "veteran-b"]

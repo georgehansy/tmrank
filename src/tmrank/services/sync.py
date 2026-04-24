@@ -195,6 +195,8 @@ class SyncService:
         run = SyncRun(command=command, status="running")
         self.session.add(run)
         self.session.flush()
+        run_id = run.id
+        self.session.commit()
         try:
             yield run
             run.status = "success"
@@ -203,7 +205,7 @@ class SyncService:
         except Exception as exc:
             self.session.rollback()
             with self.session.begin():
-                failed_run = self.session.get(SyncRun, run.id)
+                failed_run = self.session.get(SyncRun, run_id)
                 if failed_run is not None:
                     failed_run.status = "failed"
                     failed_run.finished_at = datetime.now(timezone.utc)

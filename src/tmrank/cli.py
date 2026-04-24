@@ -4,6 +4,7 @@ import json
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Optional
+from urllib.parse import urlparse
 
 import typer
 from sqlalchemy.orm import Session
@@ -64,7 +65,7 @@ def _build_site_manifest(profile_names: list[str], generated_at: datetime, repo_
     return {
         "generated_at": generated_at.isoformat(),
         "default_profile": default_profile,
-        "repo_url": repo_url,
+        "repo_url": _validate_repo_url(repo_url),
         "profiles": [
             {
                 "name": profile_name,
@@ -75,6 +76,15 @@ def _build_site_manifest(profile_names: list[str], generated_at: datetime, repo_
             for profile_name in profile_names
         ],
     }
+
+
+def _validate_repo_url(repo_url: Optional[str]) -> str | None:
+    if repo_url is None:
+        return None
+    parsed = urlparse(repo_url)
+    if parsed.scheme not in {"http", "https"} or not parsed.netloc:
+        raise typer.BadParameter("--repo-url must be an absolute http:// or https:// URL.")
+    return repo_url
 
 
 @sync_app.command("tournaments")

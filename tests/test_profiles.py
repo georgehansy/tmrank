@@ -2,9 +2,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import pytest
+import typer
 
 from tmrank.app_context import DEFAULT_PROFILE_NAME, list_profile_names, profile_label, resolve_profile_config_path
-from tmrank.cli import _build_site_manifest, _resolve_export_output_dir
+from tmrank.cli import _build_site_manifest, _resolve_export_output_dir, _validate_repo_url
+from tmrank.config_models import RatingProfile
 
 
 def test_resolve_profile_config_path_uses_root_for_default(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
@@ -89,6 +91,31 @@ def test_build_site_manifest_tracks_profiles_and_default() -> None:
         {"name": "worldcup-only", "label": "World Cups", "path": "worldcup-only.json", "is_default": False},
         {"name": "kackiest-kacky", "label": "Kacky", "path": "kackiest-kacky.json", "is_default": False},
     ]
+
+
+@pytest.mark.parametrize(
+    "repo_url",
+    [
+        "javascript:alert(1)",
+        "ftp://example.com/repo",
+        "/relative/repo",
+        "github.com/example/repo",
+    ],
+)
+def test_validate_repo_url_rejects_non_http_urls(repo_url: str) -> None:
+    with pytest.raises(typer.BadParameter):
+        _validate_repo_url(repo_url)
+
+
+def test_validate_repo_url_accepts_absolute_http_urls() -> None:
+    assert _validate_repo_url("https://github.com/example/repo") == "https://github.com/example/repo"
+    assert _validate_repo_url("http://example.test/repo") == "http://example.test/repo"
+    assert _validate_repo_url(None) is None
+
+
+def test_config_models_reject_unknown_keys() -> None:
+    with pytest.raises(ValueError, match="extra_forbidden"):
+        RatingProfile.model_validate({"initial_mu": 25.0, "initail_sigma": 8.333})
 
 
 def test_profile_label_uses_short_kacky_name() -> None:

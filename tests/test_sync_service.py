@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 
 from tmrank.config_models import AliasesConfig
 from tmrank.db.base import Base
-from tmrank.db.models import Event, EventCompetitor, EventResult, Player, TeamMembership
+from tmrank.db.models import Event, EventCompetitor, EventResult, Player, SyncRun, TeamMembership
 from tmrank.domain import ParsedCompetitor, ParsedEventResults, ParsedResultRow
 from tmrank.services.aliases import AliasResolver
 from tmrank.services.sync import SyncService
@@ -203,6 +203,11 @@ def test_sync_event_results_batch_persists_completed_events_on_late_failure() ->
 
         with pytest.raises(RuntimeError, match="boom"):
             service.sync_event_results_batch(force=True)
+
+        sync_run = session.query(SyncRun).one()
+        assert sync_run.command == "sync event-results"
+        assert sync_run.status == "failed"
+        assert sync_run.error_summary == "boom"
 
         persisted_event = session.query(Event).filter_by(source_event_id="ok").one()
         assert persisted_event.results_synced_at is not None

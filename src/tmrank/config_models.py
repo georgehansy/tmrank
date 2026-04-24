@@ -4,10 +4,14 @@ from pathlib import Path
 from typing import Any
 
 import yaml
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 
-class TournamentRuleMatch(BaseModel):
+class StrictConfigModel(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+
+class TournamentRuleMatch(StrictConfigModel):
     source_event_id: str | None = None
     pageid: int | None = None
     tier: int | None = None
@@ -22,7 +26,7 @@ class TournamentRuleMatch(BaseModel):
     start_date_lte: str | None = None
 
 
-class TournamentRule(BaseModel):
+class TournamentRule(StrictConfigModel):
     name: str
     match: TournamentRuleMatch
     include: bool | None = None
@@ -30,29 +34,29 @@ class TournamentRule(BaseModel):
     tags: list[str] | None = None
 
 
-class TournamentRuleDefaults(BaseModel):
+class TournamentRuleDefaults(StrictConfigModel):
     include: bool = True
     weight: float = 1.0
     tags: list[str] = Field(default_factory=list)
 
 
-class TournamentRulesConfig(BaseModel):
+class TournamentRulesConfig(StrictConfigModel):
     defaults: TournamentRuleDefaults = Field(default_factory=TournamentRuleDefaults)
     rules: list[TournamentRule] = Field(default_factory=list)
 
 
-class MajorPlacementPoints(BaseModel):
+class MajorPlacementPoints(StrictConfigModel):
     placement_low: int
     placement_high: int
     points: float
 
 
-class MajorEventRule(BaseModel):
+class MajorEventRule(StrictConfigModel):
     name: str
     match: TournamentRuleMatch
 
 
-class MajorEventsConfig(BaseModel):
+class MajorEventsConfig(StrictConfigModel):
     placement_points: list[MajorPlacementPoints] = Field(
         default_factory=lambda: [
             MajorPlacementPoints(placement_low=1, placement_high=1, points=10.0),
@@ -65,31 +69,31 @@ class MajorEventsConfig(BaseModel):
     rules: list[MajorEventRule] = Field(default_factory=list)
 
 
-class AliasEntry(BaseModel):
+class AliasEntry(StrictConfigModel):
     canonical_slug: str
     display_name: str
     source_ids: list[str] = Field(default_factory=list)
     exact_names: list[str] = Field(default_factory=list)
 
 
-class AliasesConfig(BaseModel):
+class AliasesConfig(StrictConfigModel):
     players: list[AliasEntry] = Field(default_factory=list)
     teams: list[AliasEntry] = Field(default_factory=list)
 
 
-class GoatWeights(BaseModel):
+class GoatWeights(StrictConfigModel):
     prime_rating: float = 0.25
     elite_area: float = 0.25
     median_conservative: float = 0.20
     title_points: float = 0.20
 
 
-class CurrentEligibility(BaseModel):
+class CurrentEligibility(StrictConfigModel):
     min_events_played: int = 0
     max_months_since_last_event: int | None = None
 
 
-class RatingProfile(BaseModel):
+class RatingProfile(StrictConfigModel):
     initial_mu: float = 25.0
     initial_sigma: float = 8.333
     monthly_inactivity_drift: float = 0.5

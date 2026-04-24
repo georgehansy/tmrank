@@ -988,11 +988,25 @@ function applyManifestMeta(manifest) {
     footerUpdated.textContent = `Updated: ${formatDate(manifest.generated_at)}`;
   }
 
-  if (manifest.repo_url) {
+  const safeRepoUrl = safeHttpUrl(manifest.repo_url);
+  if (safeRepoUrl) {
     for (const repoLink of document.querySelectorAll("[data-repo-link]")) {
-      repoLink.href = manifest.repo_url;
+      repoLink.href = safeRepoUrl;
       repoLink.classList.remove("is-hidden");
     }
+  }
+}
+
+function safeHttpUrl(value) {
+  if (!value) return null;
+  try {
+    const url = new URL(String(value));
+    if (url.protocol !== "http:" && url.protocol !== "https:") {
+      return null;
+    }
+    return url.href;
+  } catch {
+    return null;
   }
 }
 

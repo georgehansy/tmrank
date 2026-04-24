@@ -615,8 +615,17 @@ def test_build_site_payload_trims_expected_views() -> None:
                 }
             ),
         )
+        build_state_calls = []
+        original_build_state = service._build_state
+
+        def counting_build_state(*, return_snapshots=False, rated_events=None):
+            build_state_calls.append((return_snapshots, rated_events is not None))
+            return original_build_state(return_snapshots=return_snapshots, rated_events=rated_events)
+
+        service._build_state = counting_build_state
         payload = service.build_site_payload("default")
 
+        assert build_state_calls == [(True, True)]
         assert payload["profile"] == {"name": "default", "label": "Esports"}
         assert set(payload) == {
             "profile",

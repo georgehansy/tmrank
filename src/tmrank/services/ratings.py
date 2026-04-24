@@ -79,9 +79,17 @@ class RatingsService:
         )
 
     def compute_current_rankings(self) -> list[RatingRow]:
-        state = self._build_state()
+        rated_events = self._load_rated_events()
+        state = self._build_state(rated_events=rated_events)
+        return self._current_rankings_from_state(state, rated_events)
+
+    def _current_rankings_from_state(
+        self,
+        state: dict[str, PlayerState],
+        rated_events: list[RatedEvent],
+    ) -> list[RatingRow]:
         today = date.today()
-        recent_event_counts = self._count_recent_events(today=today, window_months=24)
+        recent_event_counts = self._count_recent_events(rated_events, today=today, window_months=24)
         rows = [
             RatingRow(
                 rank=0,
@@ -124,6 +132,21 @@ class RatingsService:
 
     def compute_goat_rankings(self, *, sqrt_metrics: set[str] | None = None) -> list[GoatRow]:
         state, metrics, active_month_counts = self._compute_goat_metrics()
+        return self._goat_rankings_from_metrics(
+            state,
+            metrics,
+            active_month_counts,
+            sqrt_metrics=sqrt_metrics,
+        )
+
+    def _goat_rankings_from_metrics(
+        self,
+        state: dict[str, PlayerState],
+        metrics: dict[str, dict[str, float]],
+        active_month_counts: dict[str, int],
+        *,
+        sqrt_metrics: set[str] | None = None,
+    ) -> list[GoatRow]:
         if not state:
             return []
         state, metrics, active_month_counts = self._filter_goat_pool(state, metrics, active_month_counts)
@@ -195,6 +218,13 @@ class RatingsService:
 
     def compute_rating_leader_timeline(self) -> list[RatingLeaderTimelineRow]:
         state, snapshots = self._build_state(return_snapshots=True)
+        return self._rating_leader_timeline_from_state(state, snapshots)
+
+    def _rating_leader_timeline_from_state(
+        self,
+        state: dict[str, PlayerState],
+        snapshots: list[tuple[str, dict[str, dict[str, float | date | None]]]],
+    ) -> list[RatingLeaderTimelineRow]:
         if not state:
             return []
         player_months: dict[str, list[tuple[str, float]]] = {slug: [] for slug in state}
@@ -357,11 +387,18 @@ class RatingsService:
 
     def _compute_goat_metrics(self) -> tuple[dict[str, PlayerState], dict[str, dict[str, float]], dict[str, int]]:
         state, snapshots = self._build_state(return_snapshots=True)
+        return self._compute_goat_metrics_from_state(state, snapshots)
+
+    def _compute_goat_metrics_from_state(
+        self,
+        state: dict[str, PlayerState],
+        snapshots: list[tuple[str, dict[str, dict[str, float | date | None]]]],
+    ) -> tuple[dict[str, PlayerState], dict[str, dict[str, float]], dict[str, int]]:
         if not state:
             return {}, {}, {}
         player_months: dict[str, list[tuple[str, float]]] = {slug: [] for slug in state}
         player_names = {slug: player.name for slug, player in state.items()}
-        month_rankings = self._compute_rating_leader_month_rankings(snapshots, player_months, player_names)
+        self._compute_rating_leader_month_rankings(snapshots, player_months, player_names)
 
         metrics = {
             "prime_rating": {
@@ -409,10 +446,12 @@ class RatingsService:
 
     def build_site_payload(self, profile_name: str, *, generated_at: datetime | None = None) -> dict[str, Any]:
         generated_at = generated_at or datetime.now(timezone.utc)
-        goat_rows = self.compute_goat_rankings()
-        current_rows = self.compute_current_rankings()
-        timeline_rows = self.compute_rating_leader_timeline()
-        state = self._build_state()
+        rated_events = self._load_rated_events()
+        state, snapshots = self._build_state(return_snapshots=True, rated_events=rated_events)
+        goat_state, goat_metrics, goat_active_month_counts = self._compute_goat_metrics_from_state(state, snapshots)
+        goat_rows = self._goat_rankings_from_metrics(goat_state, goat_metrics, goat_active_month_counts)
+        current_rows = self._current_rankings_from_state(state, rated_events)
+        timeline_rows = self._rating_leader_timeline_from_state(state, snapshots)
 
         title_leaders = sorted(
             goat_rows,
@@ -501,10 +540,10 @@ class RatingsService:
             ],
         }
 
-    def _build_state(self, *, return_snapshots: bool = False):
+    def _build_state(self, *, return_snapshots: bool = False, rated_events: list[RatedEvent] | None = None):
         player_states: dict[str, PlayerState] = {}
         snapshots: list[tuple[str, dict[str, dict[str, float | date | None]]]] = []
-        rated_events = self._load_rated_events()
+        rated_events = rated_events if rated_events is not None else self._load_rated_events()
 
         for index, rated_event in enumerate(rated_events):
             self._apply_rated_event(player_states, rated_event)
@@ -582,9 +621,9 @@ class RatingsService:
             )
         return rated_events
 
-    def _count_recent_events(self, *, today: date, window_months: int) -> dict[str, int]:
+    def _count_recent_events(self, rated_events: list[RatedEvent], *, today: date, window_months: int) -> dict[str, int]:
         counts: dict[str, int] = {}
-        for rated_event in self._load_rated_events():
+        for rated_event in rated_events:
             months_ago = max(
                 0,
                 (today.year - rated_event.event_date.year) * 12 + (today.month - rated_event.event_date.month),

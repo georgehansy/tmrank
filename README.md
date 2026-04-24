@@ -96,9 +96,12 @@ tmrank export rankings --profile seasonal-campaign
 tmrank export site-data
 ```
 
-Current extra profile:
+Current extra profiles:
 
 - `seasonal-campaign`
+- `zrt-cups`
+- `worldcup-only`
+- `kackiest-kacky`
 
 ## Site output
 
@@ -111,6 +114,24 @@ tmrank export site-data --repo-url https://github.com/<you>/<repo>
 ```
 
 GitHub Pages can then publish directly from the `docs/` folder on `main`.
+
+## Test and verify
+
+```powershell
+pytest
+python -m pip check
+python -m compileall -q src tests
+```
+
+The optional Postgres integration test runs when `TMRANK_TEST_DATABASE_URL` is configured.
+
+For local visual checks with Playwright, install the Chromium browser binary after Playwright is available:
+
+```powershell
+npx playwright install chromium
+```
+
+In the Codex bundled runtime, use the bundled Node and Playwright CLI paths shown by the workspace dependency loader.
 
 ## Methodology snapshot
 

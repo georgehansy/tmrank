@@ -41,6 +41,15 @@ function formatInteger(value) {
   }).format(numericValue);
 }
 
+function formatGoatIndex(value) {
+  const numericValue = Number(value);
+  if (!Number.isFinite(numericValue)) {
+    return "—";
+  }
+
+  return formatNumber(numericValue * 100, 1);
+}
+
 function formatDate(value) {
   if (!value) return "—";
   const date = new Date(value);
@@ -611,10 +620,10 @@ function goatMobileListHtml(rows) {
                   <span class="rank-pill">${row.rank}</span>
                   <div>
                     <div class="goat-mobile-card__name">${goatPlayerCell(row, { mobile: true })}</div>
-                    <div class="goat-mobile-card__label">GOAT score</div>
+                    <div class="goat-mobile-card__label">GOAT Index</div>
                   </div>
                 </div>
-                <div class="goat-mobile-card__score">${formatNumber(row.goat_score, 3)}</div>
+                <div class="goat-mobile-card__score">${formatGoatIndex(row.goat_score)}</div>
               </div>
               <details class="goat-mobile-card__details">
                 <summary>Metrics</summary>
@@ -725,7 +734,7 @@ function renderGoatTable(payload) {
   const columns = [
     { label: "Rank", render: (row) => `<span class="rank-pill">${row.rank}</span>` },
     { label: "Player", render: (row) => goatPlayerCell(row) },
-    { label: "GOAT", render: (row) => `<span class="metric-strong">${formatNumber(row.goat_score, 3)}</span>` },
+    { label: "GOAT Index", render: (row) => `<span class="metric-strong">${formatGoatIndex(row.goat_score)}</span>` },
     { label: "Prime", render: (row) => formatNumber(row.prime_rating) },
     { label: "Elite Area", render: (row) => formatNumber(row.elite_area) },
     { label: "Median", render: (row) => formatNumber(row.median_conservative) },
@@ -966,9 +975,9 @@ function renderProfileCards(manifest, payloadsByProfile) {
           <p class="section__eyebrow">Profile</p>
           <h3>${escapeHtml(profile.label)}</h3>
           <p class="stat__label">GOAT top 5</p>
-          ${miniList(goatRows(payload).slice(0, 5), "goat_score", (value) => formatNumber(value, 3), {
+          ${miniList(goatRows(payload).slice(0, 5), "goat_score", formatGoatIndex, {
             podiumTooltips: true,
-            valueLabel: "GOAT",
+            valueLabel: "Index",
           })}
         </article>
       `;
